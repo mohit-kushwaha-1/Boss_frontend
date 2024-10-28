@@ -1,0 +1,134 @@
+
+.form-contaner-main{
+    width: 100%;
+    background: var(--color-grey-97, #F7F8F8);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+    
+}
+
+
+.form-container {
+     
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 0 auto;
+    max-width: auto;
+    /* border: 1px solid black; */
+    background: var(--color-white-solid, #FFF);
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .input-group {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .input-group input, input[type="tel"], input[type="email"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 40%;
+  }
+  
+  .file-upload {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+  }
+  
+  .upload-area {
+    width: 100%;
+    height: 100px;
+    border: 2px dashed #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    cursor: pointer;
+
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .from-buttom{
+    width: 200px;
+    display: flex;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 6px;
+border-radius: var(--radius-10, 10px);
+border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
+background: var(--Boss-White, #F8F8F8);
+box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
+color: var(--Boss, #7B0801);
+text-align: center;
+font-family: Nunito;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+  .form-input-style{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+ 
+
+  .input-form-field{
+    width: 100%;
+  }
+
+  .input-form-field input{
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    .input-group {
+      flex-direction: column;
+    }
+  
+    h2 {
+      font-size: 1.25rem;
+    }
+  
+    .upload-area {
+      height: 80px;
+    }
+  }

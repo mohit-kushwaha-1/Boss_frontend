@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-container {
+    /* max-width: 1000px; */
+    /* padding: 40px; */
+
+    margin: 0 auto;
+
+  }
+  
+  .vacancy-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 80px;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--radius-10, 10px);
+border: var(--stroke-weight-1, 1px) solid var(--Boss, #7B0801);
+background: var(--color-white-solid, #FFF);
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    /* border-radius: 50%; */
+    margin-bottom: 20px;
+  }
+  
+
+
+  .card-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-icons-space{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  h3 {
+    margin: 10px 0;
+    font-size: 25px;
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+text-align: center;
+
+/* www.independentrecruiters.nl/Inter/Bold 25.21 */
+font-family: var(--font-family-Font-1, Inter);
+font-size: 25.207px;
+font-style: normal;
+font-weight: var(--font-weight-700, 700);
+line-height: var(--line-height-31_86, 31.86px); /* 126.393% */
+  }
+  
+  p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+    color: var(--Secondary-Secondary800, #637D92);
+text-align: center;
+font-family: "Nunito Sans";
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 30px; /* 166.667% */
+letter-spacing: 0.5px;
+  }
+  
+  .view-button {
+    display: flex;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 6px;
+color: var(--Boss, #7B0801);
+text-align: center;
+font-family: Nunito;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: var(--radius-10, 10px);
+border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
+background: var(--Boss-White, #F8F8F8);
+box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* .view-button:hover {
+    background-color: #0056b3;
+  } */
+  
+  @media (max-width: 760px) {
+    .vacancy-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 80px;
+        justify-content: center;
+      }
+  }
+  

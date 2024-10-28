@@ -1,0 +1,33 @@
+.testinomail-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.testinomail-container-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testinomail-container-content{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.testinomail-container-content-bottom{
+    display: flex;
+}
+
+.testinomail-container-content-img1{
+    width:100px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testinomail-container-content-img1{
+    width: 100%;
+    object-fit: contain;
+}

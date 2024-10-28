@@ -1,0 +1,133 @@
+.footer-container{
+    width: 90%;
+    margin: auto;
+   
+}
+
+.footer-content{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 50px;
+    /* margin: auto; */
+    /* align-items: center; */
+    /* border: 1px solid black; */
+}
+
+.footer-middle-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.middle-phone{
+    display: flex;
+}
+
+.middle-email{
+    display: flex;
+    gap: 10px;
+}
+
+.middle-social ul{
+    margin-top: 30px;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    padding: 0px;
+
+}
+
+.footer-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-right-links ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    padding: 0px;
+}
+
+.footer-right-links ul a{
+    text-decoration: none;
+    color: var(--color-black-solid, #000);
+    color: var(--color-black-solid, #000);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px; /* 150% */
+    letter-spacing: 0.5px;
+}
+
+.fotter-left h1{
+    color: var(--color-black-solid, #000);
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 27px; /* 112.5% */
+letter-spacing: 0.5px;
+
+margin-bottom: 40px;
+}
+
+.fotter-left h4{
+    color: var(--color-black-solid, #000);
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 27px; /* 150% */
+letter-spacing: 0.5px;
+}
+
+.footer-middle h1{
+    margin-bottom: 40px;
+    color: var(--color-black-solid, #000);
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 27px; /* 112.5% */
+letter-spacing: 0.5px;
+}
+
+.footer-middle h4{
+    color: var(--color-black-solid, #000);
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 27px; /* 150% */
+letter-spacing: 0.5px;
+}
+
+.footer-right h1{
+    margin-bottom: 40px;
+    color: var(--color-black-solid, #000);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27px; /* 112.5% */
+    letter-spacing: 0.5px;
+}
+
+
+@media (max-width: 768px) {
+
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        /* align-items: center; */
+        /* border: 1px solid black; */
+    }
+}

@@ -1,0 +1,77 @@
+/* .container1 {
+    padding: 1.5rem;
+    background-color: #f7fafc;
+    border-radius: 0.5rem;
+    max-width: 24rem;
+    margin: 0 auto;
+  } */
+  
+
+  .filter-container{
+    border-radius: var(--radius-10, 10px);
+background: var(--Boss-White, #F8F8F8);
+height: 500px;
+padding: 68px 49px;
+  }
+  .selected-filters {
+    margin-bottom: 1rem;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .filter-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #2d3748;
+    background-color: transparent;
+    border: 1px solid #7B0801;
+    border-radius: 9999px;
+  }
+  
+  .remove-btn {
+    margin-left: 0.25rem;
+    /* color: #718096; */
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .remove-btn:hover {
+    color: #4a5568;
+  }
+  
+  .clear-btn {
+    margin-left: 1rem;
+    font-size: 0.875rem;
+    color: #e53e3e;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .clear-btn:hover {
+    text-decoration: underline;
+  }
+  
+  .checkbox-container {
+    margin-top: 0.5rem;
+  }
+  
+  .checkbox-label {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .form-checkbox {
+    margin-right: 0.5rem;
+  }
+  
+  .checkbox-text {
+    margin-left: 0.5rem;
+  }
