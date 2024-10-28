@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import "../../style/home/Navbar1.css";
 import logo from '../../../public/images/logo.png'
+import {Link} from 'react-router-dom';
 
 
 const Navbar1 = () => {
@@ -45,43 +46,43 @@ const Navbar1 = () => {
 
         <div className="nav-space">
           <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
-            <a
-              href="/"
+            <Link
+              to="/"
               className={`nav-link ${activeLink === "home" ? "active" : ""}`}
               onClick={() => handleNavClick("home")}
             >
               Home
-            </a>
-            <a
-              href="/vac"
+            </Link>
+            <Link
+              to="/vac"
               className={`nav-link ${
                 activeLink === "vacancies" ? "active" : ""
               }`}
               onClick={() => handleNavClick("vacancies")}
             >
               Vacancies
-            </a>
+            </Link>
 
             {/* Candidates Dropdown */}
             <div
               className="nav-link dropdown"
               onClick={() => toggleDropdown("candidates")}
             >
-              <a
-                href="#"
+              <Link
+                to="#"
                 className={`nav-link ${
                   activeLink === "candidates" ? "active" : ""
                 }`}
                 onClick={() => handleNavClick("candidates")}
               >
                 Candidates
-              </a>
+              </Link>
               {dropdownOpen.candidates && (
                 <div className="dropdown-content">
-                  <a href="/candidate">Job Application Process</a>
-                  <a href="/candidate1">Job Application Tips</a>
-                  <a href="/candidate-star">STAR-Method</a>
-                  <a href="/candidate-ExamCv">Example CV</a>
+                  <Link to="/candidate">Job Application Process</Link>
+                  <Link to="/candidate1">Job Application Tips</Link>
+                  <Link to="/candidate-star">STAR-Method</Link>
+                  <Link to="/candidate-ExamCv">Example CV</Link>
                 </div>
               )}
             </div>
@@ -91,31 +92,31 @@ const Navbar1 = () => {
               className="nav-link dropdown"
               onClick={() => toggleDropdown("clients")}
             >
-              <a
-                href="#clients"
+              <Link
+                to="#clients"
                 className={`nav-link ${
                   activeLink === "clients" ? "active" : ""
                 }`}
                 onClick={() => handleNavClick("clients")}
               >
                 Clients
-              </a>
+              </Link>
               {dropdownOpen.clients && (
                 <div className="dropdown-content">
-                  <a href="/client-procesure">The Procedure</a>
-                  <a href="/client-services">Our Services</a>
-                  <a href="#sourcing">Sourcing Talent</a>
+                  <Link to="/client-procesure">The Procedure</Link>
+                  <Link to="/client-services">Our Services</Link>
+                  <Link to="#sourcing">Sourcing Talent</Link>
                 </div>
               )}
             </div>
 
-            <a
-              href="#about"
+            <Link
+              to="#about"
               className={`nav-link ${activeLink === "about" ? "active" : ""}`}
               onClick={() => handleNavClick("about")}
             >
               About Us
-            </a>
+            </Link>
           </nav>
           <button className="contact-btn desktop">Contact Us</button>
         </div>
