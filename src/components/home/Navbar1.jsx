@@ -131,40 +131,56 @@ const Navbar1 = () => {
       {menuOpen && (
         <div className="mobile-menu">
           <nav className="mobile-nav-links">
-            <a
-              href="#home"
+            <Link
+              to="/"
               className={`mobile-nav-link ${
                 activeLink === "home" ? "active" : ""
               }`}
               onClick={() => handleNavClick("home")}
             >
               Home
-            </a>
-            <a
-              href="#vacancies"
+            </Link>
+            <Link
+              to="/vac"
               className={`mobile-nav-link ${
                 activeLink === "vacancies" ? "active" : ""
               }`}
               onClick={() => handleNavClick("vacancies")}
             >
               Vacancies
-            </a>
+            </Link>
 
             <div
               className="mobile-nav-link dropdown"
               onClick={() => toggleDropdown("candidates")}
             >
               Candidates
+
+
+              {/* <div className="dropdown-content">
+                  <Link to="/candidate">Job Application Process</Link>
+                  <Link to="/candidate1">Job Application Tips</Link>
+                  <Link to="/candidate-star">STAR-Method</Link>
+                  <Link to="/candidate-ExamCv">Example CV</Link>
+                </div> */}
               <div
                 className="dropdown-content mobile"
                 style={{ display: dropdownOpen.candidates ? "block" : "none" }}
               >
-                <a href="#apply" onClick={() => setMenuOpen(false)}>
-                  Apply Now
-                </a>
-                <a href="#opportunities" onClick={() => setMenuOpen(false)}>
-                  Opportunities
-                </a>
+                <Link to="/candidate" onClick={() => setMenuOpen(false)}>
+                Job Application Process
+                </Link>
+                <Link to="/candidate1" onClick={() => setMenuOpen(false)}>
+                Job Application Tips
+                </Link>
+
+                <Link to="/candidate-star" onClick={() => setMenuOpen(false)}>
+                STAR-Method
+                </Link>
+
+                <Link to="/candidate-ExamCv" onClick={() => setMenuOpen(false)}>
+                Example CV
+                </Link>
               </div>
             </div>
 
@@ -173,19 +189,22 @@ const Navbar1 = () => {
               onClick={() => toggleDropdown("clients")}
             >
               Clients
+              {/* <Link to="/client-procesure">The Procedure</Link>
+                  <Link to="/client-services">Our Services</Link>
+                  <Link to="#sourcing">Sourcing Talent</Link> */}
               <div
                 className="dropdown-content mobile"
                 style={{ display: dropdownOpen.clients ? "block" : "none" }}
               >
-                <a href="#procedure" onClick={() => setMenuOpen(false)}>
+                <Link to="/client-procesure" onClick={() => setMenuOpen(false)}>
                   The Procedure
-                </a>
-                <a href="#services" onClick={() => setMenuOpen(false)}>
+                </Link>
+                <Link to="/client-services" onClick={() => setMenuOpen(false)}>
                   Our Services
-                </a>
-                <a href="#sourcing" onClick={() => setMenuOpen(false)}>
+                </Link>
+                <Link to="#sourcing" onClick={() => setMenuOpen(false)}>
                   Sourcing Talent
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -209,7 +228,7 @@ const Navbar1 = () => {
               )}
             </div> */}
 
-            <a
+            <Link
               href="#about"
               className={`mobile-nav-link ${
                 activeLink === "about" ? "active" : ""
@@ -217,7 +236,7 @@ const Navbar1 = () => {
               onClick={() => handleNavClick("about")}
             >
               About Us
-            </a>
+            </Link>
             <button className="contact-btn mobile">Contact Us</button>
           </nav>
         </div>
