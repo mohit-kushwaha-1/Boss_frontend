@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../style/details/DetailsHero.css";
+import "../../style/DetailsHero.css";
 import logo1 from "../../../public/images/logo1.png";
 import { baseUrl } from "../helper/helper";
 const DetailsHero = ({ data }) => {

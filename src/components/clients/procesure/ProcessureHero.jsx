@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../style/client/procesure/ProcessureHero.css'
+import '../../../style/ProcessureHero.css'
 const ProcessureHero = () => {
   return (
    <div className='client-processure-container'>
