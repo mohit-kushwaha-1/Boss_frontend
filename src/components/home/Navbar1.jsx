@@ -245,7 +245,7 @@ const Navbar1 = () => {
                   <Link to="#sourcing">Sourcing Talent</Link> */}
               <div
                 className="dropdown-content mobile"
-                style={{ display: dropdownOpen.clients ? "block" : "none" }}
+                style={{ display: dropdownOpen.about ? "block" : "none" }}
               >
                 <Link to="/about-working" onClick={() => setMenuOpen(false)}>
                 Working As Boss
