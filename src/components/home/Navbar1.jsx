@@ -94,7 +94,7 @@ const Navbar1 = () => {
               onClick={() => toggleDropdown("clients")}
             >
               <Link
-                to="#clients"
+                to="#"
                 className={`nav-link ${
                   activeLink === "clients" ? "active" : ""
                 }`}
@@ -117,7 +117,7 @@ const Navbar1 = () => {
               onClick={() => toggleDropdown("about")}
             >
               <Link
-                to="#about"
+                to="#"
                 className={`nav-link ${
                   activeLink === "about" ? "active" : ""
                 }`}
