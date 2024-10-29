@@ -1,0 +1,37 @@
+/* services-container-example */
+.sourcing-container-example{
+    background-image: url('../../public/images/c44.png'); /* Replace with the actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 20px;
+}
+
+.candidate-container-content{
+     padding-left: 10%;
+}
+
+
+.candidate-container-content h1{
+    color: var(--Boss-White, #F8F8F8);
+font-family: Nunito;
+font-size: 52px;
+font-style: normal;
+font-weight: 700;
+line-height: 60px; /* 115.385% */
+}
+
+@media (max-width: 768px) {
+    .candidate-container{
+        height: 60vh;
+    }
+
+    .candidate-container-content h1{
+        font-size: 30px;
+    }
+
+
+}

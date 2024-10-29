@@ -11,6 +11,7 @@ const Navbar1 = () => {
   const [dropdownOpen, setDropdownOpen] = useState({
     clients: false,
     candidates: false,
+    about:false,
   });
 
   const handleNavClick = (link) => {
@@ -105,18 +106,42 @@ const Navbar1 = () => {
                 <div className="dropdown-content">
                   <Link to="/client-procesure">The Procedure</Link>
                   <Link to="/client-services">Our Services</Link>
-                  <Link to="#sourcing">Sourcing Talent</Link>
+                  <Link to="/client-soucing">Sourcing Talent</Link>
                 </div>
               )}
             </div>
 
-            <Link
+
+            <div
+              className="nav-link dropdown"
+              onClick={() => toggleDropdown("about")}
+            >
+              <Link
+                to="#about"
+                className={`nav-link ${
+                  activeLink === "about" ? "active" : ""
+                }`}
+                onClick={() => handleNavClick("about")}
+              >
+                About Us
+              </Link>
+              {dropdownOpen.about && (
+                <div className="dropdown-content">
+                  <Link to="/about-working">Working As Boss</Link>
+                  <Link to="/about-privacy">About Us Privacy</Link>
+                  <Link to="/about-contact">Contact Us</Link>
+                  <Link to="/about-direction">Direction</Link>
+                </div>
+              )}
+            </div>
+
+            {/* <Link
               to="#about"
               className={`nav-link ${activeLink === "about" ? "active" : ""}`}
               onClick={() => handleNavClick("about")}
             >
               About Us
-            </Link>
+            </Link> */}
           </nav>
           <button className="contact-btn desktop">Contact Us</button>
         </div>
@@ -202,8 +227,38 @@ const Navbar1 = () => {
                 <Link to="/client-services" onClick={() => setMenuOpen(false)}>
                   Our Services
                 </Link>
-                <Link to="#sourcing" onClick={() => setMenuOpen(false)}>
+                <Link to="/client-soucing" onClick={() => setMenuOpen(false)}>
                   Sourcing Talent
+                </Link>
+              </div>
+            </div>
+
+
+
+            <div
+              className="mobile-nav-link dropdown"
+              onClick={() => toggleDropdown("about")}
+            >
+              About Us
+              {/* <Link to="/client-procesure">The Procedure</Link>
+                  <Link to="/client-services">Our Services</Link>
+                  <Link to="#sourcing">Sourcing Talent</Link> */}
+              <div
+                className="dropdown-content mobile"
+                style={{ display: dropdownOpen.clients ? "block" : "none" }}
+              >
+                <Link to="/about-working" onClick={() => setMenuOpen(false)}>
+                Working As Boss
+                </Link>
+                <Link to="/about-privacy" onClick={() => setMenuOpen(false)}>
+                About Us Privacy
+                </Link>
+                <Link to="/about-contact" onClick={() => setMenuOpen(false)}>
+                Contact Us
+                </Link>
+
+                <Link to="/about-direction" onClick={() => setMenuOpen(false)}>
+                Direction
                 </Link>
               </div>
             </div>
@@ -228,7 +283,7 @@ const Navbar1 = () => {
               )}
             </div> */}
 
-            <Link
+            {/* <Link
               href="#about"
               className={`mobile-nav-link ${
                 activeLink === "about" ? "active" : ""
@@ -236,7 +291,7 @@ const Navbar1 = () => {
               onClick={() => handleNavClick("about")}
             >
               About Us
-            </Link>
+            </Link> */}
             <button className="contact-btn mobile">Contact Us</button>
           </nav>
         </div>

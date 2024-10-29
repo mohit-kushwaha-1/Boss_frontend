@@ -9,6 +9,11 @@ import StartMain from "./components/candidates/star/StartMain";
 import ExampleCv from "./components/candidates/ExampCv/ExampleCv";
 import Procesure from "./components/clients/procesure/Procesure";
 import Services from "./components/clients/services/Services";
+import Sourcing from "./components/clients/sourcing/Sourcing";
+import Working from "./components/aboutUs/working/Working";
+import Privacy from "./components/aboutUs/privacy/Privacy";
+import Direction from "./components/aboutUs/direction/Direction";
+import ContactUs from "./components/aboutUs/contactUs/ContactUs";
 const App = () => {
   return (
     <div>
@@ -22,6 +27,11 @@ const App = () => {
         <Route path="/candidate-ExamCv" element={<ExampleCv />} />
         <Route path="/client-procesure" element={<Procesure />} />
         <Route path="/client-services" element={<Services />} />
+        <Route path="/client-soucing" element={<Sourcing />} />
+        <Route path="/about-working" element={<Working />} />
+        <Route path="/about-privacy" element={<Privacy />} />
+        <Route path="/about-direction" element={<Direction />} />
+        <Route path="/about-contact" element={<ContactUs />} />
       </Routes>
     </div>
   );

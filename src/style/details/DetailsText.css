@@ -1,5 +1,5 @@
 .detail-text-container{
-    width: 70%;
+    width: 80%;
     margin: auto;
     margin-top: 30px;
     /* border: 1px solid black; */
@@ -8,7 +8,7 @@
 .details-content-container{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    /* gap: 30px; */
 }
 
 .details-content-container-heading h1{

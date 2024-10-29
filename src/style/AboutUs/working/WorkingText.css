@@ -1,0 +1,60 @@
+.working-main-container{
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.working-content h1{
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+text-align: left;
+font-family: "Nunito Sans";
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: var(--line-height-59, 59px); /* 122.917% */
+}
+
+.working-content h4{
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+text-align: justify;
+font-family: "Nunito Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 48px; /* 200% */
+}
+
+.working-content h3{
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+font-family: "Nunito Sans";
+text-align: left;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: var(--line-height-59, 59px); /* 147.5% */
+}
+
+.working-content button{
+    display: flex;
+padding: var(--Spacing-spacing-150, 12px) 24px;
+justify-content: center;
+align-items: center;
+gap: var(--Clock1-Time-Hour-1, 6px);
+border-radius: 10px;
+border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
+background: var(--Boss-White, #F8F8F8);
+box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
+color: var(--Boss, #7B0801);
+text-align: center;
+font-family: Nunito;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.working-content button:hover{
+background-color: #7B0801;
+color: white;
+}

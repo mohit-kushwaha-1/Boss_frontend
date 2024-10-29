@@ -1,0 +1,85 @@
+/* Container for the entire layout */
+.addres-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 40px;
+    margin-bottom: 40px;
+    /* height: 100vh; */
+  }
+  
+  /* Address box styling */
+  .address-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* max-width: 400px; */
+    width: 40%;
+    margin-bottom: 20px;
+    background: var(--www-independentrecruiters-nl-white, #FFF);
+   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Text styles */
+  .address-box h3 {
+    margin-bottom: 10px;
+  }
+  
+  .address-box p {
+    margin: 5px 0;
+  }
+
+  .address-box h1{
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+font-family: "Nunito Sans";
+font-size: 46.484px;
+font-style: normal;
+font-weight: var(--font-weight-700, 700);
+line-height: var(--line-height-59, 59px); /* 126.924% */
+  }
+
+  .address-box h3{
+    color: var(--color-black-solid, #000);
+    text-align: left;
+font-family: Nunito;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 48px; /* 150% */
+  }
+
+  .address-box h4{
+    color: var(--color-black-solid, #000);
+font-family: "Nunito Sans";
+font-size: 28px;
+font-style: normal;
+font-weight: 500;
+line-height: 42px; /* 150% */
+  }
+
+  
+  
+  /* Map container */
+  .map-box {
+    flex: 1;
+    min-width: 300px;
+    height: 600px;
+    /* border-radius: 10px; */
+    overflow: hidden;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .addres-container {
+      flex-direction: column;
+    }
+  
+    .address-box{
+        width: 100%;
+        /* border: 1px solid black; */
+    }
+    
+  }
+  

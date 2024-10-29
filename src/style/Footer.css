@@ -1,6 +1,9 @@
 .footer-container{
-    width: 90%;
+    width: 100%;
     margin: auto;
+    border-top: 1px solid black;
+    border-top: var(--stroke-weight-1, 1px) solid #000;
+    padding: 30px;
    
 }
 
