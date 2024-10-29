@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../style/candidate/page1/CandidateHero1.css'
+import '../../../style/CandidateHero1.css'
 const CandidateHero1 = () => {
   return (
     <div className='candidate-container1'>

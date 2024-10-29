@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../style/candidate/star/StarHero.css'
+import '../../../style/StarHero.css'
 const StarHero = () => {
   return (
     <div>

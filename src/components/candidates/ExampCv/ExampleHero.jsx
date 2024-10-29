@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../style/candidate/ExampleCv/ExampleHero.css'
+import '../../../style/ExampleHero.css'
 const ExampleHero = () => {
   return (
     <div>
