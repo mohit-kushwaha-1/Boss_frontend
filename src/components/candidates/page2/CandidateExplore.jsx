@@ -1,6 +1,6 @@
 import React from "react";
 // import "../../style/home/Explor.css";
-import '../../../style/candidate/page1/CandidateExplor.css'
+import '../../../style/CandidateExplor.css'
 const CandidateExplore = () => {
   return (
     <>

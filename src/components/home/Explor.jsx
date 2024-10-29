@@ -1,5 +1,5 @@
 import React from "react";
-import "../../style/home/Explor.css";
+import "../../style/Explor.css";
 const Explor = () => {
   return (
     <>
