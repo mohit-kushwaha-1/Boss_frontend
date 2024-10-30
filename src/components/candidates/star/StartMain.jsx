@@ -8,9 +8,9 @@ const StartMain = () => {
   return (
     <>
         <Navbar1/>
-
+        <StarHero/>
         <div className='container'>
-            <StarHero/>
+            
             <StartText/>
             <CandidateExplore/>
             <Footer/>

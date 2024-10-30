@@ -7,8 +7,9 @@ const ExampleCv = () => {
   return (
     <>
           <Navbar1/>
+          <ExampleHero/>
           <div className='container'>
-            <ExampleHero/>
+
             <ExampleText/>
                <Footer/>
           </div>

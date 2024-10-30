@@ -7,9 +7,9 @@ const Procesure = () => {
   return (
     <>
        <Navbar1/>
-
+       <ProcessureHero/>
        <div className='container'>
-            <ProcessureHero/>
+            
             <ProcesureText/>
             <Footer/>
        </div>

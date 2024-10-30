@@ -9,8 +9,9 @@ const CandidatePage1 = () => {
     <>
 
     <Navbar1/>
+    <CandidateHero1/>
          <div className='container'>
-              <CandidateHero1/>
+              
               <CandidateDetails1/>
               <CandidateExplore/>
               <Footer/>

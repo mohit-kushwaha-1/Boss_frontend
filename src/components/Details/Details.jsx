@@ -40,9 +40,10 @@ const Details = () => {
 
     <>
     <Navbar1/>
+    <DetailsHero data={data}/>
     <div className='container'>
              <div className='details-container'>
-               <DetailsHero data={data}/>
+              
                <DetailsText  data={data}/>
                {/* <DetailsForm/> */}
                <ApplicationForm/>

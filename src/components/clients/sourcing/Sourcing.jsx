@@ -8,9 +8,9 @@ const Sourcing = () => {
   return (
     <>
        <Navbar1/>
-
+       <SourcingHero/>
        <div className='container'>
-             <SourcingHero/>
+
              <SourcingText/>
              <SourcingForm/>
              <Footer/>

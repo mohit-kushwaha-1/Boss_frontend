@@ -7,8 +7,9 @@ const Services = () => {
   return (
     <>
       <Navbar1/>
+      <ServicesHero/>
     <div className='container'>
-        <ServicesHero/>
+
         <ServicesText/>
         <Footer/>
     </div>

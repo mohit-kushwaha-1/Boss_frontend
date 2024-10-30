@@ -7,9 +7,9 @@ const Working = () => {
   return (
     <>
         <Navbar1/>
-
+        <WorkingHero/>
         <div className='container'>
-            <WorkingHero/>
+            
             <WorkingText/>
            <Footer/>
         </div>

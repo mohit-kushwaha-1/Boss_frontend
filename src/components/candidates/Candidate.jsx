@@ -7,8 +7,9 @@ const Candidate = () => {
   return (
     <>
        <Navbar1/>
+       <CandidateHero/>
         <div className='container'>
-            <CandidateHero/>
+
             <CandidateDetails/>
             <Footer/>
         </div>

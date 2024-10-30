@@ -8,8 +8,9 @@ const ContactUs = () => {
   return (
     <>
         <Navbar1/>
+        <ContactUsHero/>
         <div className='container'>
-            <ContactUsHero/>
+            
             <ContactForm/>
              <Footer/>
         </div>
