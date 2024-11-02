@@ -1,6 +1,16 @@
 import React from "react";
 import "../../style/home/seeking.css";
+import { useNavigate } from "react-router-dom";
 const Seeking = () => {
+  const navigate = useNavigate()
+  const handleMove = ()=>{
+    navigate('/vac')
+  }
+
+  const handleClient = ()=>{
+    navigate('/client-soucing')
+  }
+
   return (
     <div>
       <div className="seeking-container">
@@ -30,7 +40,7 @@ const Seeking = () => {
               />
             </svg>
           </div>
-          <div className="seeking-button2">
+          <div className="seeking-button2" onClick={handleClient}>
             <h6>Important Notice: Stay Vigilant Against Scammers!</h6>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +67,7 @@ const Seeking = () => {
           </div>
         </div>
         <div className="seeking-nav-box">
-          <div className="seeking-nav-box1">
+          <div className="seeking-nav-box1" onClick={handleMove}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="69"
@@ -77,7 +87,7 @@ const Seeking = () => {
           </div>
 
 
-          <div className="seeking-nav-box1">
+          <div className="seeking-nav-box1" onClick={handleMove}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="69"
@@ -100,7 +110,7 @@ const Seeking = () => {
           </div>
 
 
-          <div className="seeking-nav-box1">
+          <div className="seeking-nav-box1" onClick={handleMove}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="69"
@@ -123,7 +133,7 @@ const Seeking = () => {
 
 
 
-          <div className="seeking-nav-box1">
+          <div className="seeking-nav-box1" onClick={handleMove}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="69"

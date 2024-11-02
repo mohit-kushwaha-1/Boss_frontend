@@ -1,6 +1,12 @@
 import React from "react";
 import "../../style/HeroHome.css";
+import { useNavigate } from "react-router-dom";
 const HeroHome = () => {
+
+  const navigate = useNavigate()
+  const handlevac = ()=>{
+    navigate('/vac')
+  }
   return (
     <div>
       <div className="hero-section1">
@@ -11,7 +17,7 @@ const HeroHome = () => {
             talent with opportunity.
           </h2>
           <div className="search-bar">
-            <div className="search-button">
+            <div className="search-button" onClick={handlevac}>
               <h4>Browse All Opportunities</h4>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

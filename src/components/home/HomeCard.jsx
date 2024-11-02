@@ -3,15 +3,20 @@ import { MdArrowOutward } from "react-icons/md";
 import { FaMapMarkerAlt, FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import '../../style/home/homeCard.css'
 import img1 from '../../../public/images/img1.png'
-
+import { useNavigate } from "react-router-dom";
 const HomeCard1 = () => {
+
+  const navigate = useNavigate()
+  const handlevac = ()=>{
+    navigate('/vac')
+  }
   return (
     <div className="app-container">
       <div className="header">
         <h1 className="title">
           Ready to Take Your Career to the Next Level?
         </h1>
-        <button className="browse-button">
+        <button className="browse-button" onClick={handlevac}>
           Browse All Opportunities
           <MdArrowOutward className="icon" />
         </button>
