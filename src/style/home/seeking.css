@@ -1,7 +1,7 @@
 
 
 .seeking-container{
-    width: 70%;
+    width: 80%;
     /* border: 1px solid black; */
     margin: auto;
     margin-top: 30px;
@@ -78,7 +78,19 @@ line-height: normal;
 
 .seeking-button2:hover{
     background-color: #7B0801;
+
+}
+.seeking-button2:hover h6{
+
     color: #F8F8F8;
+    cursor: pointer;
+}
+.seeking-button2 svg{
+    color: black !important
+}
+.seeking-button2:hover svg >path{
+
+    stroke: #F8F8F8;
     cursor: pointer;
 }
 
@@ -97,7 +109,7 @@ align-items: center;
     display: flex;
 width: var(--height-170, 170px);
 height: var(--height-170, 170px);
-padding: 2px;
+padding: 10px;
 flex-direction: column;
 justify-content: center;
 align-items: center;
@@ -107,8 +119,82 @@ border: var(--stroke-weight-2, 2px) solid var(--www-independentrecruiters-nl-ebo
 background: var(--color-white-solid, #FFF);
 }
 
+.retailer{
+    width: 70%;
+    margin: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.retailer h6{
+    align-items: center;
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+text-align: center;
+
+/* www.independentrecruiters.nl/Semantic/Heading 3 */
+font-family: var(--font-family-Font-1, Inter);
+font-size: 15.5px;
+font-style: normal;
+font-weight: var(--font-weight-500, 500);
+line-height: var(--line-height-17_6, 17.6px); /* 113.548% */
+}
+
 .seeking-nav-box1:hover{
     background-color: #7B0801;
     color: #F8F8F8;
     cursor: pointer;
+}
+
+.seeking-nav-box1:hover .retailer h6{
+    color: white;
+}
+
+.seeking-nav-box1:hover svg >path{
+
+    stroke: #F8F8F8;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+    .seeking-button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .seeking-nav-box{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .seeking-nav-box1{
+        width: var(--height-170, 250px);
+        height: var(--height-170, 250px);
+    }
+
+    .seeking-button1{
+        padding: 5px;
+    }
+
+    .seeking-button1 h6{
+        font-size: 15px;
+    }
+
+    .seeking-button2{
+        padding: 5px;
+    }
+
+    .seeking-button2 h6{
+        font-size: 15px;
+    }
+
 }

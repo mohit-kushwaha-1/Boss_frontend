@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import "../style/Hero.css";
 import axios from "axios";
 import { baseUrl } from "./helper/helper";
+import { DataContext } from "./context/DataContext";
 import {
   message,
 } from "antd";
@@ -10,6 +11,7 @@ const App = ({setSearchValue,setSearchData,setSearching,filter,setSearchFuction}
 
 const[search,setSearch] = useState();
 console.log("searhc is",search);
+const { dataNow, setDataNow, loading, setLoading } = useContext(DataContext);
 setSearchValue(search)
 
 
@@ -20,25 +22,31 @@ const handle = async()=>{
            console.log("search data is now",response.data.job)
 
            if(response.data){
-            // setSearchData(response.data.job)
-            setSearching(true);
-
-            if (filter.length > 0) {
-
-              console.log("inside filter data")
-              const data = response.data.job;
-              const filterdata = data.filter((item) => {
-                return filter.some((filterItem) => item?.category === filterItem);
-              });
-              console.log("filterdata",filterdata);
-              setSearchData(filterdata)
-              // handle();
-            }
-            else{
-              setSearchData(response.data.job)
-              message.success("search data succesfully")
-            }
+            setDataNow(response.data.job)
+            setLoading(true);
            }
+           
+
+          //  if(response.data){
+          //   // setSearchData(response.data.job)
+          //   setSearching(true);
+
+          //   if (filter.length > 0) {
+
+          //     console.log("inside filter data")
+          //     const data = response.data.job;
+          //     const filterdata = data.filter((item) => {
+          //       return filter.some((filterItem) => item?.category === filterItem);
+          //     });
+          //     console.log("filterdata",filterdata);
+          //     setSearchData(filterdata)
+          //     // handle();
+          //   }
+          //   else{
+          //     setSearchData(response.data.job)
+          //     message.success("search data succesfully")
+          //   }
+          //  }
     } catch (error) {
         console.log(error)
     }

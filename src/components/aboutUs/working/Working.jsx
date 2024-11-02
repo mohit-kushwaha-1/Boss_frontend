@@ -1,18 +1,19 @@
 import React from 'react'
-import Navbar1 from '../../home/Navbar1'
+import Navbar5 from '../../home/Navbar5'
 import Footer from '../../Footer'
 import WorkingHero from './WorkingHero'
 import WorkingText from './WorkingText'
 const Working = () => {
   return (
     <>
-        <Navbar1/>
+        <Navbar5/>
         <WorkingHero/>
         <div className='container'>
             
             <WorkingText/>
-           <Footer/>
+
         </div>
+        <Footer/>
     </>
   )
 }

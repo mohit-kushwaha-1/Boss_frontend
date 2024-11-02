@@ -14,7 +14,7 @@ const DetailsHero = ({ data }) => {
               <img
                 src={logo1}
                 alt=""
-                style={{ width: "100px", height: "100px" }}
+                // style={{ width: "100px", height: "100px" }}
               />
             </div>
 
@@ -51,7 +51,7 @@ const DetailsHero = ({ data }) => {
               </div>
 
               <div className="search-button1">
-                <h4>Apply</h4>
+                <h4>Apply Now</h4>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

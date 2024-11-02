@@ -4,7 +4,7 @@ import '../../../style/AboutUs/direction/AddressMap.css'
 
 const AddressMap = () => {
   return (
-    <div className="addres-container">
+    <div className="addres-container" style={{marginTop:"80px"}}>
       <div className="address-box">
         <h1>Address</h1>
         <h3>Boss Recruitment</h3>

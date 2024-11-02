@@ -87,11 +87,14 @@ line-height: normal;
 
     .hero-section{
         height: 60vh;
+        width: 100%;
     }
+
+    
     .hero-content {
-      max-width: 100%;
+      width: 100%;
       
-      padding: 20px;
+      /* padding: 20px; */
     }
   
     h1 {

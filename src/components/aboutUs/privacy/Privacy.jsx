@@ -1,17 +1,18 @@
 import React from 'react'
-import Navbar1 from '../../home/Navbar1'
+import Navbar5 from '../../home/Navbar5'
 import Footer from '../../Footer'
 import PrivacyText from './PrivacyText'
 
 const Privacy = () => {
   return (
     <>
-        <Navbar1/>
-        <div className='container'>
+        <Navbar5/>
+        <div className='container' style={{marginTop:"80px"}}>
 
             <PrivacyText/>
-            <Footer/>
+            
         </div>
+        <Footer/>
     </>
   )
 }

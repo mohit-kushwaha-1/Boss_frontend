@@ -30,9 +30,7 @@ const HomeCard = () => {
 
             <div className="details">
               <ul className="job-details">
-                <li className="detail-item">
-                  <FaMapMarkerAlt className="icon-detail" /> Noord Holland
-                </li>
+
                 <li className="detail-item">
                   <FaBriefcase className="icon-detail" /> Full Time
                 </li>
@@ -62,9 +60,7 @@ const HomeCard = () => {
 
             <div className="details">
               <ul className="job-details">
-                <li className="detail-item">
-                  <FaMapMarkerAlt className="icon-detail" /> Noord Holland
-                </li>
+               
                 <li className="detail-item">
                   <FaBriefcase className="icon-detail" /> Full Time
                 </li>
@@ -96,9 +92,7 @@ const HomeCard = () => {
 
             <div className="details">
               <ul className="job-details">
-                <li className="detail-item">
-                  <FaMapMarkerAlt className="icon-detail" /> Noord Holland
-                </li>
+                
                 <li className="detail-item">
                   <FaBriefcase className="icon-detail" /> Full Time
                 </li>

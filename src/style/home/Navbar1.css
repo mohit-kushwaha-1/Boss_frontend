@@ -1,7 +1,13 @@
 .navbar1 {
+  
+  top: 0px;
+  left: 0px;
+  right: 0px;
   background-color: white;
   padding: 1rem;
   position: relative;
+  position: fixed;
+  z-index: 99;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
@@ -10,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* overflow-x: hidden; */
 }
 
 /* Logo */
@@ -40,6 +47,14 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 letter-spacing: 0.5px;
+color: var(--Boss-Black, var(--color-grey-7, #111));
+font-family: "Nunito Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.5px;
+/* color: red; */
 }
 
 
@@ -80,10 +95,10 @@ line-height: normal;
 
 }
 
-/* .contact-btn:hover {
-  background-color: #e60023;
+.contact-btn:hover {
+  background-color:#7B0801;
   color: white;
-} */
+}
 
 .contact-btn.desktop {
   display: none;

@@ -7,9 +7,10 @@ const Filter = ({setFilter,searching,searchFunction}) => {
 
  
   const [options, setOptions] = React.useState([
-    { label: "Hospitality", checked: false },
-    { label: "Engineering", checked: false },
-    { label: "Finance", checked: false },
+    { label: "Retail and Customer Service", checked: false },
+    { label: "Logistics and Warehousing", checked: false },
+    { label: "Hospitality and Administrative Roles", checked: false },
+    { label: "Supervisory and Management Positions", checked: false },
   ]);
 
   setFilter(selectedFilters);

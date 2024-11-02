@@ -1,5 +1,5 @@
 import React ,{useState,useEffect}from 'react'
-import Navbar1 from '../home/Navbar1'
+import Navbar2 from '../home/Navbar2'
 import DetailsHero from './DetailsHero'
 import { baseUrl } from '../helper/helper'
 import DetailsText from './DetailsText'
@@ -39,7 +39,7 @@ const Details = () => {
   return (
 
     <>
-    <Navbar1/>
+    <Navbar2/>
     <DetailsHero data={data}/>
     <div className='container'>
              <div className='details-container'>
@@ -47,9 +47,10 @@ const Details = () => {
                <DetailsText  data={data}/>
                {/* <DetailsForm/> */}
                <ApplicationForm/>
-               <Footer/>
+               
              </div>
     </div>
+    <Footer/>
 
     </>
   )

@@ -11,14 +11,16 @@ const Home = () => {
     <>
       <Navbar1/>
       <HeroHome/>
+      
        <div className='container'>
             
             <Seeking/>
             <HomeCard1/>
             {/* <Testinomial/> */}
-            <Explor/>
-            <Footer/>
+            
        </div>
+       <Explor/>
+      <Footer/>
     </>
   )
 }

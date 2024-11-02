@@ -61,7 +61,7 @@ const SourcingText = () => {
                 </div>
 
                 <div className='souncing-text-content-text'>
-                     <Link to="#">View Detailed Process- Click Here</Link>
+                     <Link to="/client-procesure">View Detailed Process- Click Here</Link>
                 </div>
 
            </div>

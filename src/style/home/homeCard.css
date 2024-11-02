@@ -1,5 +1,4 @@
 .app-container {
-
     width: 80%;
     margin: auto;
     background-color: white;
@@ -37,13 +36,18 @@ box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 
     cursor: pointer;
     color: var(--Boss, #7B0801);
 text-align: center;
-font-family: Nunito;
+font-family: "Nunito Sans";
 font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 margin: auto;
 margin-bottom: 40px;
+  }
+
+  .browse-button:hover{
+    background-color: #7B0801;
+    color: white;
   }
   
   .browse-button .icon {
@@ -58,6 +62,11 @@ margin-bottom: 40px;
     justify-content: center;
     padding: 0;
   }
+
+  .vacancy-button:hover{
+    background-color: #7B0801;
+    color: white;
+  }
   
   @media (min-width: 640px) {
     .job-cards {
@@ -68,6 +77,10 @@ margin-bottom: 40px;
   @media (min-width: 1024px) {
     .job-cards {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    .title{
+      font-size: 25px;
     }
   }
   

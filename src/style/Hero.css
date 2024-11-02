@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
   }
   
   .hero-section {
@@ -44,6 +45,7 @@ line-height: 60px; /* 115.385% */
     margin-top: 20%;
     color: var(--Boss-White, #F8F8F8);
 font-family: Nunito;
+text-align: left;
 font-size: 40px;
 font-style: normal;
 font-weight: 600;
@@ -102,11 +104,11 @@ line-height: normal;
       padding: 20px;
     }
   
-    h1 {
-      font-size: 28px;
+    .hero-content h1 {
+      font-size: 20px;
     }
   
-    h2 {
+    .hero-content h2 {
       font-size: 20px;
     }
   

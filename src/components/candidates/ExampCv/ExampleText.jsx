@@ -13,26 +13,26 @@ const ExampleText = () => {
             simple: to provide a clear overview of your work experience,
             education, and skills. This enables employers to quickly determine
             if your profile aligns with the job requirements and decide whether
-            to invite you for an interview.<br/> Unfortunately, many candidates make
+            to invite you for an interview.<br/><br/> Unfortunately, many candidates make
             common mistakes that hinder their chances of being shortlisted.
             These include including irrelevant information, listing details in a
             purely chronological order, or forgetting to add essential contact
             details. Spelling mistakes and excessive jargon can also make your
-            CV difficult to read. <br/>To avoid these pitfalls, tailor your CV to
+            CV difficult to read. <br/><br/>To avoid these pitfalls, tailor your CV to
             each job application. Highlight the most relevant experience and
             education, and avoid unnecessary details. Make your CV easy to scan
             by using bullet points and ensure your online CV matches the one you
-            submit.<br/>By following these guidelines, you'll create a compelling CV
+            submit.<br/><br/>By following these guidelines, you'll create a compelling CV
             that increases your chances of securing an interview. Below is an
             example of a strong CV, but remember to personalize your own to
             reflect your unique experience and skills.<br/> A standout CV not only
             tells your story but sets you apart from the competition!
           </h4>
         </div>
-
+        <br/>
         <div className="example-text-continer-content-lower">
               <h1>Curriculum Vitae</h1>
-
+              <br/>
               <div>
                    <h2>Personal Information</h2>
                    <ul>
@@ -89,11 +89,8 @@ const ExampleText = () => {
 
               <div>
                    <h2>Internships</h2>
-                   <ul>
-                     <li><h4><span className="span-text">Oct. 2004 – April 2005 </span>ABC Company, Sint Maarten, Responsible for Recruitment etc.
-                     </h4></li>
-                    
-                   </ul>
+                   <h4><span className="span-text">Oct. 2004 – April 2005 </span>ABC Company, Sint Maarten, Responsible for Recruitment etc.
+                   </h4>
               </div>
 
 
@@ -110,10 +107,10 @@ const ExampleText = () => {
               <div>
                    <h2>Languages</h2>
                    <ul>
-                     <li><h4>Dutch native</h4></li>
-                     <li><h4>English fluent</h4></li>
-                     <li><h4>German good</h4></li>
-                     <li><h4>French average</h4></li>
+                     <li><h4>Dutch Native</h4></li>
+                     <li><h4>English Nluent</h4></li>
+                     <li><h4>German Good</h4></li>
+                     <li><h4>French Average</h4></li>
                      
                     
                    </ul>

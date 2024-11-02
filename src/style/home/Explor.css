@@ -42,90 +42,13 @@ margin: 0px;
 padding: 0px;
 }
 
-.explor-container-content-input{
+.explor-container-content-input11{
     display: flex;
-    gap: 20px;
-}
-
-.explor-container-content-input1{
-    padding: 20px;
-    display: flex;
-/* width: 260px; */
-/* height: var(--width-60, 60px); */
-padding: 10px;
-align-items: center;
-flex-shrink: 0;
-border-radius: var(--radius-10, 10px);
-border: var(--height-1, 1px) solid var(--Boss-Text, #8C8C8C);
-background: var(--color-white-solid, #FFF);
-}
-
-.explor-container-content-input1 input{
-    border: none;
-    background-color: transparent;
-    color: var(--Boss-Text, #8C8C8C);
-    text-decoration: none;
-/* www.independentrecruiters.nl/Semantic/Label */
-font-family: var(--font-family-Font-1, Inter);
-font-size: var(--font-size-16, 16px);
-font-style: normal;
-font-weight: var(--font-weight-300, 300);
-line-height: var(--font-size-16, 16px); /* 100% */
+    flex-direction: row;
+    border: 1px solid black;
 }
 
 
-.explor-container-content-input2{
-    padding: 20px;
-    display: flex;
-/* width: 260px; */
-/* height: var(--width-60, 60px); */
-padding: 10px;
-align-items: center;
-flex-shrink: 0;
-border-radius: var(--radius-10, 10px);
-border: var(--height-1, 1px) solid var(--Boss-Text, #8C8C8C);
-background: var(--color-white-solid, #FFF);
-}
 
 
-.explor-container-content-input2 select{
-    border: none;
-    background-color: transparent;
-    color: var(--Boss-Text, #8C8C8C);
-    text-decoration: none;
-/* www.independentrecruiters.nl/Semantic/Label */
-font-family: var(--font-family-Font-1, Inter);
-font-size: var(--font-size-16, 16px);
-font-style: normal;
-font-weight: var(--font-weight-300, 300);
-line-height: var(--font-size-16, 16px); /* 100% */
-}
 
-
-.explor-container-content-input3{
-    padding: 20px;
-    display: flex;
-/* width: 260px; */
-/* height: var(--width-60, 60px); */
-padding: 10px;
-padding-left: 20px;
-padding-right: 20px;
-align-items: center;
-flex-shrink: 0;
-border-radius: var(--radius-10, 10px);
-border: var(--height-1, 1px) solid var(--Boss-Text, #8C8C8C);
-background: var(--color-white-solid, #FFF);
-}
-
-
-.explor-container-content-input3 button{
-    border: none;
-    background-color: transparent;
-    color: var(--Boss, #7B0801);
-    text-align: center;
-    font-family: Nunito;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}

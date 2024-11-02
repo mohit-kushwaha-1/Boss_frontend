@@ -5,9 +5,9 @@ import logo from '../../../public/images/logo.png'
 import {Link} from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
-const Navbar1 = () => {
+const Navbar5 = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("home");
+  const [activeLink, setActiveLink] = useState("about");
   const [dropdownOpen, setDropdownOpen] = useState({
     clients: false,
     candidates: false,
@@ -306,4 +306,4 @@ const Navbar1 = () => {
   );
 };
 
-export default Navbar1;
+export default Navbar5;

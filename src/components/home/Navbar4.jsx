@@ -5,9 +5,9 @@ import logo from '../../../public/images/logo.png'
 import {Link} from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
-const Navbar1 = () => {
+const Navbar4 = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("home");
+  const [activeLink, setActiveLink] = useState("clients");
   const [dropdownOpen, setDropdownOpen] = useState({
     clients: false,
     candidates: false,
@@ -20,6 +20,7 @@ const Navbar1 = () => {
   const handleContact = ()=>{
     navigate('/about-contact')
   }
+
   const handleNavClick = (link) => {
     setActiveLink(link);
     setMenuOpen(false); // Close mobile menu after a link click
@@ -306,4 +307,4 @@ const Navbar1 = () => {
   );
 };
 
-export default Navbar1;
+export default Navbar4;

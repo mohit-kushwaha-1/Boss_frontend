@@ -18,8 +18,10 @@
   }
   
   .form-container h2{
+    width: 100%;
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
 font-family: "Nunito Sans";
+text-align: left;
 font-size: 46.484px;
 font-style: normal;
 font-weight: var(--font-weight-700, 700);
@@ -123,6 +125,18 @@ line-height: normal;
     }
   
     .submit-button {
+      width: 100%;
+    }
+
+    .form-aligh-style{
+       display: flex;
+       flex-direction: column;
+    }
+    .form-aligh-style-left{
+      width: 100%;
+    }
+
+    .form-aligh-style-right{
       width: 100%;
     }
   }

@@ -1,12 +1,43 @@
 import React from 'react';
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Button,message } from 'antd';
 // import './ContactForm.css'; // Import the CSS file
 import '../../../style/AboutUs/contactUs/ContactUsForm.css'
 const { TextArea } = Input;
+import { baseUrl } from '../../helper/helper';
+import axios from 'axios';
 
 const ContactForm = () => {
-  const onFinish = (values) => {
+  const [form] = Form.useForm();
+  const onFinish = async(values) => {
     console.log('Form values:', values);
+// "firstName": "mukesh",
+//     "lastName":"kushwaha",
+//     "phoneNumber":"9889987876",
+//     "email":"mukesh@gmail.com",
+//     "question":"I want to applied job"
+    const postdata = {
+      firstName:values.firstName,
+      lastName:values.lastName,
+      phoneNumber:values.phoneNumber,
+      email:values.email,
+      question:values.yourQuestion,
+    }
+
+    try {
+      const response = await axios.post(`${baseUrl}/api/contacts/createContact`,postdata);
+      console.log("response",response)
+
+      if(response.data.success){
+        message.success("form submmited succesfully")
+        form.resetFields();
+      }
+      else{
+        message.error("error in form submition");
+      }
+  } catch (error) {
+       console.log(error);
+       message.error("error in form submition");
+  }
   };
 
   return (

@@ -61,6 +61,11 @@ background: var(--Boss-White, #F8F8F8);
 box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
     transition: background-color 0.3s;
   }
+
+  .contact-button button:hover{
+    background-color: #7B0801;
+    color: white;
+  }
   
   /* .contact-button button:hover {
     background-color: darkred;

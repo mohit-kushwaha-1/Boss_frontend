@@ -76,7 +76,7 @@ const ApplicationForm = () => {
   return (
     <div className="form-container-main">
       <div className="form-container">
-        <h2>Interested? Send us your application!</h2>
+        <h2>Interested? Send us <br/>your application!</h2>
         <Form layout="vertical" onFinish={onFinish} className="form-content">
           {/* First and Last Name Fields */}
        

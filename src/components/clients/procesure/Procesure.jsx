@@ -1,18 +1,17 @@
 import React from 'react'
-import Navbar1 from '../../home/Navbar1'
+import Navbar4 from '../../home/Navbar4'
 import Footer from '../../Footer'
 import ProcessureHero from './ProcessureHero'
 import ProcesureText from './ProcesureText'
 const Procesure = () => {
   return (
     <>
-       <Navbar1/>
+       <Navbar4/>
        <ProcessureHero/>
        <div className='container'>
-            
-            <ProcesureText/>
-            <Footer/>
+          <ProcesureText/>
        </div>
+       <Footer/>
     </>
   )
 }

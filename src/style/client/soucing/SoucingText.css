@@ -32,12 +32,12 @@ line-height: 48px; /* 150% */
 
 .souncing-text-content-text h3{
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
-text-align: justify;
-font-family: "Nunito Sans";
-font-size: 32px;
-font-style: normal;
-font-weight: 600;
-line-height: 48px; /* 150% */
+    text-align: justify;
+    font-family: "Nunito Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px; /* 200% */
 }
 
 .souncing-text-content-text h4{

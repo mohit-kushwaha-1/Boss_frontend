@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar1 from '../../home/Navbar1'
+import Navbar3 from '../../home/Navbar3'
 import CandidateHero1 from './CandidateHero1'
 import Footer from '../../Footer'
 import CandidateDetails1 from './CandidateDetails1'
@@ -8,14 +8,14 @@ const CandidatePage1 = () => {
   return (
     <>
 
-    <Navbar1/>
+    <Navbar3/>
     <CandidateHero1/>
          <div className='container'>
               
               <CandidateDetails1/>
-              <CandidateExplore/>
-              <Footer/>
          </div>
+         <CandidateExplore/>
+         <Footer/>
     </>
   )
 }

@@ -1,18 +1,19 @@
 import React from 'react'
-import Navbar1 from '../../home/Navbar1'
+import Navbar3 from '../../home/Navbar3'
 import Footer from '../../Footer'
 import ExampleHero from './ExampleHero'
 import ExampleText from './ExampleText'
 const ExampleCv = () => {
   return (
     <>
-          <Navbar1/>
+          <Navbar3/>
           <ExampleHero/>
           <div className='container'>
 
             <ExampleText/>
-               <Footer/>
+               
           </div>
+          <Footer/>
     </>
   )
 }

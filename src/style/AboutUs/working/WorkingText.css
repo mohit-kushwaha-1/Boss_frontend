@@ -13,6 +13,7 @@ font-size: 48px;
 font-style: normal;
 font-weight: 700;
 line-height: var(--line-height-59, 59px); /* 122.917% */
+margin-bottom: 30px;
 }
 
 .working-content h4{

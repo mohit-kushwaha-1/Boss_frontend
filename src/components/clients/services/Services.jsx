@@ -1,18 +1,19 @@
 import React from 'react'
-import Navbar1 from '../../home/Navbar1'
+import Navbar4 from '../../home/Navbar4'
 import Footer from '../../Footer'
 import ServicesHero from './ServicesHero'
 import ServicesText from './ServicesText'
 const Services = () => {
   return (
     <>
-      <Navbar1/>
+      <Navbar4/>
       <ServicesHero/>
     <div className='container'>
 
         <ServicesText/>
-        <Footer/>
+        
     </div>
+    <Footer/>
     </>
   )
 }
