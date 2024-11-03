@@ -96,7 +96,7 @@ const Card = ({ vacancy }) => (
         </div>
       </div>
     </div>
-    <button className="view-button">View Vacancy</button>
+    <button className="view-button" >View Vacancy</button>
   </div>
 );
 

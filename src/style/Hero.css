@@ -28,8 +28,9 @@
     padding: 40px;
     border-radius: 10px;
     text-align: left;
-    max-width: 600px;
+    max-width: 700px;
     color: white;
+    /* border: 1px solid black; */
   }
   
   .hero-content h1 {
@@ -54,8 +55,9 @@ line-height: 60px; /* 150% */
   }
   
   .search-bar {
+    width: 100%;
     display: flex;
-    gap: 10px;
+    gap: 50px;
   }
   
   .search-input {
@@ -63,20 +65,31 @@ line-height: 60px; /* 150% */
     padding: 10px;
     font-size: 16px;
     border: none;
-    width: 70%;
+    width: 80%;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
+    display: flex;
+height: 58px;
+/* padding: 0px 162px 0px 16px; */
+align-items: center;
+border-radius: 10px;
+border: var(--height-1, 1px) solid var(--www-independentrecruiters-nl-mercury, #E5E5E5);
+background: var(--www-independentrecruiters-nl-white, #FFF);
+color: var(--Boss-Text, #8C8C8C);
+font-family: Nunito;
+font-size: var(--font-size-16, 16px);
+font-style: normal;
+font-weight: var(--font-weight-300, 300);
+line-height: var(--font-size-16, 16px); /* 100% */
+margin-right: 30px;
+}
   
   .search-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    border-radius: var(--radius-10, 10px);
+    display: flex;
+padding: 16.5px var(--item-spacing-60, 60px);
+align-items: center;
+gap: var(--Clock1-Time-Hour-1, 6px);
+border-radius: 10px;
 border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
 background: var(--Boss-White, #F8F8F8);
 box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
@@ -87,7 +100,7 @@ font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
-  }
+}
   
   /* .search-button:hover {
     background-color: #0056b3;

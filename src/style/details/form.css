@@ -100,12 +100,59 @@ line-height: normal;
   .form-aligh-style-right{
     width: 47%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid black; */
   }
+
+  .select-form-modal{
+    width: 100%;
+    border: 1px dashed black;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-2_5, 2.5px);
+  }
+
+  .select-form-modal h5{
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+font-family: "Nunito Sans";
+font-size: 23.047px;
+font-style: normal;
+font-weight: var(--font-weight-700, 700);
+line-height: var(--line-height-37_5, 37.5px); /* 162.712% */
+  }
+
+  .select-form-modal button{
+    display: flex;
+padding: var(--Spacing-spacing-150, 12px) 24px;
+justify-content: center;
+align-items: center;
+gap: var(--Clock1-Time-Hour-1, 6px);
+border-radius: 10px;
+border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
+background: var(--Boss-White, #F8F8F8);
+box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
+color: var(--Boss, #7B0801);
+text-align: center;
+font-family: Nunito;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.select-form-modal button:hover{
+  background-color: #7B0801;
+  color: white;
+}
 
   .form-aligh-style-left{
     width: 47%;
+    
     
   }
   

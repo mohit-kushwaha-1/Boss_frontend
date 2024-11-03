@@ -9,11 +9,7 @@ const StartText = () => {
             <h3>STAR- Method</h3>
             <br/>
             <h4>
-              Picture this: you've found the perfect job vacancy. You’re
-              confident you’re the right fit, and you quickly send your
-              well-crafted resume. Now comes the important part—preparing for
-              the interview. How do you ensure you’re ready? That’s where the
-              STAR Method comes in.
+            Picture this: you've found the perfect job vacancy. You’re confident you’re the right fit, and you quickly send your well-crafted resume. Now comes the important part—preparing for the interview. How do you ensure you’re ready? That’s where the STAR Method comes in.
             </h4>
             <br/>
           </div>
@@ -24,7 +20,7 @@ const StartText = () => {
             <h4>
               The STAR Method is a structured approach to answering behavioral
               interview questions, helping you effectively highlight your
-              skills. STAR stands for Situation, Task, Action, and Result. To
+              skills. STAR is an acronym for Situation, Task, Action, and Result To
               use this method, look at the job vacancy, identify the top three
               skills required, and reflect on past work experiences where you
               demonstrated those skills. This method allows you to show the

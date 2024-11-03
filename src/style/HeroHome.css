@@ -54,6 +54,21 @@ line-height: 36px; /* 150% */
     gap: 10px;
   }
   
+
+  .girl-image{
+
+    margin-top: 21%;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+  }
+
+  .girl-image img{
+    width: 100%;
+    object-fit: contain;
+  }
   
   
   .search-button {

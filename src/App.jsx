@@ -14,10 +14,13 @@ import Working from "./components/aboutUs/working/Working";
 import Privacy from "./components/aboutUs/privacy/Privacy";
 import Direction from "./components/aboutUs/direction/Direction";
 import ContactUs from "./components/aboutUs/contactUs/ContactUs";
+import ScrollToTop from "./components/ScrollToTop";
 const App = () => {
   return (
     <div>
+      <ScrollToTop/>
       <Routes>
+        
         <Route path="/vac" element={<Vacancis />}></Route>
         <Route path="/details" element={<Details />} />
         <Route path="/" element={<Home />} />

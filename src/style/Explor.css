@@ -52,7 +52,8 @@ padding: 0px;
     display: flex;
 width: 260px;
 height: var(--width-60, 60px);
-padding: 21px 192px 23px 16px;
+/* padding: 21px 192px 23px 16px; */
+padding-left: 10px;
 align-items: center;
 flex-shrink: 0;
 border-radius: 10px;

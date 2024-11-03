@@ -23,7 +23,7 @@ line-height: var(--line-height-59, 59px); /* 122.917% */
 .example-text-continer-content-upper h4{
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
 text-align: justify;
-font-family: Inter;
+font-family: "Nunito Sans";
 font-size: 24px;
 font-style: normal;
 font-weight: 500;
@@ -44,10 +44,10 @@ line-height: 48px; /* 200% */
 
 .example-text-continer-content-lower h4 .span-text{
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
-font-family: Inter;
+font-family: "Nunito Sans";
 font-size: 24px;
 font-style: normal;
-font-weight: 500;
+font-weight: 700;
 line-height: 48px;
 }
 

@@ -1,6 +1,9 @@
 import React from "react";
 import "../../style/HeroHome.css";
 import { useNavigate } from "react-router-dom";
+import { MdArrowOutward } from "react-icons/md";
+import girl from '../../../public/images/girl.png'
+import { FaMapMarkerAlt, FaBriefcase, FaGraduationCap } from "react-icons/fa";
 const HeroHome = () => {
 
   const navigate = useNavigate()
@@ -16,8 +19,11 @@ const HeroHome = () => {
             We specialize in finding the right fit for staff positions, aligning
             talent with opportunity.
           </h2>
-          <div className="search-bar">
-            <div className="search-button" onClick={handlevac}>
+          <button className="browse-button1" onClick={handlevac} style={{left:"0px"}}>
+          Browse All Opportunities
+          <MdArrowOutward className="icon" />
+        </button>
+            {/* <div className="search-button" onClick={handlevac}>
               <h4>Browse All Opportunities</h4>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,8 +47,14 @@ const HeroHome = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-            </div>
-          </div>
+            </div> */}
+
+
+          
+        </div>
+
+        <div className="girl-image">
+              <img src={girl} alt="" />
         </div>
       </div>
     </div>

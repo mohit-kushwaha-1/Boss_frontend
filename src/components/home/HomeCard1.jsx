@@ -33,7 +33,7 @@ const HomeCard = () => {
   return (
     <div className="app-container">
       <div className="header">
-        <h1 className="title">Ready to Take Your Career to the Next Level?</h1>
+        <h1 className="title" >Ready to Take Your Career to the Next Level?</h1>
         <button className="browse-button" onClick={handlevac}>
           Browse All Opportunities
           <MdArrowOutward className="icon" />

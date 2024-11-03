@@ -41,7 +41,7 @@
   
   /* Active link styling */
   .nav-links li a:hover, .nav-links li.active a {
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #7B0801;
     color: #7B0801;
   }
   

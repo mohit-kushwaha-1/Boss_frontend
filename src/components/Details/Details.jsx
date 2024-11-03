@@ -6,7 +6,9 @@ import DetailsText from './DetailsText'
 import DetailsForm from './DetailsForm'
 import Footer from '../Footer'
 import axios from 'axios'
-import ApplicationForm from './ApplicationForm'
+import WhatNext from './WhatNext'
+import ApplicationForm from './ApplicationForm';
+import ReumeForm from './ReumeForm'
 const Details = () => {
 
  const [data,setData] = useState();
@@ -45,11 +47,14 @@ const Details = () => {
              <div className='details-container'>
               
                <DetailsText  data={data}/>
+               <WhatNext/>
                {/* <DetailsForm/> */}
                <ApplicationForm/>
                
              </div>
     </div>
+
+   
     <Footer/>
 
     </>

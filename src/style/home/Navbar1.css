@@ -59,23 +59,23 @@ letter-spacing: 0.5px;
 
 
 .nav-links li a:hover, .nav-links li.active a {
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #7B0801;
   color: #7B0801;
 }
 
 .nav-link:active{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #7B0801;
 }
 
 .nav-link:hover {
-  color: #e60023;
+  color: #7B0801;
  
 }
 
 /* Contact Button (Desktop) */
 .contact-btn {
   padding: 0.5rem 1rem;
-  color: #e60023;
+  color: #7B0801;
   background-color: transparent;
   /* border: 2px solid #e60023; */
   border-radius: 20px;
@@ -140,12 +140,12 @@ padding: 0rem;
 }
 
 .mobile-nav-link:hover {
-  color:  #c1112b;
+  color:  #7B0801;
 }
 
 .contact-btn.mobile {
   margin-top: 1rem;
-  background-color: #e60023;
+  background-color: #7B0801;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -154,7 +154,7 @@ padding: 0rem;
 }
 
 .contact-btn.mobile:hover {
-  background-color: #cc0020;
+  background-color: #7B0801;
 }
 
 .nav-space{
@@ -200,13 +200,13 @@ padding: 0rem;
 /* Active link styling for desktop */
 .nav-link.active {
   color: #7B0801;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #7B0801;
 }
 
 /* Active link styling for mobile */
 .mobile-nav-link.active {
   color: #7B0801;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #7B0801;
 }
 
 
@@ -251,7 +251,7 @@ padding: 0rem;
 }
 
 .mobile-nav-link.dropdown .dropdown-content a:hover {
-  color: #e60023;
+  color: #7B0801;
   background-color: #f1f1f1;
 }
 

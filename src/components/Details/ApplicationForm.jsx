@@ -1,12 +1,26 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Checkbox, Upload,message } from 'antd';
+import {Modal, Form, Input, Button, Checkbox, Upload,message } from 'antd';
 import { InboxOutlined } from '@ant-design/icons';
 import '../../style/details/form.css';
+import ReumeForm from './ReumeForm';
 import axios from 'axios';
 import { baseUrl } from '../helper/helper';
 const ApplicationForm = () => {
   const [file, setFile] = useState(null);
   const[image,setImage] = useState();
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [form] = Form.useForm();
+
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
+
 
   const handleFileChange = async(info) => {
     const { status, name } = info.file;
@@ -154,9 +168,16 @@ const ApplicationForm = () => {
               <p className="ant-upload-hint">Drag & Drop or Browse</p>
             </Upload.Dragger>
           </Form.Item>
-
+           
+          
+          <div  className='select-form-modal'>
+            <h5>If You don’t have resume</h5>
+          <button onClick={showModal}>Click Here </button>
           </div>
 
+
+          </div>
+                
           </div>
           
 
@@ -182,6 +203,16 @@ const ApplicationForm = () => {
           </Form.Item>
         </Form>
       </div>
+
+
+      <Modal
+      //  title="Personal Details"
+       visible={isModalVisible}
+       onCancel={handleCancel}
+       footer={null} // This removes the "OK" and "Cancel" buttons
+      >
+       <ReumeForm/>
+      </Modal>
     </div>
   );
 };

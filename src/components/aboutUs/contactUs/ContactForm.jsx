@@ -75,7 +75,7 @@ const ContactForm = () => {
             name="yourQuestion"
             rules={[{ required: true, message: 'Please input your question!' }]}
           >
-            <TextArea rows={4} placeholder="Your Question" />
+            <TextArea rows={4} placeholder="Your Question *" />
           </Form.Item>
           <Form.Item
             // label="E-mail Address"
