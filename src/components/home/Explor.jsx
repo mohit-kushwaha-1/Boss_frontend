@@ -60,7 +60,7 @@ const Explor = () => {
     <>
       <div className="explor-container">
         <div className="explor-container-content">
-          <h5>Explore All Our Vacancies</h5>
+          <h5 id="vacancy">Explore All Our Vacancies</h5>
           <div className="explor-container-content-input11">
             <div className="explor-container-content-input12">
               <input type="text" placeholder="Search"  value={search}
@@ -69,8 +69,10 @@ const Explor = () => {
             <div className="explor-container-content-input22">
               <select name="expertise" id="expertise" value={category} onChange={(e) => setCategory(e.target.value)}>
                 <option value="">Select a Field of Experties</option>
-                <option value="Hospitality">Hospitality</option>
-                <option value="Engineering">Engineering</option>
+                <option value="Retail and Customer Service">Retail and Customer Service</option>
+                <option value="Logistics and Warehousing">Logistics and Warehousing</option>
+                <option value="Hospitality and Administrative Roles">Hospitality and Administrative Roles</option>
+                <option value="Supervisory and Management Positions">Supervisory and Management Positions</option>
                 
               </select>
             </div>

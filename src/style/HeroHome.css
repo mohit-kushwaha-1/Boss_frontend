@@ -15,7 +15,8 @@
     background-image: url('../../public/images/Home.png'); /* Replace with the actual image path */
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 90vh;
+    position:  relative;
     display: flex;
     align-items: center;
     /* justify-content: center; */
@@ -27,6 +28,7 @@
     padding: 40px;
     border-radius: 10px;
     text-align: left;
+    margin-top: 5%;
     max-width: 800px;
     color: white;
   }
@@ -58,8 +60,14 @@ line-height: 36px; /* 150% */
 
   .girl-image{
 
-    margin-top: 21%;
-    width: 300px;
+    position: absolute;
+    top:15%;
+    bottom: 0%;
+    z-index: 0;
+    overflow: hidden;
+    right: 10%;
+    left: auto;
+    /* width: 300px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +76,8 @@ line-height: 36px; /* 150% */
 
   .girl-image img{
     width: 100%;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
   }
   
   
@@ -84,7 +93,9 @@ background: var(--Boss-White, #F8F8F8);
 box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
   }
 
-
+.browse-button1{
+  margin-top: 10%;
+}
 
 
   .search-input h4{
@@ -99,10 +110,7 @@ line-height: normal;
     padding: 0%;
   }
 
-  .search-button:hover{
-    background-color: #7B0801;
-    color: white;
-  }
+  
 
   .search-button:hover svg >path{
 
@@ -116,29 +124,37 @@ line-height: normal;
   
   @media (max-width: 768px) {
 
-    .hero-section{
-        height: 60vh;
+    .hero-section1{
+        height: 70vh !important;
     }
-    .hero-content {
+    .hero-content1 {
       max-width: 100%;
       
       padding: 20px;
     }
-  
-    h1 {
-      font-size: 28px;
+    .hero-content1 h1{
+      font-size: 30px !important;
+      line-height: 36px !important;
     }
-  
-    h2 {
-      font-size: 20px;
+    .girl-image img{
+      display:none
     }
-  
+    .hero-content1 h2{
+      font-size: 20px !important;
+      line-height: 25px !important;
+    }
+   
     .search-bar {
       flex-direction: column;
     }
   
     .search-input {
-      width: 100%;
+      width: 70%;
+    }
+
+    .browse-button1{
+      width: 200px;
+      font-size: 10px !important;
     }
   }
   

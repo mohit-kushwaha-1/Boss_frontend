@@ -7,7 +7,17 @@
 
 
 .Candidate-Details1-container-content{
-    gap: 40px;
+    gap: 60px;
+}
+.Candidate-Details1-container-content p{
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+    text-align: left;
+    font-family: "Nunito Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    /* line-height: var(--line-height-59, 59px); 122.917% */
+    margin-bottom: 30px; 
 }
 .Candidate-Details1-container h2{
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
@@ -16,30 +26,30 @@ font-family: "Nunito Sans";
 font-size: 48px;
 font-style: normal;
 font-weight: 700;
-line-height: var(--line-height-59, 59px); /* 122.917% */
-margin-bottom: 30px;
+/* line-height: var(--line-height-59, 59px); 122.917% */
+/* margin-bottom: 10px; */
 }
 
 .Candidate-Details1-container-content h3{
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
     text-align: justify;
     font-family: "Nunito Sans";
-    font-size: 32px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 700;
-    line-height: 48px; /* 150% */
+    /* line-height: 48px; 150% */
     margin-bottom: 30px;
 }
 
 .Candidate-Details1-container-content h4{
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
 text-align: justify;
-font-family: Inter;
-font-size: 24px;
+font-family: "Nunito Sans";
+font-size: 32px;
 font-style: normal;
-font-weight: 500;
-line-height: 48px; /* 200% */
-margin-bottom: 30px;
+font-weight: 700;
+/* line-height: 48px; 200% */
+margin-bottom: 24px;
 }
 
 .Processure-button-text h5{
@@ -65,7 +75,7 @@ background: var(--Boss-White, #F8F8F8);
 box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
 color: var(--Boss, #7B0801);
 text-align: center;
-font-family: Nunito;
+font-family:  "Nunito Sans";
 font-size: 20px;
 font-style: normal;
 font-weight: 400;
@@ -76,4 +86,26 @@ margin-bottom: 30px;
 .Processure-button-text button:hover{
     background-color: #7B0801;
     color: white;
+}
+
+@media (max-width:768px) {
+    .Candidate-Details1-container h2{
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .Candidate-Details1-container-content h3{
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .Candidate-Details1-container-content h4{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .Processure-button-text{
+        font-size: 30px;
+        line-height: 36px;
+    }
 }

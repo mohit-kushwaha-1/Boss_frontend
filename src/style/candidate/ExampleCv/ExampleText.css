@@ -30,6 +30,16 @@ font-weight: 500;
 line-height: 48px; /* 200% */
 }
 
+.example-text-continer-content-lower h1{
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+    text-align: left;
+    font-family: "Nunito Sans";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top:40px;
+    line-height: 48px; /* 150% */
+}
 .example-text-continer-content-lower h2{
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
     text-align: left;
@@ -51,3 +61,25 @@ font-weight: 700;
 line-height: 48px;
 }
 
+@media (max-width:768px) {
+    .example-text-continer-content-upper h1{
+        font-size: 30px;
+        
+    }
+
+    .example-text-continer-content-upper h4{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .example-text-continer-content-lower h2{
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .example-text-continer-content-lower h4{
+        font-size: 20px;
+        line-height: 30px;
+        text-align: justify;
+    }
+}

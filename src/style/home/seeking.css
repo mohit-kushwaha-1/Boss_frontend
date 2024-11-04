@@ -188,19 +188,24 @@ cursor: pointer;
     }
 
     .seeking-button1{
+        width: 200px;
+        font-size: 10px;
         padding: 5px;
     }
 
     .seeking-button1 h6{
-        font-size: 15px;
+        font-size: 10px;
     }
 
     .seeking-button2{
+        width: 200px;
         padding: 5px;
     }
 
     .seeking-button2 h6{
-        font-size: 15px;
+        font-size: 10px;
     }
+
+   
 
 }

@@ -177,7 +177,7 @@ const SourcingForm = () => {
           </Form.Item>
 
           {/* Submit Button */}
-          <Form.Item>
+          <Form.Item className='submit-form'>
             <Button type="primary" htmlType="submit" className="submit-button" id='submit-button'>
               Send 
             </Button>

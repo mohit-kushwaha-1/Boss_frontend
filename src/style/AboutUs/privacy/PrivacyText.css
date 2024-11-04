@@ -23,7 +23,7 @@ font-family: "Nunito Sans";
 font-size: 24px;
 font-style: normal;
 font-weight: 600;
-line-height: 48px; /* 200% */
+line-height: 48px; 
 }
 
 .privacy-text-content-text h3{
@@ -34,6 +34,7 @@ font-size: 24px;
 font-style: normal;
 font-weight: 700;
 line-height: 48px; /* 171.429% */
+margin-top: 40px;
 }
 
 .privacy-text-content-text-text h2{
@@ -44,6 +45,7 @@ font-size: 32px;
 font-style: normal;
 font-weight: 700;
 line-height: 48px; /* 150% */
+margin-top: 40px;
 }
 
 .privacy-text-content-text-text h5{
@@ -63,6 +65,7 @@ font-size: 40px;
 font-style: normal;
 font-weight: 600;
 line-height: var(--line-height-59, 59px); /* 147.5% */
+margin-top: 80px
 }
 
 .privacy-text-content-text button{
@@ -82,6 +85,7 @@ font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+margin: 40px 0;
 }
 
 .privacy-text-content-text button:hover{

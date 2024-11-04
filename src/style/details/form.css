@@ -66,7 +66,7 @@ line-height: var(--line-height-59, 59px); /* 126.924% */
   /* Submit Button */
   .submit-button {
     display: flex;
-padding: 12px 24px;
+padding: 24px 24px;
 justify-content: center;
 align-items: center;
 gap: 6px;
@@ -88,7 +88,11 @@ line-height: normal;
   color: white;
 }
 
-
+.submit-form{
+width: 100%;
+display: flex;
+justify-content: center;
+}
   .form-aligh-style{
     width: 100%;
     /* border: 1px solid black; */
@@ -185,6 +189,12 @@ line-height: normal;
 
     .form-aligh-style-right{
       width: 100%;
+    }
+
+    .form-container h2
+    {
+      font-size: 30px;
+      line-height: 36px;
     }
   }
   

@@ -25,8 +25,8 @@ line-height: 60px; /* 115.385% */
 }
 
 @media (max-width: 768px) {
-    .candidate-container{
-        height: 60vh;
+    .client-processure-container{
+        height: 60vh !important;
     }
 
     .candidate-container-content h1{

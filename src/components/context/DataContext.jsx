@@ -8,6 +8,7 @@ export const DataProvider = ({ children }) => {
   // Declare the states you want to share
   const [dataNow, setDataNow] = useState(null);
   const [loading, setLoading] = useState(false);
+  const[id,setId] = useState(null)
   console.log(loading);
   // Context value to share
   const value = {
@@ -15,6 +16,8 @@ export const DataProvider = ({ children }) => {
     setDataNow,
     loading,
     setLoading,
+    id,
+    setId,
   };
 
   // Return the provider with the context value

@@ -34,7 +34,7 @@ const PrivacyText = () => {
                      <h2>1. For Recruitment Purposes:</h2>
                       <h4>When you apply for a role or register on our website, we collect your personal data to assess your suitability for current or future positions. We also manage your data within our recruitment database to facilitate communication and inform you about potential opportunities.</h4>
                        <ul>
-                        <li><h5><span style={{fontWeight:"bold"}}> Legal Basis:</span>Our legal basis for processing your data includes legitimate interest in finding suitable candidates, your consent when submitting your application, and our need to comply with legal obligations.</h5></li>
+                        <li><h5><span style={{fontWeight:"bold"}}> Legal Basis: </span>Our legal basis for processing your data includes legitimate interest in finding suitable candidates, your consent when submitting your application, and our need to comply with legal obligations.</h5></li>
                        </ul>
                     </div>
 

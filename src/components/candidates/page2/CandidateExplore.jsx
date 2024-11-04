@@ -33,7 +33,7 @@ const CandidateExplore = () => {
 
               <div className="candidate-explor-container1-content-input">
                    <input type="text" name="" id="" placeholder="Search Vacancies by Keyword" value={search} onChange={(e)=>{setSearch(e.target.value)}}/>
-                   <button onClick={handle}>search</button>
+                   <button onClick={handle}>Search</button>
               </div>
            </div>
              

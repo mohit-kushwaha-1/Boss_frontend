@@ -1,5 +1,5 @@
-.candidate-container1{
-    background-image: url('../../public/images/c2.png'); /* Replace with the actual image path */
+.candidate-container12{
+    background-image: url('../../public/images/c11.png'); /* Replace with the actual image path */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -25,12 +25,13 @@ line-height: 60px; /* 115.385% */
 }
 
 @media (max-width: 768px) {
-    .candidate-container1{
-        height: 60vh;
+    .candidate-container12{
+        height: 50vh !important;
     }
 
     .candidate-container-content1 h1{
         font-size: 30px;
+        line-height: 36px !important;
     }
 
 

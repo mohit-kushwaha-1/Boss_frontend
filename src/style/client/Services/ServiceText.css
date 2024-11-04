@@ -24,3 +24,15 @@ font-style: normal;
 font-weight: 500;
 line-height: 48px; /* 200% */
 }
+
+@media (max-width:768px) {
+    .services-text-contaner-text h1{
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .services-text-contaner-text h4{
+        font-size: 20px;
+        line-height: 30px;
+    }
+}

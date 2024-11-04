@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,useContext} from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { FaMapMarkerAlt, FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import "../../style/home/homeCard.css";
@@ -6,8 +6,11 @@ import img1 from "../../../public/images/img1.png";
 import { baseUrl } from "../helper/helper";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { DataContext } from "../context/DataContext";
+
 const HomeCard = () => {
   const [data, setData] = useState();
+  const { dataNow, setDataNow, loading, setLoading,id,setId } = useContext(DataContext);
   const navigate = useNavigate()
   const handlevac = ()=>{
     navigate('/vac')
@@ -24,12 +27,21 @@ const HomeCard = () => {
       if (response.data) {
         // console.log("data is now");
         // console.log(filter.length);
-        setData(response.data.jobs);
+         const a = response.data.jobs
+        let slicedArray = a.slice(0, 3); 
+        setData(slicedArray);
       }
     } catch (error) {
       console.log(error);
     }
   };
+
+
+  const handle = (id)=>{
+    console.log(id)
+    setId(id)
+     navigate('/details');
+  }
   return (
     <div className="app-container">
       <div className="header">
@@ -42,217 +54,65 @@ const HomeCard = () => {
         {/* Job Cards Section */}
         <div className="job-cards">
           {/* Job Card 1 */}
-          <div className="job-card">
-            {data ? (
+
+
+        {
+          data?.map((item)=>{
+             return(
+              <>
+
+         <div className="job-card">
+           
               <img
                 // src={img1}
-                src={`${baseUrl}${data[0]?.image}`}
+                src={`${baseUrl}${item?.image}`}
                 alt="People working in an office"
                 className="job-image"
               />
-            ) : (
-              <img
-                src={img1}
-                // src={`${baseUrl}${data[1]?.logo}`}
-                alt="People working in an office"
-                className="job-image"
-              />
-            )}
+             
 
-            {data ? (
-              <h2 className="job-title">{data[0]?.jobName}</h2>
-            ) : (
-              <h2 className="job-title">Reservation Collection Clerk</h2>
-            )}
+           
+              <h2 className="job-title">{item?.jobName}</h2>
+            
 
-            {data ? (
-              <p className="location">{data[0]?.location}</p>
-            ) : (
-              <p className="location">Philipsburg, Sint Maarten</p>
-            )}
+            
+              <p className="location">{item?.location}</p>
+            
 
             <div className="details">
               <ul className="job-details">
-                {data ? (
+                
                   <li className="detail-item">
-                    <FaBriefcase className="icon-detail" /> {data[0]?.jobType}
+                    <FaBriefcase className="icon-detail" /> {item?.jobType}
                   </li>
-                ) : (
-                  <li className="detail-item">
-                    <FaBriefcase className="icon-detail" /> Full Time
-                  </li>
-                )}
+                
 
-                {data ? (
+                
                   <li className="detail-item">
                     <FaGraduationCap className="icon-detail" />
-                    {data[0]?.upper_jd[0]}
+                    {item?.upper_jd[0]}
                   </li>
-                ) : (
-                  <li className="detail-item">
-                    <FaGraduationCap className="icon-detail" /> Bachelor
-                  </li>
-                )}
+                
 
-                {data ? (
+
                   <li className="detail-item">
                     <FaGraduationCap className="icon-detail" />
-                    {data[0]?.upper_jd[1]}
+                    {item?.upper_jd[1]}
                   </li>
-                ) : (
-                  <li className="detail-item">
-                    <FaGraduationCap className="icon-detail" /> Master
-                  </li>
-                )}
+                
               </ul>
             </div>
 
-            <button className="vacancy-button">
+            <button className="vacancy-button" onClick={()=>{handle(`${item?._id}`)}}>
               View Vacancy <MdArrowOutward className="icon" />
             </button>
           </div>
+              </>
+             )
+          })
+        }
 
-          {/* Job Card 2 */}
-          <div className="job-card">
-            {data ? (
-              <img
-                // src={img1}
-                src={`${baseUrl}${data[1]?.image}`}
-                alt="People working in an office"
-                className="job-image"
-              />
-            ) : (
-              <img
-                src={img1}
-                // src={`${baseUrl}${data[1]?.logo}`}
-                alt="People working in an office"
-                className="job-image"
-              />
-            )}
-
-            {data ? (
-              <h2 className="job-title">{data[1]?.jobName}</h2>
-            ) : (
-              <h2 className="job-title">Reservation Collection Clerk</h2>
-            )}
-
-            {data ? (
-              <p className="location">{data[1]?.location}</p>
-            ) : (
-              <p className="location">Philipsburg, Sint Maarten</p>
-            )}
-
-            <div className="details">
-              <ul className="job-details">
-                {data ? (
-                  <li className="detail-item">
-                    <FaBriefcase className="icon-detail" /> {data[1]?.jobType}
-                  </li>
-                ) : (
-                  <li className="detail-item">
-                    <FaBriefcase className="icon-detail" /> Full Time
-                  </li>
-                )}
-
-                {data ? (
-                  <li className="detail-item">
-                    <FaGraduationCap className="icon-detail" />
-                    {data[1]?.upper_jd[0]}
-                  </li>
-                ) : (
-                  <li className="detail-item">
-                    <FaGraduationCap className="icon-detail" /> Bachelor
-                  </li>
-                )}
-
-                {data ? (
-                  <li className="detail-item">
-                    <FaGraduationCap className="icon-detail" />
-                    {data[1]?.upper_jd[1]}
-                  </li>
-                ) : (
-                  <li className="detail-item">
-                    <FaGraduationCap className="icon-detail" /> Master
-                  </li>
-                )}
-              </ul>
-            </div>
-
-            <button className="vacancy-button">
-              View Vacancy <MdArrowOutward className="icon" />
-            </button>
-          </div>
-
-          {/* Job Card 3 */}
-          <div className="job-card">
-            {data ? (
-              <img
-                // src={img1}
-                src={`${baseUrl}${data[2]?.image}`}
-                alt="People working in an office"
-                className="job-image"
-              />
-            ) : (
-              <img
-                src={img1}
-                // src={`${baseUrl}${data[1]?.logo}`}
-                alt="People working in an office"
-                className="job-image"
-              />
-            )}
-
-            {data ? (
-              <h2 className="job-title">{data[2]?.jobName}</h2>
-            ) : (
-              <h2 className="job-title">Reservation Collection Clerk</h2>
-            )}
-
-            {data ? (
-              <p className="location">{data[2]?.location}</p>
-            ) : (
-              <p className="location">Philipsburg, Sint Maarten</p>
-            )}
-
-            <div className="details">
-              <ul className="job-details">
-                {data ? (
-                  <li className="detail-item">
-                    <FaBriefcase className="icon-detail" /> {data[2]?.jobType}
-                  </li>
-                ) : (
-                  <li className="detail-item">
-                    <FaBriefcase className="icon-detail" /> Full Time
-                  </li>
-                )}
-
-                {data ? (
-                  <li className="detail-item">
-                    <FaGraduationCap className="icon-detail" />
-                    {data[2]?.upper_jd[0]}
-                  </li>
-                ) : (
-                  <li className="detail-item">
-                    <FaGraduationCap className="icon-detail" /> Bachelor
-                  </li>
-                )}
-
-                {data ? (
-                  <li className="detail-item">
-                    <FaGraduationCap className="icon-detail" />
-                    {data[2]?.upper_jd[1]}
-                  </li>
-                ) : (
-                  <li className="detail-item">
-                    <FaGraduationCap className="icon-detail" /> Master
-                  </li>
-                )}
-              </ul>
-            </div>
-
-            <button className="vacancy-button">
-              View Vacancy <MdArrowOutward className="icon" />
-            </button>
-          </div>
+         
         </div>
       </div>
     </div>

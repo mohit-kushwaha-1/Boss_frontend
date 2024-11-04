@@ -31,7 +31,7 @@ const App = () => {
         <Route path="/candidate-ExamCv" element={<ExampleCv />} />
         <Route path="/client-procesure" element={<Procesure />} />
         <Route path="/client-services" element={<Services />} />
-        <Route path="/client-soucing" element={<Sourcing />} />
+        <Route path="/client-sourcing" element={<Sourcing />} />
         <Route path="/about-working" element={<Working />} />
         <Route path="/about-privacy" element={<Privacy />} />
         <Route path="/about-direction" element={<Direction />} />

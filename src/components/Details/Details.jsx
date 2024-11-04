@@ -1,4 +1,4 @@
-import React ,{useState,useEffect}from 'react'
+import React ,{useState,useEffect,useContext}from 'react'
 import Navbar2 from '../home/Navbar2'
 import DetailsHero from './DetailsHero'
 import { baseUrl } from '../helper/helper'
@@ -8,21 +8,24 @@ import Footer from '../Footer'
 import axios from 'axios'
 import WhatNext from './WhatNext'
 import ApplicationForm from './ApplicationForm';
-import ReumeForm from './ReumeForm'
+import ReumeForm from './ReumeForm';
+import { DataContext } from '../context/DataContext'
 const Details = () => {
 
  const [data,setData] = useState();
   // const data = localStorage.getItem("auth");
   // if (data) {
   //   const parseData = JSON.parse(data);
+  const { dataNow, setDataNow, loading, setLoading,id,setId } = useContext(DataContext);
 
-  const id1 = localStorage.getItem("id");
-  const id = JSON.parse(id1)
-  console.log("id is",id);
+  // const id1 = localStorage.getItem("id");
+  // const id = JSON.parse(id1)
+  // console.log("id is",id);
 
   useEffect(() => {
     fetchdata();
   }, []);
+  console.log("id is",id)
 
   const fetchdata = async () => {
     try {

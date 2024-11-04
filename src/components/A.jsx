@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,useContext} from "react";
 import "./A.css";
 import img1 from "../../public/images/img1.png";
 import axios from "axios";
 import { baseUrl } from "./helper/helper";
 import { useNavigate } from "react-router-dom";
+import { DataContext } from "./context/DataContext";
 
 console.log(img1);
 const vacancies = [
@@ -102,7 +103,7 @@ const Card = ({ vacancy }) => (
 
 const App = ({data}) => {
   // const [data, setData] = useState();
-
+  const { dataNow, setDataNow, loading, setLoading,id,setId } = useContext(DataContext);
   const Navigate = useNavigate()
 
   // useEffect(() => {
@@ -121,7 +122,7 @@ const App = ({data}) => {
 
   const handle = (id)=>{
     console.log(id)
-    localStorage.setItem("id", JSON.stringify(id));
+    setId(id)
      Navigate('/details');
   }
 

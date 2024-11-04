@@ -36,7 +36,7 @@ const Footer = () => {
                   />
                 </svg>
 
-                <h4>+1 (721) 542-1242</h4>
+                <h4 style={{marginLeft:"8px"}}>+1 (721) 542-1242</h4>
               </div>
 
               <div className="middle-phone">
@@ -53,7 +53,7 @@ const Footer = () => {
                   />
                 </svg>
 
-                <h4>+1 (721) 524-1709</h4>
+                <h4 style={{marginLeft:"8px"}}>+1 (721) 524-1709</h4>
               </div>
               <div>
                 <div className="middle-email">

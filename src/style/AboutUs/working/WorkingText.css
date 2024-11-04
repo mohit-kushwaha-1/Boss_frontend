@@ -34,6 +34,7 @@ font-size: 40px;
 font-style: normal;
 font-weight: 600;
 line-height: var(--line-height-59, 59px); /* 147.5% */
+margin-top: 80px 
 }
 
 .working-content button{
@@ -53,6 +54,7 @@ font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+margin: 40px 0px;
 }
 
 .working-content button:hover{

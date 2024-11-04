@@ -113,7 +113,7 @@ const Navbar4 = () => {
                 <div className="dropdown-content">
                   <Link to="/client-procesure">The Procedure</Link>
                   <Link to="/client-services">Our Services</Link>
-                  <Link to="/client-soucing">Sourcing Talent</Link>
+                  <Link to="/client-sourcing">Sourcing Talent</Link>
                 </div>
               )}
             </div>
@@ -234,7 +234,7 @@ const Navbar4 = () => {
                 <Link to="/client-services" onClick={() => setMenuOpen(false)}>
                   Our Services
                 </Link>
-                <Link to="/client-soucing" onClick={() => setMenuOpen(false)}>
+                <Link to="/client-sourcing" onClick={() => setMenuOpen(false)}>
                   Sourcing Talent
                 </Link>
               </div>

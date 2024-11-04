@@ -22,7 +22,7 @@ flex-direction: column;
 flex-shrink: 0;
     width: 60%;
     /* height: 10vh; */
-    border-radius: 40px;
+    border-radius: 10px;
 background: var(--color-white-solid, #FFF);
 box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.40);
 
@@ -113,6 +113,7 @@ line-height: normal;
     .explor-container-content{
         width: 90%;
         margin: auto;
+        border-radius: 10px;
     }
     .explor-container-content-input11{
         flex-direction: column;
@@ -128,5 +129,12 @@ line-height: normal;
     .explor-container-content-input22 select{
         width: 100%;
         padding: 5px;
+    }
+
+    .explor-container-content h5{
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 10px;
+        text-align: center;
     }
 }

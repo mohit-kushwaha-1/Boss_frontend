@@ -26,7 +26,7 @@ line-height: 60px; /* 115.385% */
 }
 
 @media (max-width: 768px) {
-    .candidate-container{
+    .sourcing-container-example{
         height: 60vh;
     }
 

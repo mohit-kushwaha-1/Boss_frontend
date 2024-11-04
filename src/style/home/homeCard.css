@@ -16,7 +16,7 @@
     text-align: center;
     
     /* www.independentrecruiters.nl/Semantic/Heading 2 */
-    font-family: var(--font-family-Font-1, Inter);
+    font-family:  "Nunito Sans";;
     font-size: 46.68px;
     font-style: normal;
     font-weight: var(--font-weight-700, 700);
@@ -99,6 +99,8 @@ padding: 12px 24px;
     .job-cards {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    
   }
   
   @media (min-width: 1024px) {
@@ -106,9 +108,7 @@ padding: 12px 24px;
       grid-template-columns: repeat(3, 1fr);
     }
 
-    .title{
-      font-size: 25px;
-    }
+    
   }
   
   /* Job card */
@@ -216,4 +216,16 @@ line-height: normal;
   
   .vacancy-button .icon {
     margin-left: 5px;
+  }
+
+  @media (max-width:768px) {
+    .title{
+      font-size: 30px !important;
+      line-height: 36px;
+    }
+
+    .browse-button{
+       width: 200px;
+       font-size: 10px;
+    }
   }

@@ -31,6 +31,7 @@ line-height: 60px; /* 115.385% */
 
     .candidate-container-content h1{
         font-size: 30px;
+        line-height: 36px !important;
     }
 
 

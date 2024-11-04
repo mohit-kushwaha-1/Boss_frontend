@@ -48,6 +48,14 @@ padding: 0px;
     border: 1px solid black;
 }
 
+@media (max-width:768px) {
+    #vacancy{
+        font-size: 20px;
+    }
+}
+
+
+
 
 
 

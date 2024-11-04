@@ -62,7 +62,7 @@ line-height: var(--line-height-59, 59px); /* 126.924% */
   .submit-btn{
     display: flex;
 width: var(--width-150, 150px);
-padding: var(--Spacing-spacing-150, 12px) 24px;
+padding: var(--Spacing-spacing-150, 24px) 24px;
 justify-content: center;
 align-items: center;
 gap: var(--Clock1-Time-Hour-1, 6px);
