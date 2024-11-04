@@ -16,26 +16,27 @@ import Direction from "./components/aboutUs/direction/Direction";
 import ContactUs from "./components/aboutUs/contactUs/ContactUs";
 import ScrollToTop from "./components/ScrollToTop";
 import Notice from "./components/notice/Notice";
-const App = () => {
+const App = () =>
+{
   return (
     <div>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Routes>
-        
-        <Route path="/vac" element={<Vacancis />}></Route>
-        <Route path="/details" element={<Details />} />
+
+        <Route path="/vacancies" element={<Vacancis />}></Route>
+        <Route path="/job-details" element={<Details />} />
         <Route path="/" element={<Home />} />
-        <Route path="/candidate" element={<Candidate />} />
-        <Route path="/candidate1" element={<CandidatePage1 />} />
-        <Route path="/candidate-star" element={<StartMain />} />
-        <Route path="/candidate-ExamCv" element={<ExampleCv />} />
-        <Route path="/client-procesure" element={<Procesure />} />
-        <Route path="/client-services" element={<Services />} />
-        <Route path="/client-sourcing" element={<Sourcing />} />
-        <Route path="/about-working" element={<Working />} />
-        <Route path="/about-privacy" element={<Privacy />} />
-        <Route path="/about-direction" element={<Direction />} />
-        <Route path="/about-contact" element={<ContactUs />} />
+        <Route path="/job-application-process" element={<Candidate />} />
+        <Route path="/job-application-tips" element={<CandidatePage1 />} />
+        <Route path="/star-method" element={<StartMain />} />
+        <Route path="/example-cv" element={<ExampleCv />} />
+        <Route path="/procedure" element={<Procesure />} />
+        <Route path="/our-services" element={<Services />} />
+        <Route path="/sourcing-talent" element={<Sourcing />} />
+        <Route path="/working-at-boss-recruitement" element={<Working />} />
+        <Route path="/privacy-statement" element={<Privacy />} />
+        <Route path="/direction" element={<Direction />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/notice" element={<Notice />} />
       </Routes>
     </div>

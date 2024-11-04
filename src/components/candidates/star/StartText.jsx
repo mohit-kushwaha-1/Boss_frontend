@@ -1,22 +1,23 @@
 import React from "react";
 import "../../../style/candidate/page1/CandidateExplor.css";
-const StartText = () => {
+const StartText = () =>
+{
   return (
     <div>
       <div className="Candidate-Details1-container">
         <div className="Candidate-Details1-container-content">
-          <div>
-            <h3>STAR- Method</h3>
-            <br/>
-            <p>
-            Picture this: you've found the perfect job vacancy. You’re confident you’re the right fit, and you quickly send your well-crafted resume. Now comes the important part—preparing for the interview. How do you ensure you’re ready? That’s where the STAR Method comes in.
+          <div >
+            <h3 style={{ marginBottom: '10px' }}>STAR- Method</h3>
+            <br />
+            <p style={{ marginBottom: '0px' }}>
+              Picture this: you've found the perfect job vacancy. You’re confident you’re the right fit, and you quickly send your well-crafted resume. Now comes the important part—preparing for the interview. How do you ensure you’re ready? That’s where the STAR Method comes in.
             </p>
-            <br/>
+
           </div>
 
           <div>
             <h4>What is STAR?</h4>
-            <br/>
+
             <p>
               The STAR Method is a structured approach to answering behavioral
               interview questions, helping you effectively highlight your
@@ -26,11 +27,11 @@ const StartText = () => {
               demonstrated those skills. This method allows you to show the
               interviewer how you’ve handled challenges in the past, providing
               them with insight into how you might handle similar situations in
-              the future.<br/> <br/>By using the STAR Method, you present your skills and
+              the future.<br /> <br />By using the STAR Method, you present your skills and
               experiences with confidence, backed by specific examples—without
               sounding boastful.
             </p>
-            <br/>
+
           </div>
 
           <div>
@@ -39,9 +40,8 @@ const StartText = () => {
               Let’s take a look at how the STAR Method works in practice.
               Imagine you’re applying for a Financial Controller role where
               prioritization is key—a skill needed in many industries.
-              
+
             </p>
-            <br/>
           </div>
 
           <div>
@@ -52,7 +52,6 @@ const StartText = () => {
               had to prepare the monthly financial report for a meeting with the
               CFO.
             </p>
-            <br/>
           </div>
 
           <div>
@@ -62,7 +61,7 @@ const StartText = () => {
               financial data from the relevant teams to complete both the
               year-end and monthly reports before the scheduled meeting.
             </p>
-            <br/>
+
           </div>
 
           <div>
@@ -73,7 +72,7 @@ const StartText = () => {
               I also rescheduled the CFO meeting to later in the day to give
               myself additional time to finalize the reports.
             </p>
-            <br/>
+
           </div>
 
           <div>
@@ -82,18 +81,18 @@ const StartText = () => {
               Both reports were completed on time, and I was able to present
               them to the CFO without any delays.
             </p>
-            <br/>
+
           </div>
 
           <div>
-            <p style={{fontSize:"28px"}}>
+            <p style={{ fontSize: "28px", color: '#24303A', fontWeight: 700 }}>
               Using the STAR Method, you can clearly showcase how you’ve applied
               your skills to real-world situations, making it easier for
               employers to see your value. Prepare your answers ahead of time,
               and you’ll be ready to confidently navigate your next interview
               with STAR Recruitment!
             </p >
-            <br/>
+
           </div>
         </div>
       </div>

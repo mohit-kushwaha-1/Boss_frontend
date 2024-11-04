@@ -2,46 +2,51 @@ import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import "../../style/home/Navbar1.css";
 import logo from '../../../public/images/logo.png'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
-const Navbar5 = () => {
+const Navbar5 = () =>
+{
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("about");
   const [dropdownOpen, setDropdownOpen] = useState({
     clients: false,
     candidates: false,
-    about:false,
+    about: false,
   });
 
 
   const navigate = useNavigate()
 
-  const handleContact = ()=>{
-    navigate('/about-contact')
+  const handleContact = () =>
+  {
+    navigate('/contact-us')
   }
-  const handleNavClick = (link) => {
+  const handleNavClick = (link) =>
+  {
     setActiveLink(link);
     setMenuOpen(false); // Close mobile menu after a link click
   };
 
-  const handleMenuClick = () => {
+  const handleMenuClick = () =>
+  {
     setMenuOpen(!menuOpen);
   };
 
-  const toggleDropdown = (key) => {
+  const toggleDropdown = (key) =>
+  {
     setDropdownOpen((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
 
-  // <Route path="/vac" element={<Vacancis />}></Route>
-  //       <Route path="/details" element={<Details />} />
+  // <Route path="/vacancies" element={<Vacancis />}></Route>
+  //       <Route path="/job-details" element={<Details />} />
   //       <Route path="/" element={<Home />} />
-  //       <Route path="/candidate" element={<Candidate />} />
-  //       <Route path="/candidate1" element={<CandidatePage1 />} />
-  //       <Route path="/candidate-star" element={<StartMain />} />
-  //       <Route path="/candidate-ExamCv" element={<ExampleCv />} />
-  //       <Route path="/client-procesure" element={<Procesure />} />
+  //       <Route path="/job-application-process" element={<Candidate />} />
+  //       <Route path="/job-application-tips" element={<CandidatePage1 />} />
+  //       <Route path="/star-method" element={<StartMain />} />
+  //       <Route path="/example-cv" element={<ExampleCv />} />
+  //       <Route path="/procedure" element={<Procesure />} />
 
   return (
     <header className="navbar1">
@@ -52,19 +57,18 @@ const Navbar5 = () => {
         </div>
 
         <div className="nav-space">
-          <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
+          <nav className={`nav-links ${ menuOpen ? "active" : "" }`}>
             <Link
               to="/"
-              className={`nav-link ${activeLink === "home" ? "active" : ""}`}
+              className={`nav-link ${ activeLink === "home" ? "active" : "" }`}
               onClick={() => handleNavClick("home")}
             >
               Home
             </Link>
             <Link
-              to="/vac"
-              className={`nav-link ${
-                activeLink === "vacancies" ? "active" : ""
-              }`}
+              to="/vacancies"
+              className={`nav-link ${ activeLink === "vacancies" ? "active" : ""
+                }`}
               onClick={() => handleNavClick("vacancies")}
             >
               Vacancies
@@ -77,42 +81,40 @@ const Navbar5 = () => {
             >
               <Link
                 to="#"
-                className={`nav-link ${
-                  activeLink === "candidates" ? "active" : ""
-                }`}
+                className={`nav-link ${ activeLink === "candidates" ? "active" : ""
+                  }`}
                 onClick={() => handleNavClick("candidates")}
               >
                 Candidates
               </Link>
               {dropdownOpen.candidates && (
                 <div className="dropdown-content">
-                  <Link to="/candidate">Job Application Process</Link>
-                  <Link to="/candidate1">Job Application Tips</Link>
-                  <Link to="/candidate-star">STAR-Method</Link>
-                  <Link to="/candidate-ExamCv">Example CV</Link>
+                  <Link to="/job-application-process">Job Application Process</Link>
+                  <Link to="/job-application-tips">Job Application Tips</Link>
+                  <Link to="/star-method">STAR-Method</Link>
+                  <Link to="/example-cv">Example CV</Link>
                 </div>
               )}
             </div>
 
-            
+
             <div
               className="nav-link dropdown"
               onClick={() => toggleDropdown("clients")}
             >
               <Link
                 to="#"
-                className={`nav-link ${
-                  activeLink === "clients" ? "active" : ""
-                }`}
+                className={`nav-link ${ activeLink === "clients" ? "active" : ""
+                  }`}
                 onClick={() => handleNavClick("clients")}
               >
                 Clients
               </Link>
               {dropdownOpen.clients && (
                 <div className="dropdown-content">
-                  <Link to="/client-procesure">The Procedure</Link>
-                  <Link to="/client-services">Our Services</Link>
-                  <Link to="/client-sourcing">Sourcing Talent</Link>
+                  <Link to="/procedure">The Procedure</Link>
+                  <Link to="/our-services">Our Services</Link>
+                  <Link to="/sourcing-talent">Sourcing Talent</Link>
                 </div>
               )}
             </div>
@@ -124,19 +126,18 @@ const Navbar5 = () => {
             >
               <Link
                 to="#"
-                className={`nav-link ${
-                  activeLink === "about" ? "active" : ""
-                }`}
+                className={`nav-link ${ activeLink === "about" ? "active" : ""
+                  }`}
                 onClick={() => handleNavClick("about")}
               >
                 About Us
               </Link>
               {dropdownOpen.about && (
                 <div className="dropdown-content">
-                  <Link to="/about-working">Working at BOSS Recruitment</Link>
-                  <Link to="/about-privacy">Privacy Statement</Link>
-                  <Link to="/about-contact">Contact Us</Link>
-                  <Link to="/about-direction">Direction</Link>
+                  <Link to="/working-at-boss-recruitement">Working at BOSS Recruitment</Link>
+                  <Link to="/privacy-statement">Privacy Statement</Link>
+                  <Link to="/contact-us">Contact Us</Link>
+                  <Link to="/direction">Direction</Link>
                 </div>
               )}
             </div>
@@ -164,18 +165,16 @@ const Navbar5 = () => {
           <nav className="mobile-nav-links">
             <Link
               to="/"
-              className={`mobile-nav-link ${
-                activeLink === "home" ? "active" : ""
-              }`}
+              className={`mobile-nav-link ${ activeLink === "home" ? "active" : ""
+                }`}
               onClick={() => handleNavClick("home")}
             >
               Home
             </Link>
             <Link
-              to="/vac"
-              className={`mobile-nav-link ${
-                activeLink === "vacancies" ? "active" : ""
-              }`}
+              to="/vacancies"
+              className={`mobile-nav-link ${ activeLink === "vacancies" ? "active" : ""
+                }`}
               onClick={() => handleNavClick("vacancies")}
             >
               Vacancies
@@ -189,28 +188,28 @@ const Navbar5 = () => {
 
 
               {/* <div className="dropdown-content">
-                  <Link to="/candidate">Job Application Process</Link>
-                  <Link to="/candidate1">Job Application Tips</Link>
-                  <Link to="/candidate-star">STAR-Method</Link>
-                  <Link to="/candidate-ExamCv">Example CV</Link>
+                  <Link to="/job-application-process">Job Application Process</Link>
+                  <Link to="/job-application-tips">Job Application Tips</Link>
+                  <Link to="/star-method">STAR-Method</Link>
+                  <Link to="/example-cv">Example CV</Link>
                 </div> */}
               <div
                 className="dropdown-content mobile"
                 style={{ display: dropdownOpen.candidates ? "block" : "none" }}
               >
-                <Link to="/candidate" onClick={() => setMenuOpen(false)}>
-                Job Application Process
+                <Link to="/job-application-process" onClick={() => setMenuOpen(false)}>
+                  Job Application Process
                 </Link>
-                <Link to="/candidate1" onClick={() => setMenuOpen(false)}>
-                Job Application Tips
-                </Link>
-
-                <Link to="/candidate-star" onClick={() => setMenuOpen(false)}>
-                STAR-Method
+                <Link to="/job-application-tips" onClick={() => setMenuOpen(false)}>
+                  Job Application Tips
                 </Link>
 
-                <Link to="/candidate-ExamCv" onClick={() => setMenuOpen(false)}>
-                Example CV
+                <Link to="/star-method" onClick={() => setMenuOpen(false)}>
+                  STAR-Method
+                </Link>
+
+                <Link to="/example-cv" onClick={() => setMenuOpen(false)}>
+                  Example CV
                 </Link>
               </div>
             </div>
@@ -220,20 +219,20 @@ const Navbar5 = () => {
               onClick={() => toggleDropdown("clients")}
             >
               Clients
-              {/* <Link to="/client-procesure">The Procedure</Link>
-                  <Link to="/client-services">Our Services</Link>
+              {/* <Link to="/procedure">The Procedure</Link>
+                  <Link to="/our-services">Our Services</Link>
                   <Link to="#sourcing">Sourcing Talent</Link> */}
               <div
                 className="dropdown-content mobile"
                 style={{ display: dropdownOpen.clients ? "block" : "none" }}
               >
-                <Link to="/client-procesure" onClick={() => setMenuOpen(false)}>
+                <Link to="/procedure" onClick={() => setMenuOpen(false)}>
                   The Procedure
                 </Link>
-                <Link to="/client-services" onClick={() => setMenuOpen(false)}>
+                <Link to="/our-services" onClick={() => setMenuOpen(false)}>
                   Our Services
                 </Link>
-                <Link to="/client-sourcing" onClick={() => setMenuOpen(false)}>
+                <Link to="/sourcing-talent" onClick={() => setMenuOpen(false)}>
                   Sourcing Talent
                 </Link>
               </div>
@@ -246,25 +245,25 @@ const Navbar5 = () => {
               onClick={() => toggleDropdown("about")}
             >
               About Us
-              {/* <Link to="/client-procesure">The Procedure</Link>
-                  <Link to="/client-services">Our Services</Link>
+              {/* <Link to="/procedure">The Procedure</Link>
+                  <Link to="/our-services">Our Services</Link>
                   <Link to="#sourcing">Sourcing Talent</Link> */}
               <div
                 className="dropdown-content mobile"
                 style={{ display: dropdownOpen.about ? "block" : "none" }}
               >
-                <Link to="/about-working" onClick={() => setMenuOpen(false)}>
-                Working at BOSS Recruitment
+                <Link to="/working-at-boss-recruitement" onClick={() => setMenuOpen(false)}>
+                  Working at BOSS Recruitment
                 </Link>
-                <Link to="/about-privacy" onClick={() => setMenuOpen(false)}>
-                Privacy Statement
+                <Link to="/privacy-statement" onClick={() => setMenuOpen(false)}>
+                  Privacy Statement
                 </Link>
-                <Link to="/about-contact" onClick={() => setMenuOpen(false)}>
-                Contact Us
+                <Link to="/contact-us" onClick={() => setMenuOpen(false)}>
+                  Contact Us
                 </Link>
 
-                <Link to="/about-direction" onClick={() => setMenuOpen(false)}>
-                Direction
+                <Link to="/direction" onClick={() => setMenuOpen(false)}>
+                  Direction
                 </Link>
               </div>
             </div>

@@ -4,11 +4,13 @@ import { useNavigate } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
 import girl from '../../../public/images/girl.png'
 import { FaMapMarkerAlt, FaBriefcase, FaGraduationCap } from "react-icons/fa";
-const HeroHome = () => {
+const HeroHome = () =>
+{
 
   const navigate = useNavigate()
-  const handlevac = ()=>{
-    navigate('/vac')
+  const handlevac = () =>
+  {
+    navigate('/vacancies')
   }
   return (
     <div>
@@ -19,17 +21,17 @@ const HeroHome = () => {
             We specialize in finding the right fit for staff positions, aligning
             talent with opportunity.
           </h2>
-          <button className="browse-button1" onClick={handlevac} style={{left:"0px"}}>
-          Browse All Opportunities
-          <MdArrowOutward className="icon" />
-        </button>
-           
+          <button className="browse-button1" onClick={handlevac} style={{ left: "0px" }}>
+            Browse All Opportunities
+            <MdArrowOutward className="icon" />
+          </button>
 
-          
+
+
         </div>
 
         <div className="girl-image">
-              <img src={girl} alt="" />
+          <img src={girl} alt="" />
         </div>
       </div>
     </div>

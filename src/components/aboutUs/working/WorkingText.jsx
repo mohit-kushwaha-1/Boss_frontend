@@ -1,13 +1,15 @@
 import React from "react";
 import '../../../style/AboutUs/working/WorkingText.css'
 import { useNavigate } from "react-router-dom";
-const WorkingText = () => {
-  
+const WorkingText = () =>
+{
+
   const navigate = useNavigate();
 
-     const handleNav = ()=>{
-          navigate('/about-contact')
-     }
+  const handleNav = () =>
+  {
+    navigate('/contact-us')
+  }
   return (
     <div className="working-main-container">
       <div className="working-content">
@@ -19,14 +21,14 @@ const WorkingText = () => {
           and award-winning recruitment process create the perfect environment
           for growth. We welcome not only recent graduates but also individuals
           with industry experience looking to transition into the rewarding
-          world of recruitment.<br/> <br/> As a recruiter, your role is dynamic and
+          world of recruitment.<br /> <br /> As a recruiter, your role is dynamic and
           engaging. You'll connect with companies to understand their talent
           needs while also interacting with candidates to discover if they’re a
           great fit for your clients. It’s a profession that requires constant
           networking, writing compelling job ads, evaluating applications, and
           proactively searching for top talent.
         </h4>
-        <h3>Curious about our company and culture?<br/> Reach out to Us.</h3>
+        <h3>Curious about our company and culture?<br /> Reach out to Us.</h3>
         <button onClick={handleNav}>Contact Us</button>
       </div>
     </div>

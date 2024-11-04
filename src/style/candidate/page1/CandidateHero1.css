@@ -1,5 +1,6 @@
-.candidate-container1{
-    background-image: url('../../public/images/c2.png'); /* Replace with the actual image path */
+.candidate-container1 {
+    background-image: url('../../public/images/c2.png');
+    /* Replace with the actual image path */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -9,26 +10,27 @@
     padding: 20px;
 }
 
-.candidate-container-content1{
-     padding-left: 10%;
+.candidate-container-content1 {
+    padding-left: 3%;
 }
 
 
-.candidate-container-content1 h1{
+.candidate-container-content1 h1 {
     color: var(--Boss-White, #F8F8F8);
-font-family: Nunito;
-font-size: 52px;
-font-style: normal;
-font-weight: 700;
-line-height: 60px; /* 115.385% */
+    font-family: Nunito;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+    /* 115.385% */
 }
 
 @media (max-width: 768px) {
-    .candidate-container1{
+    .candidate-container1 {
         height: 60vh;
     }
 
-    .candidate-container-content1 h1{
+    .candidate-container-content1 h1 {
         font-size: 30px;
     }
 

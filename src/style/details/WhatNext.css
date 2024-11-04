@@ -1,33 +1,35 @@
-.what-next-container{
+.what-next-container {
     width: 80%;
     margin: auto;
     padding: 5px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
-.what-next-container h1{
+.what-next-container h1 {
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
-font-family: "Nunito Sans";
-font-size: 44px;
-font-style: normal;
-font-weight: 700;
-line-height: 59px; /* 134.091% */
+    font-family: "Nunito Sans";
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 59px;
+    /* 134.091% */
+    margin-bottom: 30px !important;
 }
 
-.what-next-content{
+.what-next-content {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.what-next-content-box{
+.what-next-content-box {
     display: flex;
     flex-direction: row;
     gap: 30px;
 }
 
-.what-next-content-left{
+.what-next-content-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,20 +38,20 @@ line-height: 59px; /* 134.091% */
 }
 
 
-.what-next-circle{
+.what-next-circle {
     margin-top: 8px;
-   border: 1px solid black;
-   width: 30px;
-   height: 30px;
-   border-radius: 50%;
-   padding: 5px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-  
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.vetical-line-div{
+.vetical-line-div {
     /* height: 150px; */
     height: 100%;
     border-left: 1px dashed black;
@@ -57,59 +59,80 @@ line-height: 59px; /* 134.091% */
     margin-bottom: 10px;
 }
 
-.what-next-content-right h3{
+
+
+.what-next-content-right p {
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
-font-family: "Nunito Sans";
-text-align: left;
-font-size: 32px;
-font-style: normal;
-font-weight: 500;
-line-height: var(--line-height-18, 18px); /* 56.25% */
+    font-family: "Nunito Sans";
+    text-align: start;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    margin-top: 20px;
+
 }
 
-.what-next-content-right h4{
+.what-next-content-right h3 {
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+    font-family: "Nunito Sans";
+    text-align: left;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--line-height-18, 18px);
+    margin-bottom: 0px !important;
+
+    /* 56.25% */
+}
+
+.what-next-content-right h4 {
     color: var(--www-independentrecruiters-nl-dove-gray, var(--color-grey-44, #707070));
     font-family: "Nunito Sans";
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 36px; /* 150% */ 
+    line-height: 36px;
+    margin-bottom: 0px !important;
+
+    /* 150% */
 }
 
 @media (max-width: 768px) {
 
-    .what-next-container{
+    .what-next-container {
         width: 95%;
     }
-    .vetical-line-div{
+
+    .vetical-line-div {
         height: 100%;
         border-left: 1px dashed black;
     }
 
-    .what-next-content-right h3{
+    .what-next-content-right h3 {
         font-size: 25px;
     }
 
-    .what-next-content-right h4{
+    .what-next-content-right h4 {
         font-size: 20px;
     }
 }
 
 @media (max-width: 500px) {
 
-    .what-next-container{
+    .what-next-container {
         width: 95%;
     }
-    .vetical-line-div{
+
+    .vetical-line-div {
         height: 100%;
         border-left: 1px dashed black;
     }
 
-    .what-next-content-right h3{
+    .what-next-content-right h3 {
         font-size: 20px;
     }
 
-    .what-next-content-right h4{
+    .what-next-content-right h4 {
         font-size: 15px;
     }
 }

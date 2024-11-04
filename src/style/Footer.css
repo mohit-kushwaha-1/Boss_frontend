@@ -1,13 +1,13 @@
-.footer-container{
+.footer-container {
     width: 100%;
     margin: auto;
     border-top: 1px solid black;
     border-top: var(--stroke-weight-1, 1px) solid #000;
     padding: 30px;
-   
+
 }
 
-.footer-content{
+.footer-content {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -18,22 +18,26 @@
     /* border: 1px solid black; */
 }
 
-.footer-middle-bottom{
+.footer-middle-bottom {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.middle-phone{
+.middle-phone {
     display: flex;
 }
 
-.middle-email{
+.middle-email {
     display: flex;
     gap: 10px;
 }
 
-.middle-social ul{
+.middle-email h4 {
+    text-decoration: underline;
+}
+
+.middle-social ul {
     margin-top: 30px;
     display: flex;
     list-style: none;
@@ -44,12 +48,12 @@
 
 }
 
-.footer-right{
+.footer-right {
     display: flex;
     flex-direction: column;
 }
 
-.footer-right-links ul{
+.footer-right-links ul {
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -58,11 +62,11 @@
     padding: 0px;
 }
 
-.footer-right-links ul li{
+.footer-right-links ul li {
     margin-bottom: 10px;
 }
 
-.footer-right-links ul a{
+.footer-right-links ul a {
     text-decoration: none;
     color: var(--color-black-solid, #000);
     color: var(--color-black-solid, #000);
@@ -70,69 +74,75 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: 27px; /* 150% */
+    line-height: 27px;
+    /* 150% */
     letter-spacing: 0.5px;
-   
+
 }
 
-.fotter-left h1{
+.fotter-left h1 {
     color: var(--color-black-solid, #000);
-font-family: Inter;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 27px; /* 112.5% */
-letter-spacing: 0.5px;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27px;
+    /* 112.5% */
+    letter-spacing: 0.5px;
 
-margin-bottom: 40px;
-}
-
-.fotter-left h4{
-    color: var(--color-black-solid, #000);
-font-family: Inter;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: 27px; /* 150% */
-letter-spacing: 0.5px;
-}
-
-.footer-middle h1{
     margin-bottom: 40px;
-    color: var(--color-black-solid, #000);
-font-family: Inter;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 27px; /* 112.5% */
-letter-spacing: 0.5px;
 }
 
-.footer-middle h4{
+.fotter-left h4 {
     color: var(--color-black-solid, #000);
-font-family: Inter;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: 27px; /* 150% */
-letter-spacing: 0.5px;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    /* 150% */
+    letter-spacing: 0.5px;
 }
 
-.footer-right h1{
+.footer-middle h1 {
     margin-bottom: 40px;
     color: var(--color-black-solid, #000);
     font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 27px; /* 112.5% */
+    line-height: 27px;
+    /* 112.5% */
+    letter-spacing: 0.5px;
+}
+
+.footer-middle h4 {
+    color: var(--color-black-solid, #000);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    /* 150% */
+    letter-spacing: 0.5px;
+}
+
+.footer-right h1 {
+    margin-bottom: 40px;
+    color: var(--color-black-solid, #000);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27px;
+    /* 112.5% */
     letter-spacing: 0.5px;
 }
 
 
 @media (max-width: 768px) {
 
-    .footer-content{
+    .footer-content {
         display: flex;
         justify-content: space-between;
         flex-direction: column;

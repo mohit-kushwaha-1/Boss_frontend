@@ -1,18 +1,18 @@
 .navbar1 {
-  
+
   top: 0px;
   left: 0px;
   right: 0px;
   background-color: white;
-  padding: 1rem;
+  padding: 1rem 2rem;
   position: relative;
   position: fixed;
   z-index: 99;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container1 {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,44 +32,45 @@
 
 /* Nav Links (Desktop) */
 .nav-links {
-  
+
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .nav-link {
   color: #4a4a4a;
   text-decoration: none;
   color: var(--Boss-Black, var(--color-grey-7, #111));
-font-family: "Nunito Sans";
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-letter-spacing: 0.5px;
-color: var(--Boss-Black, var(--color-grey-7, #111));
-font-family: "Nunito Sans";
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-letter-spacing: 0.5px;
-/* color: red; */
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: var(--Boss-Black, var(--color-grey-7, #111));
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  /* color: red; */
 }
 
 
-.nav-links li a:hover, .nav-links li.active a {
+.nav-links li a:hover,
+.nav-links li.active a {
   border-bottom: 2px solid #7B0801;
   color: #7B0801;
 }
 
-.nav-link:active{
+.nav-link:active {
   border-bottom: 1px solid #7B0801;
 }
 
 .nav-link:hover {
   color: #7B0801;
- 
+
 }
 
 /* Contact Button (Desktop) */
@@ -77,26 +78,26 @@ letter-spacing: 0.5px;
   padding: 0.5rem 1rem;
   color: #7B0801;
   background-color: transparent;
-  /* border: 2px solid #e60023; */
+  /* border: 2px solid #7B0801; */
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
   border-radius: var(--radius-10, 10px);
-border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
-background: var(--Boss-White, #F8F8F8);
-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
-color: var(--Boss, #7B0801);
-text-align: center;
-font-family: Nunito;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
+  background: var(--Boss-White, #F8F8F8);
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
+  color: var(--Boss, #7B0801);
+  text-align: center;
+  font-family: Nunito;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 
 }
 
 .contact-btn:hover {
-  background-color:#7B0801;
+  background-color: #7B0801;
   color: white;
 }
 
@@ -122,9 +123,9 @@ line-height: normal;
   width: 75%;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
- 
+
   z-index: 10;
-padding: 0rem;
+  padding: 0rem;
 }
 
 .mobile-nav-links {
@@ -140,7 +141,7 @@ padding: 0rem;
 }
 
 .mobile-nav-link:hover {
-  color:  #7B0801;
+  color: #7B0801;
 }
 
 .contact-btn.mobile {
@@ -157,13 +158,14 @@ padding: 0rem;
   background-color: #7B0801;
 }
 
-.nav-space{
+.nav-space {
   /* width: 1000px; */
- 
-  width: 95%;
+
+  width: 100%;
   margin: auto;
   margin-left: 50px;
   display: flex;
+  gap: 40px;
   /* border: 1px solid black; */
   justify-content: space-between;
 }
@@ -186,6 +188,7 @@ padding: 0rem;
 }
 
 @media (max-width: 768px) {
+
   .nav-links,
   .contact-btn.desktop {
     display: none;
@@ -218,10 +221,10 @@ padding: 0rem;
   background-color: white;
   min-width: 150px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  padding: 0.5rem;
+  padding: 0rem;
   border-radius: 4px;
   z-index: 5;
-  
+
 }
 
 /* For desktop dropdowns */
@@ -255,6 +258,10 @@ padding: 0rem;
   background-color: #f1f1f1;
 }
 
+.dropdown-content {
+  font-style: italic;
+}
+
 /* Hide desktop dropdowns on mobile */
 @media (max-width: 768px) {
   .dropdown-content {
@@ -264,6 +271,7 @@ padding: 0rem;
 
 /* Responsive styles */
 @media (max-width: 768px) {
+
   .nav-links,
   .contact-btn.desktop {
     display: none;
@@ -284,7 +292,7 @@ padding: 0rem;
     padding: 1rem;
     z-index: 10;
   }
-  
+
   .mobile-nav-link {
     display: flex;
     flex-direction: column;
@@ -311,7 +319,7 @@ padding: 0rem;
   min-width: 300px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 5;
-  padding: 0.5rem;
+  padding: 0rem;
   border-radius: 4px;
 }
 
@@ -323,7 +331,7 @@ padding: 0rem;
 }
 
 .dropdown-content a:hover {
-  background-color: #e60023;
+  background-color: #7B0801;
   color: white;
 }
 

@@ -4,11 +4,13 @@ import { FaMapMarkerAlt, FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import '../../style/home/homeCard.css'
 import img1 from '../../../public/images/img1.png'
 import { useNavigate } from "react-router-dom";
-const HomeCard1 = () => {
+const HomeCard1 = () =>
+{
 
   const navigate = useNavigate()
-  const handlevac = ()=>{
-    navigate('/vac')
+  const handlevac = () =>
+  {
+    navigate('/vacancies')
   }
   return (
     <div className="app-container">
@@ -113,17 +115,17 @@ const HomeCard1 = () => {
                 </li> */}
 
                 <div>
-                <FaMapMarkerAlt className="icon-detail" />
-                <FaBriefcase className="icon-detail" />
-                <FaGraduationCap className="icon-detail" />
-                <FaGraduationCap className="icon-detail" />
+                  <FaMapMarkerAlt className="icon-detail" />
+                  <FaBriefcase className="icon-detail" />
+                  <FaGraduationCap className="icon-detail" />
+                  <FaGraduationCap className="icon-detail" />
                 </div>
 
                 <div>
-                    <span>Full Time</span>
-                    <span>Bachelor</span>
-                    <span>Noord Holland</span>
-                    <span>Master</span>
+                  <span>Full Time</span>
+                  <span>Bachelor</span>
+                  <span>Noord Holland</span>
+                  <span>Master</span>
                 </div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect ,useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { FaMapMarkerAlt, FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import "../../style/home/homeCard.css";
@@ -8,39 +8,47 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "../context/DataContext";
 
-const HomeCard = () => {
+const HomeCard = () =>
+{
   const [data, setData] = useState();
-  const { dataNow, setDataNow, loading, setLoading,id,setId } = useContext(DataContext);
+  const { dataNow, setDataNow, loading, setLoading, id, setId } = useContext(DataContext);
   const navigate = useNavigate()
-  const handlevac = ()=>{
-    navigate('/vac')
+  const handlevac = () =>
+  {
+    navigate('/vacancies')
   }
   console.log(data, "data is now");
-  useEffect(() => {
+  useEffect(() =>
+  {
     fetchdata();
   }, []);
-  const fetchdata = async () => {
-    try {
+  const fetchdata = async () =>
+  {
+    try
+    {
       const response = await axios.get(baseUrl + "/api/jobPost/getAllJobs");
       console.log("response is", response.data.jobs);
 
-      if (response.data) {
+      if (response.data)
+      {
         // console.log("data is now");
         // console.log(filter.length);
-         const a = response.data.jobs
-        let slicedArray = a.slice(0, 3); 
+        const a = response.data.jobs
+        let slicedArray = a.slice(0, 3);
         setData(slicedArray);
       }
-    } catch (error) {
+    } catch (error)
+    {
       console.log(error);
     }
   };
 
 
-  const handle = (id)=>{
+  const handle = (id) =>
+  {
     console.log(id)
     setId(id)
-     navigate('/details');
+    navigate('/job-details');
   }
   return (
     <div className="app-container">
@@ -56,63 +64,64 @@ const HomeCard = () => {
           {/* Job Card 1 */}
 
 
-        {
-          data?.map((item)=>{
-             return(
-              <>
+          {
+            data?.map((item) =>
+            {
+              return (
+                <>
 
-         <div className="job-card">
-           
-              <img
-                // src={img1}
-                src={`${baseUrl}${item?.image}`}
-                alt="People working in an office"
-                className="job-image"
-              />
-             
+                  <div className="job-card">
 
-           
-              <h2 className="job-title">{item?.jobName}</h2>
-            
-
-            
-              <p className="location">{item?.location}</p>
-            
-
-            <div className="details">
-              <ul className="job-details">
-                
-                  <li className="detail-item">
-                    <FaBriefcase className="icon-detail" /> {item?.jobType}
-                  </li>
-                
-
-                
-                  <li className="detail-item">
-                    <FaGraduationCap className="icon-detail" />
-                    {item?.upper_jd[0]}
-                  </li>
-                
+                    <img
+                      // src={img1}
+                      src={`${ baseUrl }${ item?.image }`}
+                      alt="People working in an office"
+                      className="job-image"
+                    />
 
 
-                  <li className="detail-item">
-                    <FaGraduationCap className="icon-detail" />
-                    {item?.upper_jd[1]}
-                  </li>
-                
-              </ul>
-            </div>
 
-            <button className="vacancy-button" onClick={()=>{handle(`${item?._id}`)}}>
-              View Vacancy <MdArrowOutward className="icon" />
-            </button>
-          </div>
-              </>
-             )
-          })
-        }
+                    <h2 className="job-title">{item?.jobName}</h2>
 
-         
+
+
+                    <p className="location">{item?.location}</p>
+
+
+                    <div className="details">
+                      <ul className="job-details">
+
+                        <li className="detail-item">
+                          <FaBriefcase className="icon-detail" /> {item?.jobType}
+                        </li>
+
+
+
+                        <li className="detail-item">
+                          <FaGraduationCap className="icon-detail" />
+                          {item?.upper_jd[0]}
+                        </li>
+
+
+
+                        <li className="detail-item">
+                          <FaGraduationCap className="icon-detail" />
+                          {item?.upper_jd[1]}
+                        </li>
+
+                      </ul>
+                    </div>
+
+                    <button className="vacancy-button" onClick={() => { handle(`${ item?._id }`) }}>
+                      View Vacancy <MdArrowOutward className="icon" />
+                    </button>
+                  </div>
+                </>
+              )
+            })
+          }
+
+
         </div>
       </div>
     </div>

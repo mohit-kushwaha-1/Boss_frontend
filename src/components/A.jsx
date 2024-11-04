@@ -1,4 +1,4 @@
-import React, { useState, useEffect ,useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./A.css";
 import img1 from "../../public/images/img1.png";
 import axios from "axios";
@@ -42,7 +42,7 @@ const vacancies = [
 const Card = ({ vacancy }) => (
   <div className="card">
     <div style={{ width: "100%" }}>
-      <img src={`${baseUrl}/${vacancy?.image}`} alt="" className="card-img" />
+      <img src={`${ baseUrl }/${ vacancy?.image }`} alt="" className="card-img" />
     </div>
 
     <div style={{ width: "90%" }}>
@@ -101,9 +101,10 @@ const Card = ({ vacancy }) => (
   </div>
 );
 
-const App = ({data}) => {
+const App = ({ data }) =>
+{
   // const [data, setData] = useState();
-  const { dataNow, setDataNow, loading, setLoading,id,setId } = useContext(DataContext);
+  const { dataNow, setDataNow, loading, setLoading, id, setId } = useContext(DataContext);
   const Navigate = useNavigate()
 
   // useEffect(() => {
@@ -120,10 +121,11 @@ const App = ({data}) => {
   //   } catch (error) {}
   // };
 
-  const handle = (id)=>{
+  const handle = (id) =>
+  {
     console.log(id)
     setId(id)
-     Navigate('/details');
+    Navigate('/job-details');
   }
 
   return (
@@ -134,7 +136,7 @@ const App = ({data}) => {
             <div className="card">
               <div style={{ width: "100%" }}>
                 <img
-                  src={`${baseUrl}${vacancy?.image}`}
+                  src={`${ baseUrl }${ vacancy?.image }`}
                   alt=""
                   className="card-img"
                 />
@@ -181,7 +183,7 @@ const App = ({data}) => {
                     <div></div>
                   </div>
 
-                  <div className="card-icons-space">
+                  <div className="card-icons-space" style={{ marginRight: "15px" }}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -199,7 +201,7 @@ const App = ({data}) => {
                   </div>
                 </div>
               </div>
-              <button className="view-button" onClick={()=>{handle(`${vacancy?._id}`)}}>View Vacancy</button>
+              <button className="view-button" onClick={() => { handle(`${ vacancy?._id }`) }}>View Vacancy</button>
             </div>
           </>
         ))}

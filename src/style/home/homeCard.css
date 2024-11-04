@@ -1,233 +1,250 @@
 .app-container {
-    width: 80%;
-    margin: auto;
-    background-color: white;
-    padding: 20px;
-  }
-  
-  /* Header section */
-  .header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .title {
-    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
-    text-align: center;
-    
-    /* www.independentrecruiters.nl/Semantic/Heading 2 */
-    font-family:  "Nunito Sans";;
-    font-size: 46.68px;
-    font-style: normal;
-    font-weight: var(--font-weight-700, 700);
-    line-height: var(--line-height-59, 59px); /* 126.393% */
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .browse-button {
-    display: flex;
-padding: 12px 24px;
-justify-content: center;
-align-items: center;
-gap: 6px;
-border-radius: var(--radius-10, 10px);
-border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
-background: var(--Boss-White, #F8F8F8);
-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
-    color: var(--Boss, #7B0801);
-text-align: center;
-font-family: "Nunito Sans";
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin: auto;
-margin-bottom: 40px;
-  }
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+}
 
-  .browse-button1{
-    /* display: flex; */
-padding: 12px 24px;
-/* justify-content: center; */
-    border-radius: var(--radius-10, 10px);
-    border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
-    background: var(--Boss-White, #F8F8F8);
-    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
-        cursor: pointer;
-        color: var(--Boss, #7B0801);
-    text-align: center;
-    font-family: "Nunito Sans";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin: auto;
-    margin-bottom: 40px;
-  }
+/* Header section */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-  .browse-button:hover{
-    background-color: #7B0801;
-    color: white;
-  }
+.title {
+  color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+  text-align: center;
+  text-transform: capitalize;
+  /* www.independentrecruiters.nl/Semantic/Heading 2 */
+  font-family: "Nunito Sans";
+  ;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: var(--font-weight-700, 700);
+  line-height: var(--line-height-59, 59px);
+  /* 126.393% */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
-  .browse-button1:hover{
-    background-color: #7B0801;
-    color: white;
-  }
-  
-  .browse-button .icon {
-    margin-left: 5px;
-  }
-  
-  /* Job cards container */
+.browse-button {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: var(--radius-10, 10px);
+  border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
+  background: var(--Boss-White, #F8F8F8);
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  color: var(--Boss, #7B0801);
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.browse-button1 {
+  /* display: flex; */
+  padding: 12px 24px;
+  /* justify-content: center; */
+  border-radius: var(--radius-10, 10px);
+  border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
+  background: var(--Boss-White, #F8F8F8);
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  color: var(--Boss, #7B0801);
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: auto;
+  margin-top: 8%;
+}
+
+.browse-button:hover {
+  background-color: #7B0801;
+  color: white;
+}
+
+.browse-button1:hover {
+  background-color: #7B0801;
+  color: white;
+}
+
+.browse-button .icon {
+  margin-left: 5px;
+}
+
+/* Job cards container */
+.job-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-content: center;
+  padding: 0;
+}
+
+
+
+.vacancy-button:hover {
+  background-color: #7B0801;
+  color: white;
+}
+
+@media (min-width: 640px) {
   .job-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    justify-content: center;
-    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  
 
-  .vacancy-button:hover{
-    background-color: #7B0801;
-    color: white;
-  }
-  
-  @media (min-width: 640px) {
-    .job-cards {
-      grid-template-columns: repeat(2, 1fr);
-    }
+}
 
-    
-  }
-  
-  @media (min-width: 1024px) {
-    .job-cards {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    
-  }
-  
-  /* Job card */
-  .job-card {
-    border-radius: var(--radius-10, 10px);
-    border-radius: 10px;
-    padding: 8px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: var(--radius-10, 10px);
-border: var(--stroke-weight-1, 1px) solid var(--Boss, #7B0801);
-background: var(--color-white-solid, #FFF);
+@media (min-width: 1024px) {
+  .job-cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  
-  .job-image {
-    width: 300px;
-    height: 200px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .job-title {
-    color: var(--color-black-solid, #000);
-    text-align: center;
-    font-family: "Nunito Sans";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.5px;
-  }
-  
-  .location {
-    color: var(--Secondary-Secondary800, #637D92);
-text-align: center;
-font-family: "Nunito Sans";
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: 30px; /* 166.667% */
-letter-spacing: 0.5px;
-    margin-bottom: 10px;
-  }
-  
-  /* Job details */
-  .details {
-    width: 100%;
-  }
-  
-  .job-details {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    width: 50%;
-  }
-  
-  .detail-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #777;
-    margin-bottom: 5px;
-  }
-  
-  .icon-detail {
-    color: rgb(80, 78, 78.0.5);
-    margin-right: 10px;
-  }
-  
-  /* Vacancy button */
-  .vacancy-button {
 
-    width: 70%;
-    margin: auto;
-    display: flex;
-padding: 12px 24px;
-justify-content: center;
-align-items: center;
-gap: 6px;
-border-radius: var(--radius-10, 10px);
-border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
-background: var(--Boss-White, #F8F8F8);
-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
-    color: var(--Boss, #7B0801);
-text-align: center;
-font-family: Nunito;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-color: var(--Boss, #7B0801);
-text-align: center;
-font-family:  "Nunito Sans";;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-  }
-  
-  .vacancy-button .icon {
-    margin-left: 5px;
+}
+
+/* Job card */
+.job-card {
+  border-radius: var(--radius-10, 10px);
+  border-radius: 10px;
+  padding: 8px;
+  max-width: 317px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: var(--radius-10, 10px);
+  border: var(--stroke-weight-1, 1px) solid var(--Boss, #7B0801);
+  background: var(--color-white-solid, #FFF);
+}
+
+
+.job-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.job-title {
+  color: var(--color-black-solid, #000);
+  text-align: center;
+  padding: 0 1rem;
+  font-family: "Nunito Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.5px;
+}
+
+.location {
+  color: var(--Secondary-Secondary800, #637D92);
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  /* 166.667% */
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+/* Job details */
+.details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* Centers .job-details horizontally */
+
+}
+
+.job-details {
+  margin: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* width: 50%; */
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  color: #777;
+  margin-bottom: 5px;
+  /* gap: 8px; */
+}
+
+.icon-detail {
+  color: rgb(80, 78, 78.0.5);
+  margin-right: 10px;
+}
+
+/* Vacancy button */
+.vacancy-button {
+
+  width: 70%;
+  margin: auto;
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: var(--radius-10, 10px);
+  border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
+  background: var(--Boss-White, #F8F8F8);
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  color: var(--Boss, #7B0801);
+  text-align: center;
+  font-family: Nunito;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--Boss, #7B0801);
+  text-align: center;
+  font-family: "Nunito Sans";
+  ;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.vacancy-button .icon {
+  margin-left: 5px;
+}
+
+@media (max-width:768px) {
+  .title {
+    font-size: 30px !important;
+    line-height: 36px;
   }
 
-  @media (max-width:768px) {
-    .title{
-      font-size: 30px !important;
-      line-height: 36px;
-    }
-
-    .browse-button{
-       width: 200px;
-       font-size: 10px;
-    }
+  .browse-button {
+    width: 200px;
+    font-size: 10px;
   }
+}

@@ -1,133 +1,135 @@
 /* Basic styling for the navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-  }
-  
-  .navbar-left {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Logo styling */
-  .logo img {
-    height: 50px;
-    margin-right: 20px;
-  }
-  
-  /* Navigation links on larger screens */
-  .nav-links {
-    display: flex;
-    list-style: none;
-    align-items: center;
-  }
-  
-  .nav-links li {
-    margin-left: 20px;
-    font-size: 18px;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: black;
-    padding-bottom: 5px;
-    transition: border-bottom 0.3s;
-  }
-  
-  /* Active link styling */
-  .nav-links li a:hover, .nav-links li.active a {
-    border-bottom: 2px solid #7B0801;
-    color: #7B0801;
-  }
-  
-  /* Button styling */
-  .contact-button button {
-    color: var(--Boss, #7B0801);
-text-align: center;
-font-family: Nunito;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-    border-radius: var(--radius-10, 10px);
-    padding: 10px;
-border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
-background: var(--Boss-White, #F8F8F8);
-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
-    transition: background-color 0.3s;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
 
-  .contact-button button:hover{
-    background-color: #7B0801;
-    color: white;
-  }
-  
-  /* .contact-button button:hover {
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo styling */
+.logo img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+/* Navigation links on larger screens */
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 5px;
+  transition: border-bottom 0.3s;
+}
+
+/* Active link styling */
+.nav-links li a:hover,
+.nav-links li.active a {
+  border-bottom: 2px solid #7B0801;
+  color: #7B0801;
+}
+
+/* Button styling */
+.contact-button button {
+  color: var(--Boss, #7B0801);
+  text-align: center;
+  font-family: Nunito;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: var(--radius-10, 10px);
+  padding: 10px;
+  border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
+  background: var(--Boss-White, #F8F8F8);
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.3s;
+}
+
+.contact-button button:hover {
+  background-color: #7B0801;
+  color: white;
+}
+
+/* .contact-button button:hover {
     background-color: darkred;
   } */
-  
-  /* Hamburger icon */
-  .hamburger {
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile styling */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  /* Hide navigation links and contact button initially in mobile */
+  .nav-links,
+  .contact-button {
     display: none;
-    font-size: 24px;
-    cursor: pointer;
   }
-  
-  /* Mobile styling */
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: row;
-      justify-content: space-between;
-      
-    }
-  
-    /* Hide navigation links and contact button initially in mobile */
-    .nav-links, .contact-button {
-      display: none;
-    }
-  
-    /* Show the navigation and button when hamburger is clicked */
-    .nav-links-mobile {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      list-style: none;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      z-index: 999;
-      z-index: 20;
-    }
-  
-    .nav-links-mobile li {
-      margin-bottom: 15px;
-    }
-  
-    /* Adjust the button in mobile view */
-    .contact-button-mobile {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      margin-top: 20px;
-    }
-  
-    .contact-button-mobile button {
-      width: 30%; /* Button takes 30% width in mobile view */
-      padding: 10px;
-      text-align: center;
-    }
-  
-    /* Display the hamburger icon in mobile */
-    .hamburger {
-      display: block;
-    }
+
+  /* Show the navigation and button when hamburger is clicked */
+  .nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    list-style: none;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    z-index: 20;
   }
-  
+
+  .nav-links-mobile li {
+    margin-bottom: 15px;
+  }
+
+  /* Adjust the button in mobile view */
+  .contact-button-mobile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .contact-button-mobile button {
+    width: 30%;
+    /* Button takes 30% width in mobile view */
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Display the hamburger icon in mobile */
+  .hamburger {
+    display: block;
+  }
+}
