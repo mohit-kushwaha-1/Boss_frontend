@@ -4,6 +4,11 @@ import logo1 from "../../../public/images/logo1.png";
 import { baseUrl } from "../helper/helper";
 const DetailsHero = ({ data }) => {
   //   const [data,setData] = useState()
+  const scrollToSection = () => {
+    document.getElementById('apply-section').scrollIntoView({
+        behavior: 'smooth' // Smooth scrolling
+    });
+};
 
   return (
     <div>
@@ -51,7 +56,7 @@ const DetailsHero = ({ data }) => {
               </div>
 
               <div className="search-button1">
-                <h4>Apply Now</h4>
+                <h4 onClick={scrollToSection} >Apply Now</h4>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

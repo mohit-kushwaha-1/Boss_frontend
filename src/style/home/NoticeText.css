@@ -1,0 +1,37 @@
+.notice-text-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: auto;
+}
+
+.notice-text-container h1{
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+text-align: center;
+font-family: Inter;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: var(--line-height-59, 59px); /* 122.917% */
+}
+
+.notice-text-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* border: 1px solid black; */
+}
+
+.notice-text-content h4{
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+text-align: justify;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 48px; /* 200% */
+}

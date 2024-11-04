@@ -1,7 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import '../../../style/client/soucing/SoucingText.css'
+import { useNavigate } from 'react-router-dom'
 const SourcingText = () => {
+     const navigate = useNavigate();
+
+     const handleNav = ()=>{
+          navigate('/about-contact')
+     }
+
   return (
     <div className='soucing-text-continaer'>
            <div className='souncing-text-content'>
@@ -18,7 +25,7 @@ const SourcingText = () => {
                          <li><h4>Our Track Record</h4></li>
                       </ul>
 
-                      <button>Get in Touch</button>
+                      <button onClick={handleNav}>Get in Touch</button>
                 </div>
 
 

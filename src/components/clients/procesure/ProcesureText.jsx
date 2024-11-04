@@ -1,7 +1,15 @@
 import React from 'react'
 // import '../../../style/candidate/page1/CandidatePage1Details.css'
 import '../../../style/candidate/page1/CandidatePage1Details.css'
+import { useNavigate } from 'react-router-dom';
 const ProcesureText = () => {
+
+
+  const navigate = useNavigate();
+
+     const handleNav = ()=>{
+          navigate('/about-contact')
+     }
   return (
     <div>
           <div className='Candidate-Details1-container'>
@@ -58,7 +66,7 @@ const ProcesureText = () => {
 
                   <div className='Processure-button-text'>
                        <h5>Have More Questions?</h5>
-                      <button>Contact Us</button>
+                      <button onClick={handleNav}>Contact Us</button>
                   </div>
             </div>
     </div>

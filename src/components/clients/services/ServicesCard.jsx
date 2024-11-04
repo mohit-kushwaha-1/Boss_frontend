@@ -16,12 +16,12 @@ const ServicesCard = () => {
                 </div>
          </div>
 
-         <div className='services-card'>
+         <div className='services-card1'>
 
-               <div className='services-card-box-image'>
+               <div className='services-card-box-image1'>
                     <img src={ct42} alt="" />
                 </div>
-                <div className='services-card-box'>
+                <div className='services-card-box1'>
                      <h2>Direct Hire Recruitment Services</h2>
                      <h4>Our direct hire solutions help you build a strong, dedicated team. We find candidates who not only meet your skills requirements but also align with your company’s culture and goals, ensuring a perfect long-term fit.</h4>
                 </div>

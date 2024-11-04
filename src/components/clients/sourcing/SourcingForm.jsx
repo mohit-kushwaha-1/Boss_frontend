@@ -18,39 +18,38 @@ const SourcingForm = () => {
       console.error(`${name} file upload failed.`);
     }
 
-
-
     const formData = new FormData();
     formData.append("image", info.file);
     // console.log(file.file.name);
 
-    // try {
-    //   const response = await axios.post(
-    //     "http://localhost:5000/api/uploadImage/uploadImage",
-    //     formData,
-    //     {
-    //       headers: {
-    //         "Content-Type": "multipart/form-data",
-    //       },
-    //     }
-    //   );
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/uploadImage/uploadImage",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
 
 
-    //    if(response){
-    //     console.log(response.data.imageUrl)
-    //     message.success("Image uploaded successfully!");
-    //     setImage(response.data.imageUrl);
-    //    }
+       if(response){
+        console.log(response.data.imageUrl)
+        message.success("Image uploaded successfully!");
+        setImage(response.data.imageUrl);
+       }
       
       
-    //   return response.data.imageUrl// Assuming the API returns the image URL in the 'url' field
-    // } catch (error) {
-    //   message.error("Error uploading image. Please try again later.");
-    //   console.error("Image upload error:", error);
-    //   return null;
-    // }
+      return response.data.imageUrl// Assuming the API returns the image URL in the 'url' field
+    } catch (error) {
+      message.error("Error uploading image. Please try again later.");
+      console.error("Image upload error:", error);
+      return null;
+    }
   };
 
+  const [form] = Form.useForm(); 
   const onFinish = async(values) => {
         
     const formdata ={
@@ -63,16 +62,17 @@ const SourcingForm = () => {
     }
 
 
-    // try {
-    //     const response = await axios.post(`${baseUrl}/api/sendApplication/createSendApplication`,formdata);
-    //     console.log("response",response)
+    try {
+        const response = await axios.post(`${baseUrl}/api/adminPost/createAdminPost`,formdata);
+        console.log("response",response)
 
-    //     if(response.data){
-    //       message.success("form submmited succesfully")
-    //     }
-    // } catch (error) {
-    //      console.log(error);
-    // }
+        if(response.data){
+          message.success("form submmited succesfully");
+          form.resetFields(); 
+        }
+    } catch (error) {
+         console.log(error);
+    }
   };
 
   return (

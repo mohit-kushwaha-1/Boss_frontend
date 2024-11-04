@@ -88,6 +88,8 @@ padding: 12px 24px;
     padding: 0;
   }
 
+  
+
   .vacancy-button:hover{
     background-color: #7B0801;
     color: white;
@@ -124,6 +126,7 @@ padding: 12px 24px;
 border: var(--stroke-weight-1, 1px) solid var(--Boss, #7B0801);
 background: var(--color-white-solid, #FFF);
   }
+
   
   .job-image {
     width: 300px;

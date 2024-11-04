@@ -5,6 +5,7 @@ import Seeking from './Seeking'
 import HomeCard1 from './HomeCard1'
 import Footer from '../Footer'
 import Explor from './Explor'
+import HomeCard2 from './HomeCard2'
 import Testinomial from './Testinomial'
 const Home = () => {
   return (
@@ -16,6 +17,8 @@ const Home = () => {
             
             <Seeking/>
             <HomeCard1/>
+
+           
             {/* <Testinomial/> */}
             
        </div>

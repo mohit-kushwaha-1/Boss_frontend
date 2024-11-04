@@ -1,6 +1,13 @@
 import React from "react";
 import '../../../style/AboutUs/working/WorkingText.css'
+import { useNavigate } from "react-router-dom";
 const WorkingText = () => {
+  
+  const navigate = useNavigate();
+
+     const handleNav = ()=>{
+          navigate('/about-contact')
+     }
   return (
     <div className="working-main-container">
       <div className="working-content">
@@ -20,7 +27,7 @@ const WorkingText = () => {
           proactively searching for top talent.
         </h4>
         <h3>Curious about our company and culture?<br/> Reach out to Us.</h3>
-        <button>Contact Us</button>
+        <button onClick={handleNav}>Contact Us</button>
       </div>
     </div>
   );

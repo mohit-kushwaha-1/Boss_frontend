@@ -154,9 +154,15 @@ line-height: var(--line-height-17_6, 17.6px); /* 113.548% */
 
 .seeking-nav-box1:hover svg >path{
 
-    stroke: #F8F8F8;
+    stroke: white;
     cursor: pointer;
 }
+
+.seeking-button1{
+cursor: pointer;
+}
+
+
 
 
 

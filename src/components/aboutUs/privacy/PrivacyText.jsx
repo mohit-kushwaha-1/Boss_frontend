@@ -1,6 +1,12 @@
 import React from 'react'
 import '../../../style/AboutUs/privacy/PrivacyText.css'
+import { useNavigate } from 'react-router-dom';
 const PrivacyText = () => {
+  const navigate = useNavigate();
+
+  const handleNav = ()=>{
+       navigate('/about-contact')
+  }
   return (
     <div className='privacy-text-container'>
           <div className='privacy-text-content'>
@@ -66,7 +72,7 @@ const PrivacyText = () => {
                    </div>
 
                    <div className='privacy-text-content-text'>
-                    <button>
+                    <button onClick={handleNav}>
                         Contact Us
                     </button>
                    </div>

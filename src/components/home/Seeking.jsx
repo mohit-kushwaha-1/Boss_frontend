@@ -11,11 +11,15 @@ const Seeking = () => {
     navigate('/client-soucing')
   }
 
+
+  const handleNavigate = ()=>{
+    navigate('/notice')
+  }
   return (
     <div>
       <div className="seeking-container">
         <div className="seeking-button">
-          <div className="seeking-button1">
+          <div className="seeking-button1" onClick={handleNavigate}>
             <h6>For Employers: Seeking the Right Talent?</h6>
             <svg
               xmlns="http://www.w3.org/2000/svg"

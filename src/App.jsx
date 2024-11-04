@@ -15,6 +15,7 @@ import Privacy from "./components/aboutUs/privacy/Privacy";
 import Direction from "./components/aboutUs/direction/Direction";
 import ContactUs from "./components/aboutUs/contactUs/ContactUs";
 import ScrollToTop from "./components/ScrollToTop";
+import Notice from "./components/notice/Notice";
 const App = () => {
   return (
     <div>
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/about-privacy" element={<Privacy />} />
         <Route path="/about-direction" element={<Direction />} />
         <Route path="/about-contact" element={<ContactUs />} />
+        <Route path="/notice" element={<Notice />} />
       </Routes>
     </div>
   );

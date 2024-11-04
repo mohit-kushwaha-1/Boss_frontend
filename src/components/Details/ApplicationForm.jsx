@@ -87,8 +87,14 @@ const ApplicationForm = () => {
     }
   };
 
+  const handdleClick = (e)=>{
+    e.preventDefault();
+    setIsModalVisible(true);
+  }
+
+
   return (
-    <div className="form-container-main">
+    <div className="form-container-main" id="apply-section">
       <div className="form-container">
         <h2>Interested? Send us <br/>your application!</h2>
         <Form layout="vertical" onFinish={onFinish} className="form-content">
@@ -172,7 +178,7 @@ const ApplicationForm = () => {
           
           <div  className='select-form-modal'>
             <h5>If You don’t have resume</h5>
-          <button onClick={showModal}>Click Here </button>
+          <button onClick={handdleClick}>Click Here </button>
           </div>
 
 
