@@ -29,7 +29,7 @@ const SourcingForm = () =>
     try
     {
       const response = await axios.post(
-        "http://localhost:5000/api/uploadImage/uploadImage",
+        `${baseUrl}/api/uploadImage/uploadImage`,
         formData,
         {
           headers: {

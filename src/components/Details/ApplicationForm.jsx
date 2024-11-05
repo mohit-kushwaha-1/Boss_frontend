@@ -5,6 +5,7 @@ import '../../style/details/form.css';
 import ReumeForm from './ReumeForm';
 import axios from 'axios';
 import { baseUrl } from '../helper/helper';
+
 const ApplicationForm = () =>
 {
   const [file, setFile] = useState(null);
@@ -45,7 +46,7 @@ const ApplicationForm = () =>
     try
     {
       const response = await axios.post(
-        "http://localhost:5000/api/uploadImage/uploadImage",
+        `${baseUrl}/api/uploadImage/uploadImage1`,
         formData,
         {
           headers: {

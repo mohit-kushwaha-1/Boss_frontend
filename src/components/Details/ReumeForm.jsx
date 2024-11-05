@@ -1,10 +1,11 @@
 import React from "react";
-import { Form, Input, Radio, Select, DatePicker, Button, Row, Col ,message} from "antd";
+import { Form, Input, Radio, Select, DatePicker, Button, Row, Col ,message,TimePicker} from "antd";
 import '../../style/details/ResumeForm.css'
 import axios from "axios";
 import { baseUrl } from "../helper/helper";
 
 const { Option } = Select;
+const { TextArea } = Input;
 
 const ReumeForm = () => {
   const onFinish = async(values) => {
@@ -20,7 +21,20 @@ const ReumeForm = () => {
         driversLicense:values.driversLicense,
         drivingLicenseCategory:values.drivingLicenseCategory,
         ownVehicle:values.ownVehicle,
-        currentlyEmployed:values.currentlyEmployed
+        currentlyEmployed:values.currentlyEmployed,
+        jobTitle:values.jobTitle,
+      companyName1:values.companyName1,
+      jobTitle1:values.jobTitle,
+      DOS:values.dateInService,
+      RFL:values.reason,
+      HAW:values.hourstoAvailable,
+      day:values.day,
+      WorkE:values.evening,
+      WorkN:values.night,
+      startTime:values.starttime,
+      finishTime:values.lasttime,
+      highEducatioin:values.highest,
+      companyName:values.companyName,
        }
 
        try {
@@ -170,6 +184,179 @@ const ReumeForm = () => {
             </Form.Item>
           </Col>
         </Row>
+
+
+      <h6>If Yes, please specify your employer:</h6>
+
+      <Row gutter={16}>
+          <Col span={12}>
+            <Form.Item
+              label="Company Name"
+              name="companyName"
+              // rules={[{ required: true, message: "Please enter your Company Name" }]}
+            >
+              <Input placeholder="Enter Company Name" />
+            </Form.Item>
+          </Col>
+          <Col span={12}>
+            <Form.Item
+              label="Job Title"
+              name="jobTitle"
+              // rules={[{ required: true, message: "Please enter your Job Title" }]}
+            >
+              <Input placeholder="Enter Job Title" />
+            </Form.Item>
+          </Col>
+        </Row>
+
+
+
+        <h6>Last or Most Relevant Work Experience</h6>
+
+<Row gutter={16}>
+    <Col span={12}>
+      <Form.Item
+        label="Company Name"
+        name="companyName1"
+        // rules={[{ required: true, message: "Please enter your Company Name" }]}
+      >
+        <Input placeholder="Enter Company Name" />
+      </Form.Item>
+    </Col>
+    <Col span={12}>
+      <Form.Item
+        label="Job Title"
+        name="jobTitle1"
+        // rules={[{ required: true, message: "Please enter your Job Title" }]}
+      >
+        <Input placeholder="Enter Job Title" />
+      </Form.Item>
+    </Col>
+  </Row>
+
+
+  <Row gutter={16}>
+    <Col span={12}>
+      <Form.Item
+        label="Date In Service"
+        name="dateInService"
+        // rules={[{ required: true, message: "Please enter your Date In Service" }]}
+      >
+        <Input placeholder="Enter Date In Service" type="date"/>
+      </Form.Item>
+    </Col>
+    <Col span={12}>
+      <Form.Item
+        label="Date Out of Service"
+        name="dateOfOut"
+        // rules={[{ required: true, message: "Please enter your Job Title" }]}
+      >
+        <Input placeholder="Enter  Date Out of Service" type="date"/>
+      </Form.Item>
+    </Col>
+  </Row>
+
+
+     <Form.Item
+        label="Reason for Leaving"
+        name="reason"
+      >
+        <TextArea
+          placeholder="Type Here"
+          style={{ width: '80%', height: '70px' }}
+        />
+      </Form.Item>
+
+
+ <h2>Availability</h2>
+      <Row gutter={16}>
+    <Col span={12}>
+      <Form.Item
+        label="Hours Available to Work"
+        name="hourstoAvailable"
+        // rules={[{ required: true, message: "Please enter your Date In Service" }]}
+      >
+        <Input placeholder="Enter Work Hours" />
+      </Form.Item>
+    </Col>
+    <Col span={12}>
+    <Form.Item
+        label="Day"
+        name="day"
+        // rules={[{ required: true, message: 'Please select a day!' }]}
+      >
+        <Select placeholder="Select" >
+          <Option value="5">5</Option>
+          <Option value="10">10</Option>
+          <Option value="15">15</Option>
+          <Option value="20">20</Option>
+          <Option value="25">25</Option>
+        </Select>
+      </Form.Item>
+    </Col>
+  </Row>
+
+
+
+  <Row gutter={16}>
+    <Col span={12}>
+    <Form.Item
+        label="Can You Work Evenings?"
+        name="evening"
+        // rules={[{ required: true, message: 'Please select a day!' }]}
+      >
+        <Select placeholder="Select" >
+          <Option value="Yes">Yes</Option>
+          <Option value="No">No</Option>
+          
+        </Select>
+      </Form.Item>
+    </Col>
+    <Col span={12}>
+    <Form.Item
+        label="Can You Work Nights?"
+        name="night"
+        // rules={[{ required: true, message: 'Please select a day!' }]}
+      >
+        <Select placeholder="Select" >
+          <Option value="Yes">Yes</Option>
+          <Option value="No">No</Option>
+
+        </Select>
+      </Form.Item>
+    </Col>
+  </Row>
+
+
+  <Row gutter={16}>
+    <Col span={12}>
+    <Form.Item
+        label="Earliest Start Time"
+        name="starttime"
+        // rules={[{ required: true, message: 'Please select a Start time!' }]}
+      >
+        <TimePicker use12Hours format="h:mm A" />
+      </Form.Item>
+    </Col>
+    <Col span={12}>
+    <Form.Item
+        label="Latest Finish Time"
+        name="lasttime"
+        // rules={[{ required: true, message: 'Please select a time!' }]}
+      >
+        <TimePicker use12Hours format="h:mm A" />
+      </Form.Item>
+    </Col>
+  </Row>
+
+  <h2>Education</h2>
+  <Form.Item
+        label=" Highest Level of Education Completed: "
+        name="highest"
+        // rules={[{ required: true, message: 'Please input some text!' }]}
+      >
+        <Input placeholder="Enter Your Highest Education" style={{ width: '80%' }} />
+      </Form.Item>
 
         <Button type="primary" htmlType="submit">
           Submit
