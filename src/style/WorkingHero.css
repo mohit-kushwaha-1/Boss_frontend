@@ -29,12 +29,15 @@
 
 @media (max-width: 768px) {
     .candidate-container {
-        height: 60vh;
+        height: 70vh;
     }
 
     .candidate-container-content h1 {
         font-size: 30px;
     }
 
+    .working-container-example {
+        height: 70vh !important;
+    }
 
 }

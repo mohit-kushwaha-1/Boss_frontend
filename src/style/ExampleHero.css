@@ -28,7 +28,7 @@
 
 @media (max-width: 768px) {
     .candidate-container-example {
-        height: 60vh !important;
+        height: 70vh !important;
     }
 
     .candidate-container-content h1 {
