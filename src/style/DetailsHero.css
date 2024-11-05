@@ -42,7 +42,7 @@ html {
 
 .hero-content1 h1 {
   color: var(--Boss-White, #F8F8F8);
-  font-family: Nunito;
+  font-family: "Nunito Sans", sans-serif !important;
   font-size: 52px;
   font-style: normal;
   font-weight: 700;
@@ -55,7 +55,7 @@ html {
 .hero-content1 h2 {
   color: var(--Boss-White, #F8F8F8);
   font-family: "Nunito Sans";
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 36px;
@@ -69,12 +69,15 @@ html {
   gap: 10px;
 }
 
+.search-bar input {
+  outline: none !important;
+}
 
 
 .search-button1 {
 
   margin-top: 10%;
-  width: 200px;
+  width: auto;
   display: flex;
   padding: 10px 10px;
   justify-content: center;
@@ -89,7 +92,7 @@ html {
 .search-button1 h4 {
   color: var(--Boss, #7B0801);
   text-align: center;
-  font-family: Nunito;
+  font-family: "Nunito Sans", sans-serif !important;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -116,7 +119,7 @@ html {
 .search-input h4 {
   color: var(--Boss, #7B0801);
   text-align: center;
-  font-family: Nunito;
+  font-family: "Nunito Sans", sans-serif !important;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -143,7 +146,7 @@ html {
 .details-hero-heading h2 {
   color: var(--Boss-White, #F8F8F8);
   font-family: "Nunito Sans";
-  font-size: 32px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: 30px;

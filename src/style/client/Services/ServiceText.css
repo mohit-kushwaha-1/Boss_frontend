@@ -1,38 +1,45 @@
-.services-text-contaner{
+.services-text-contaner {
     width: 80%;
     margin: auto;
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
-.services-text-contaner-text h1{
+.services-text-contaner-text h1 {
     color: var(--Boss-Black, var(--color-grey-7, #111));
     text-align: center;
     font-family: "Nunito Sans";
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
-    line-height: var(--line-height-59, 59px); /* 122.917% */
+    line-height: var(--line-height-59, 59px);
+    /* 122.917% */
 }
 
-.services-text-contaner-text h4{
+.services-text-contaner-text h4 {
     color: var(--Boss-Black, var(--color-grey-7, #111));
-text-align: center;
-font-family: "Nunito Sans";
-font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: 48px; /* 200% */
+    text-align: center;
+    font-family: "Nunito Sans";
+    font-size: 20px;
+    text-align: justify;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+    /* 200% */
 }
 
 @media (max-width:768px) {
-    .services-text-contaner-text h1{
-        font-size: 30px;
+    .services-text-contaner-text h1 {
+        font-size: 20px;
         line-height: 36px;
     }
 
-    .services-text-contaner-text h4{
-        font-size: 20px;
+    .services-card-box h2 {
+        font-size: 18px;
+    }
+
+    .services-text-contaner-text h4 {
+        font-size: 16px;
         line-height: 30px;
     }
 }

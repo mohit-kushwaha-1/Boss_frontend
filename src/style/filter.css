@@ -11,11 +11,14 @@
   border-radius: var(--radius-10, 10px);
   background: var(--Boss-White, #F8F8F8);
   height: 500px;
-  padding: 68px 49px;
+  padding: 48px 24px;
+  /* padding: 68px 49px; */
 }
 
 .selected-filters {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .font-semibold {
@@ -25,14 +28,14 @@
 .filter-tag {
   display: inline-flex;
   align-items: center;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 1rem;
   margin-left: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
   color: #2d3748;
   background-color: transparent;
   border: 1px solid #7B0801;
-  border-radius: 9999px;
+  border-radius: 10px;
   margin-bottom: 10px;
 }
 
@@ -62,7 +65,8 @@
 }
 
 .checkbox-container {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .checkbox-label {

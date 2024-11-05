@@ -72,6 +72,8 @@
 .browse-button:hover {
   background-color: #7B0801;
   color: white;
+  border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #7B0801);
+
 }
 
 .browse-button1:hover {
@@ -97,6 +99,8 @@
 .vacancy-button:hover {
   background-color: #7B0801;
   color: white;
+  border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #7B0801);
+
 }
 
 @media (min-width: 640px) {
@@ -146,7 +150,7 @@
   text-align: center;
   padding: 0 1rem;
   font-family: "Nunito Sans";
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -191,7 +195,7 @@
   display: flex;
   align-items: center;
   /* justify-content: center; */
-  color: #777;
+  color: #637D92;
   margin-bottom: 5px;
   /* gap: 8px; */
 }
@@ -218,7 +222,7 @@
   cursor: pointer;
   color: var(--Boss, #7B0801);
   text-align: center;
-  font-family: Nunito;
+  font-family: "Nunito Sans", sans-serif !important;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -243,8 +247,12 @@
     line-height: 36px;
   }
 
+  .vacancy-button {
+    font-size: 16px;
+  }
+
   .browse-button {
-    width: 200px;
-    font-size: 10px;
+    width: auto;
+    font-size: 16px;
   }
 }

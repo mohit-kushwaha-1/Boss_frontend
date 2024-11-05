@@ -85,13 +85,13 @@ const StartText = () =>
           </div>
 
           <div>
-            <p style={{ fontSize: "28px", color: '#24303A', fontWeight: 700 }}>
+            <h4 >
               Using the STAR Method, you can clearly showcase how you’ve applied
               your skills to real-world situations, making it easier for
               employers to see your value. Prepare your answers ahead of time,
               and you’ll be ready to confidently navigate your next interview
               with STAR Recruitment!
-            </p >
+            </h4 >
 
           </div>
         </div>

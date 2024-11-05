@@ -1,32 +1,30 @@
 .form-container {
-    width: 100%;;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    /* border-radius: 15px; */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-  }
-  
-  h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-  }
-  
-  .ant-form-item {
-    margin-bottom: 20px;
-  }
-  
-  .ant-input,
-  .ant-select-selector,
-  .ant-picker {
-    height: 40px;
-    border-radius: 5px;
-  }
-  
-  .ant-radio-group {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  
-  
+  width: 100%;
+  ;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  /* border-radius: 15px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.ant-form-item {
+  margin-bottom: 20px;
+}
+
+.ant-input,
+.ant-select-selector,
+.ant-picker {
+  height: 40px;
+  border-radius: 5px;
+}
+
+.ant-radio-group {
+  display: flex;
+  justify-content: space-between;
+}

@@ -2,16 +2,17 @@ import React from 'react';
 // import './AddressMap.css'; // import the CSS file for styling
 import '../../../style/AboutUs/direction/AddressMap.css'
 
-const AddressMap = () => {
+const AddressMap = () =>
+{
   return (
-    <div className="addres-container" style={{marginTop:"80px"}}>
+    <div className="addres-container" style={{ marginTop: "80px" }}>
       <div className="address-box">
-        <h1>Address</h1>
+        <h1>Constact Details</h1>
         <h3>Boss Recruitment</h3>
-        <h4><span style={{fontWeight:"bold"}}>Phone Number:</span> +1 (721) 542-1242</h4>
-        <h4>Bush Road 26, unit 2-3,<br/>
-           Ms Lailes Commercial Center,<br/>
-           Philipsburg, Sint Maarten
+        <h4><span style={{ fontWeight: "bold" }}>Phone Number:</span> +1 (721) 542-1242</h4>
+        <h4><strong>Address: </strong>Bush Road 26, unit 2-3,<br />
+          Ms Lailes Commercial Center,<br />
+          Philipsburg, Sint Maarten
         </h4>
       </div>
       <div className="map-box">

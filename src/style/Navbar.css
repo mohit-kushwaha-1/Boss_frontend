@@ -50,7 +50,7 @@
 .contact-button button {
   color: var(--Boss, #7B0801);
   text-align: center;
-  font-family: Nunito;
+  font-family: "Nunito Sans", sans-serif !important;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -66,6 +66,8 @@
 .contact-button button:hover {
   background-color: #7B0801;
   color: white;
+  border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #7B0801);
+
 }
 
 /* .contact-button button:hover {
@@ -75,7 +77,7 @@
 /* Hamburger icon */
 .hamburger {
   display: none;
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
 }
 

@@ -66,7 +66,7 @@ const Explor = () =>
     <>
       <div className="explor-container">
         <div className="explor-container-content">
-          <h5 id="vacancy">Explore All Our Vacancies</h5>
+          <h5 id="vacancy" style={{ fontWeight: 'bold' }}>Explore All Our Vacancies</h5>
           <div className="explor-container-content-input11">
             <div className="explor-container-content-input12">
               <input type="text" placeholder="Search" value={search}

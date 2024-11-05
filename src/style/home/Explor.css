@@ -1,5 +1,6 @@
-.explor-container{
-    background-image: url('../../public/images/Home1.png'); /* Replace with the actual image path */
+.explor-container {
+    background-image: url('../../public/images/Home1.jpg');
+    /* Replace with the actual image path */
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -13,50 +14,45 @@
     margin-bottom: 40px;
 }
 
-.explor-container-content{
-display: flex;
-padding: 40px;
-flex-direction: column;
-/* justify-content: center; */
-/* align-items: center; */
-flex-shrink: 0;
+.explor-container-content {
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-shrink: 0;
     width: 60%;
     /* height: 10vh; */
     border-radius: 40px;
-background: var(--color-white-solid, #FFF);
-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.40);
+    background: var(--color-white-solid, #FFF);
+    box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.40);
 
     /* border :1px solid black */
 }
 
-.explor-container-content h5{
+.explor-container-content h5 {
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
 
-/* www.independentrecruiters.nl/Semantic/Heading 1 */
-font-family: var(--font-family-Font-1, Inter);
-font-size: 46.289px;
-font-style: normal;
-font-weight: var(--font-weight-300, 300);
-line-height: var(--width-60, 60px); /* 129.62% */
-margin: 0px;
-padding: 0px;
+    /* www.independentrecruiters.nl/Semantic/Heading 1 */
+    font-family: "Nunito Sans", sans-serif !important;
+    ;
+    font-size: 46.289px;
+    font-style: normal;
+    font-weight: var(--font-weight-300, 300);
+    line-height: var(--width-60, 60px);
+    /* 129.62% */
+    margin: 0px;
+    padding: 0px;
 }
 
-.explor-container-content-input11{
+.explor-container-content-input11 {
     display: flex;
     flex-direction: row;
     border: 1px solid black;
 }
 
 @media (max-width:768px) {
-    #vacancy{
+    #vacancy {
         font-size: 20px;
     }
 }
-
-
-
-
-
-
-

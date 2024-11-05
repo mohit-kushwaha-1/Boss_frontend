@@ -76,7 +76,7 @@
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
     font-family: "Nunito Sans";
     text-align: left;
-    font-size: 32px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 500;
     line-height: var(--line-height-18, 18px);
@@ -88,7 +88,7 @@
 .what-next-content-right h4 {
     color: var(--www-independentrecruiters-nl-dove-gray, var(--color-grey-44, #707070));
     font-family: "Nunito Sans";
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 36px;

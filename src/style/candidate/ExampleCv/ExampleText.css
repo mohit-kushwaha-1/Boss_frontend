@@ -1,85 +1,181 @@
-.example-text-continer{
+.example-text-continer {
     width: 80%;
     margin: auto;
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
-.example-text-continer-content{
+.example-text-continer-content {
     display: flex;
     flex-direction: column;
+    text-align: justify;
 }
 
-.example-text-continer-content-upper h1{
+
+.example-text-continer-content-upper h1 {
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
-text-align: left;
-font-family: "Nunito Sans";
-font-size: 48px;
-font-style: normal;
-font-weight: 700;
-line-height: var(--line-height-59, 59px); /* 122.917% */
+    text-align: left;
+    font-family: "Nunito Sans";
+    font-size: 48px;
+    font-style: normal;
+    margin-top: 20px;
+    text-align: justify;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: var(--line-height-59, 59px);
+    /* 122.917% */
 }
 
-.example-text-continer-content-upper h4{
+.example-text-continer-content-upper h4 {
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
-text-align: justify;
-font-family: "Nunito Sans";
-font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: 48px; /* 200% */
+    text-align: justify;
+    font-family: "Nunito Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: justify;
+    /* 200% */
 }
 
-.example-text-continer-content-lower h1{
+.example-text-continer-content-lower h1 {
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
     text-align: left;
     font-family: "Nunito Sans";
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
-    margin-top:40px;
-    line-height: 48px; /* 150% */
+    margin-top: 40px;
+    text-align: justify;
+    line-height: 48px;
+    /* 150% */
 }
-.example-text-continer-content-lower h2{
+
+.example-text-continer-content-lower h2 {
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
     text-align: left;
     font-family: "Nunito Sans";
-    font-size: 32px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 700;
-    line-height: 48px; /* 150% */
+    line-height: 48px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    text-align: justify;
+    /* 150% */
 }
 
+.span-above-fields {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    gap: 4px;
+}
 
-
-.example-text-continer-content-lower h4 .span-text{
+/* .example-text-continer-content-lower p {
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
-font-family: "Nunito Sans";
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 48px;
+    font-family: "Nunito Sans";
+    font-size: 48px;
+    font-style: normal;
+    text-transform: capitalize;
+    text-align: justify;
+    font-weight: 700;
+    line-height: 48px;
+} */
+.cv {
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+    font-family: "Nunito Sans";
+    font-size: 48px;
+    font-style: normal;
+    text-transform: capitalize;
+    text-align: justify;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.example-text-continer-content-lower h4 .span-text {
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+    font-family: "Nunito Sans";
+    font-size: 20px;
+    font-style: normal;
+    text-transform: capitalize;
+    text-align: justify;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.span-value {
+    font-size: 20px;
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+    font-family: "Nunito Sans";
+    text-align: left;
+    font-size: 20px;
+    font-style: normal;
+    text-transform: capitalize;
+    text-align: justify;
+    font-weight: 400;
+    line-height: 48px;
 }
 
 @media (max-width:768px) {
-    .example-text-continer-content-upper h1{
-        font-size: 30px;
-        
-    }
-
-    .example-text-continer-content-upper h4{
+    .example-text-continer-content-upper h1 {
         font-size: 20px;
-        line-height: 30px;
+
     }
 
-    .example-text-continer-content-lower h2{
-        font-size: 25px;
+    .example-text-continer-content-upper h4 {
+        font-size: 16px;
         line-height: 30px;
+
     }
 
-    .example-text-continer-content-lower h4{
-        font-size: 20px;
+    .example-text-continer-content-lower h2 {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        margin-top: 30px;
+        line-height: 30px
+    }
+
+    .example-text-continer-content-lower h4 {
+        font-size: 16px;
         line-height: 30px;
         text-align: justify;
+        /* font-weight: 700; */
+        line-height: 30px
+    }
+
+    .example-text-continer-content-lower h4 .span-text {
+        font-size: 16px;
+    }
+
+    .example-text-continer-content-lower h4 .span-value {
+        font-size: 16px;
+    }
+
+    .span-above-fields {
+        /* flex-direction: column; */
+        display: block;
+        justify-content: start;
+        gap: 1px;
+        align-items: start;
+    }
+
+    .example-text-continer-content-lower {
+        font-size: 20px;
+    }
+
+    .example-text-continer-content-lower p {
+        font-size: 20px;
+    }
+
+    .span-value {
+        font-size: 16px;
+        line-height: 20px
+    }
+
+    .span-text {
+        font-size: 16px;
+        line-height: 20px
     }
 }

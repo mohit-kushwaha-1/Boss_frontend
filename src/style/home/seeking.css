@@ -21,7 +21,7 @@
     background: var(--Boss, #7B0801);
     color: var(--Boss-White, #F8F8F8);
     text-align: center;
-    font-family: Nunito;
+    font-family: "Nunito Sans", sans-serif !important;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -34,7 +34,7 @@
     padding: 0px;
     color: var(--Boss-White, #F8F8F8);
     text-align: center;
-    font-family: Nunito;
+    font-family: "Nunito Sans", sans-serif !important;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -54,7 +54,7 @@
 
     color: var(--Boss, #7B0801);
     text-align: center;
-    font-family: Nunito;
+    font-family: "Nunito Sans", sans-serif !important;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -68,7 +68,7 @@
     padding: 0px;
     color: var(--Boss, #7B0801);
     text-align: center;
-    font-family: Nunito;
+    font-family: "Nunito Sans", sans-serif !important;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -77,6 +77,9 @@
 
 .seeking-button2:hover {
     background-color: #7B0801;
+    cursor: pointer;
+    border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #7B0801);
+
 
 }
 
@@ -118,7 +121,7 @@
     align-items: center;
     flex-shrink: 0;
     border-radius: var(--radius-10, 10px);
-    border: var(--stroke-weight-2, 2px) solid var(--www-independentrecruiters-nl-ebony-clay, #24303A);
+    border: var(--stroke-weight-2, 2px) solid var(--www-independentrecruiters-nl-ebony-clay, #7B0801);
     background: var(--color-white-solid, #FFF);
 }
 
@@ -134,11 +137,12 @@
 
 .retailer h6 {
     align-items: center;
-    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+    color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #637D92));
     text-align: center;
 
     /* www.independentrecruiters.nl/Semantic/Heading 3 */
-    font-family: var(--font-family-Font-1, Inter);
+    font-family: "Nunito Sans", sans-serif !important;
+    ;
     font-size: 15.5px;
     font-style: normal;
     font-weight: var(--font-weight-500, 500);
@@ -148,6 +152,8 @@
 
 .seeking-nav-box1:hover {
     background-color: #7B0801;
+    border: var(--stroke-weight-2, 2px) solid var(--www-independentrecruiters-nl-ebony-clay, #7B0801);
+
     color: #F8F8F8;
     cursor: pointer;
 }
@@ -191,23 +197,37 @@
         height: var(--height-170, 250px);
     }
 
+    .seeking-nav-box1 svg {
+        width: var(--height-170, 100px);
+        height: var(--height-170, 100px);
+    }
+
+    .retailer {
+        margin: 0px;
+        margin-top: 20px;
+    }
+
+    .retailer h6 {
+        font-size: 16px;
+    }
+
     .seeking-button1 {
-        width: 200px;
-        font-size: 10px;
+        width: auto;
+        font-size: 16px;
         padding: 5px;
     }
 
     .seeking-button1 h6 {
-        font-size: 10px;
+        font-size: 16px;
     }
 
     .seeking-button2 {
-        width: 200px;
+        width: auto;
         padding: 5px;
     }
 
     .seeking-button2 h6 {
-        font-size: 10px;
+        font-size: 16px;
     }
 
 

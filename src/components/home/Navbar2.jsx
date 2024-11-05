@@ -38,23 +38,18 @@ const Navbar2 = () =>
     setDropdownOpen((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
-
-  // <Route path="/vacancies" element={<Vacancis />}></Route>
-  //       <Route path="/job-details" element={<Details />} />
-  //       <Route path="/" element={<Home />} />
-  //       <Route path="/job-application-process" element={<Candidate />} />
-  //       <Route path="/job-application-tips" element={<CandidatePage1 />} />
-  //       <Route path="/star-method" element={<StartMain />} />
-  //       <Route path="/example-cv" element={<ExampleCv />} />
-  //       <Route path="/procedure" element={<Procesure />} />
-
   return (
     <header className="navbar1">
       <div className="navbar-container1">
         {/* Logo */}
-        <div className="logo-container">
-          <img src={logo} alt="Company Logo" className="logo" />
-        </div>
+        <a
+          href="/"
+          className={`nav-link `}
+        >
+          <div className="logo-container">
+            <img src={logo} alt="Company Logo" className="logo" />
+          </div>
+        </a>
 
         <div className="nav-space">
           <nav className={`nav-links ${ menuOpen ? "active" : "" }`}>

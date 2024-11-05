@@ -26,8 +26,8 @@
 }
 
 .logo {
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
 }
 
 /* Nav Links (Desktop) */
@@ -88,7 +88,7 @@
   box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
   color: var(--Boss, #7B0801);
   text-align: center;
-  font-family: Nunito;
+  font-family: "Nunito Sans", sans-serif !important;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -136,6 +136,7 @@
 }
 
 .mobile-nav-link {
+  max-width: 85px;
   color: #4a4a4a;
   text-decoration: none;
 }
@@ -197,6 +198,12 @@
   .menu-icon {
     display: flex;
   }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+
 }
 
 
@@ -274,6 +281,10 @@
 
   .nav-links,
   .contact-btn.desktop {
+    display: none;
+  }
+
+  .contact-btn {
     display: none;
   }
 

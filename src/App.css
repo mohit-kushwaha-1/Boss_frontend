@@ -1,3 +1,12 @@
+* {
+    font-family: "Nunito Sans", sans-serif !important;
+
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif !important;
+}
+
 /* Hide the default arrow */
 /* select {
     appearance: none !important;
@@ -12,3 +21,31 @@
     font-size: 16px !important;
 
 } */
+
+input {
+    outline: none !important;
+    text-transform: capitalize;
+}
+
+::placeholder {
+    text-transform: capitalize !important;
+}
+
+.enlarge-button {
+    transition: transform 0.3s ease;
+}
+
+.enlarge-button:hover {
+    transform: scale(1.1);
+    /* Adjust scale value as needed for desired enlargement */
+}
+
+
+.candidate-container-content {
+    padding-left: 3%;
+    max-width: 780px;
+}
+
+:where(.css-dev-only-do-not-override-ni1kz0).ant-checkbox-wrapper span {
+    font-family: 'Nunito' !important;
+}

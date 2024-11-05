@@ -1,5 +1,6 @@
-.explor-container{
-    background-image: url('../../public/images/Home1.png'); /* Replace with the actual image path */
+.explor-container {
+    background-image: url('../../public/images/Home1.jpg');
+    /* Replace with the actual image path */
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -13,57 +14,81 @@
     margin-bottom: 40px;
 }
 
-.explor-container-content{
-display: flex;
-padding: 40px;
-flex-direction: column;
-/* justify-content: center; */
-/* align-items: center; */
-flex-shrink: 0;
+.explor-container-content {
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-shrink: 0;
     width: 60%;
     /* height: 10vh; */
     border-radius: 10px;
-background: var(--color-white-solid, #FFF);
-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.40);
+    background: var(--color-white-solid, #FFF);
+    box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.40);
 
     /* border :1px solid black */
 }
 
-.explor-container-content h5{
+.explor-container-content h5 {
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
 
-/* www.independentrecruiters.nl/Semantic/Heading 1 */
-font-family: var(--font-family-Font-1, Inter);
-font-size: 46.289px;
-font-style: normal;
-font-weight: var(--font-weight-300, 300);
-line-height: var(--width-60, 60px); /* 129.62% */
-margin: 0px;
-padding: 0px;
+    /* www.independentrecruiters.nl/Semantic/Heading 1 */
+    font-family: "Nunito Sans", sans-serif !important;
+    ;
+    font-size: 46.289px;
+    font-style: normal;
+    font-weight: var(--font-weight-300, 300);
+    line-height: var(--width-60, 60px);
+    /* 129.62% */
+    margin: 0px;
+    padding: 0px;
 }
 
-.explor-container-content-input11{
+.explor-container-content-input11 {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-.explor-container-content-input12 input{
+.explor-container-content-input12 input {
     display: flex;
-width: 260px;
-height: var(--width-60, 60px);
-/* padding: 21px 192px 23px 16px; */
-padding-left: 10px;
-align-items: center;
-flex-shrink: 0;
-border-radius: 10px;
-border: var(--height-1, 1px) solid var(--Boss-Text, #8C8C8C);
-background: var(--www-independentrecruiters-nl-white, #FFF);
+    width: 100%;
+    height: var(--width-60, 60px);
+    /* padding: 21px 192px 23px 16px; */
+    padding-left: 10px;
+    color: var(--Boss-Text, #8C8C8C);
+    align-items: center;
+    flex-shrink: 0;
+
+    border-radius: 10px;
+    font-weight: var(--font-weight-300, 300);
+    border: var(--height-1, 1px) solid var(--Boss-Text, #8C8C8C);
+    background: var(--www-independentrecruiters-nl-white, #FFF);
 }
+
+.explor-container-content-input12 input:focus {
+    outline: #7B0801 !important;
+}
+
+/* .explor-container-content-input12 input::placeholder {
+
+    color: var(--Boss-Text, #8C8C8C) !important;
+    font-weight: var(--font-weight-300, 300) !important;
+
+} */
+
+input::placeholder {
+    color: var(--Boss-Text, #8C8C8C) !important;
+    font-weight: var(--font-weight-300, 100) !important;
+
+}
+
+
 
 .explor-container-content-input22 select {
     display: flex;
-    width: 260px;
+    width: 100%;
     height: var(--width-60, 60px);
     /* padding: 21px 192px 23px 16px; */
     align-items: center;
@@ -73,65 +98,80 @@ background: var(--www-independentrecruiters-nl-white, #FFF);
     background: var(--www-independentrecruiters-nl-white, #FFF);
     color: var(--Boss-Text, #8C8C8C);
 
-/* www.independentrecruiters.nl/Semantic/Button */
-font-family: var(--font-family-Font-1, Inter);
-font-size: 14.375px;
-font-style: normal;
-font-weight: var(--font-weight-300, 300);
-line-height: var(--font-size-16, 16px); /* 111.304% */
+    /* www.independentrecruiters.nl/Semantic/Button */
+    font-family: "Nunito Sans", sans-serif !important;
+    ;
+    font-size: 14.375px;
+    font-style: normal;
+    font-weight: var(--font-weight-300, 300);
+    line-height: var(--font-size-16, 16px);
+    /* 111.304% */
 }
 
 
-.explor-container-content-input32 button{
+.explor-container-content-input32 button {
     display: flex;
-padding: 16.5px var(--item-spacing-60, 60px);
-justify-content: center;
-align-items: center;
-gap: var(--Clock1-Time-Hour-1, 6px);
-border-radius: 10px;
-border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
-background: var(--Boss-White, #F8F8F8);
-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
-color: var(--Boss, #7B0801);
-text-align: center;
-font-family: Nunito;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    padding: 16.5px var(--item-spacing-60, 60px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--Clock1-Time-Hour-1, 6px);
+    border-radius: 10px;
+    border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #F8F8F8);
+    background: var(--Boss-White, #F8F8F8);
+    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.20), 0px 9px 12px 0px rgba(0, 0, 0, 0.14), 0px 3px 16px 0px rgba(0, 0, 0, 0.12);
+    color: var(--Boss, #7B0801);
+    text-align: center;
+    font-family: "Nunito Sans", sans-serif !important;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
 }
 
-.explor-container-content-input32 button:hover{
+.explor-container-content-input32 button:hover {
+    border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #7B0801);
+
     background-color: #7B0801;
     color: white;
 }
 
 @media (max-width: 768px) {
-    .explor-container{
+    .explor-container {
         height: 70vh;
     }
-    .explor-container-content{
+
+    .explor-container-content {
         width: 90%;
         margin: auto;
         border-radius: 10px;
     }
-    .explor-container-content-input11{
+
+    .explor-container-content-input11 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .explor-container-content-input12 input{
+    .explor-container-content-input12 {
+        width: 100%;
+    }
+
+    .explor-container-content-input12 input {
         width: 100%;
         padding: 5px;
     }
 
-    .explor-container-content-input22 select{
+    .explor-container-content-input32 button {
+        font-size: 16px;
+    }
+
+    .explor-container-content-input22 select {
         width: 100%;
         padding: 5px;
     }
 
-    .explor-container-content h5{
+    .explor-container-content h5 {
         font-size: 30px;
         line-height: 36px;
         margin-bottom: 10px;

@@ -182,8 +182,8 @@ const ApplicationForm = () =>
                   <p className="ant-upload-drag-icon">
                     <InboxOutlined />
                   </p>
-                  <p className="ant-upload-text">
-                    {file ? file : 'Resume Upload (required)'}
+                  <p className="ant-upload-text" style={{ fontSize: '16px' }}>
+                    {file ? file : 'Resume Upload (Required)'}
                   </p>
                   <p className="ant-upload-hint">Drag & Drop or Browse</p>
                 </Upload.Dragger>
@@ -212,7 +212,7 @@ const ApplicationForm = () =>
               },
             ]}
           >
-            <Checkbox>I agree with the privacy conditions.</Checkbox>
+            <Checkbox style={{ fontFamily: 'Nunito sans' }}>I agree with the privacy conditions.</Checkbox>
           </Form.Item>
 
           {/* Submit Button */}

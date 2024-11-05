@@ -1,7 +1,7 @@
 .Candidate-Details1-container {
     width: 80%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 80px;
     margin-bottom: 40px;
 }
 
@@ -10,15 +10,22 @@
     margin-bottom: 50px;
 }
 
+.Candidate-Details1-container-content span {
+    font-size: 24px;
+    color: "#24303A";
+    font-weight: 500;
+}
+
 .Candidate-Details1-container-content p {
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
     text-align: left;
     font-family: "Nunito Sans";
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     /* line-height: var(--line-height-59, 59px); 122.917% */
     margin-bottom: 30px;
+    text-align: justify;
 }
 
 .Candidate-Details1-container h2 {
@@ -47,7 +54,7 @@
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
     text-align: justify;
     font-family: "Nunito Sans";
-    font-size: 32px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 700;
     /* line-height: 48px; 200% */
@@ -58,9 +65,9 @@
     color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
     text-align: left;
     font-family: "Nunito Sans";
-    font-size: 40px;
+    font-size: 32px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     line-height: var(--line-height-59, 59px);
     /* 147.5% */
     margin-bottom: 30px;
@@ -89,12 +96,22 @@
 .Processure-button-text button:hover {
     background-color: #7B0801;
     color: white;
+    border: var(--stroke-weight-1, 1px) solid var(--Boss-White, #7B0801);
+
 }
 
 @media (max-width:768px) {
     .Candidate-Details1-container h2 {
-        font-size: 30px;
+        font-size: 20px;
         line-height: 36px;
+    }
+
+    .Processure-button-text h5 {
+        font-size: 20px;
+    }
+
+    .Processure-button-text button {
+        font-size: 16px;
     }
 
     .Candidate-Details1-container-content h3 {
@@ -103,8 +120,18 @@
     }
 
     .Candidate-Details1-container-content h4 {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 30px;
+    }
+
+    .Candidate-Details1-container-content p {
+        font-size: 16px;
+    }
+
+    .Candidate-Details1-container-content span {
+        font-size: 20px !important;
+        color: "#24303A";
+        font-weight: 500;
     }
 
     .Processure-button-text {

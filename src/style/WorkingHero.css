@@ -3,7 +3,7 @@
     background-image: url('../../public/images/a1.png');
     /* Replace with the actual image path */
     background-size: cover;
-    background-position: center;
+    background-position: 80%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@
 
 .candidate-container-content h1 {
     color: var(--Boss-White, #F8F8F8);
-    font-family: Nunito;
+    font-family: "Nunito Sans", sans-serif !important;
     font-size: 52px;
     font-style: normal;
     font-weight: 700;

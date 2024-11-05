@@ -18,7 +18,7 @@
 
 .candidate-container-content1 h1 {
     color: var(--Boss-White, #F8F8F8);
-    font-family: Nunito;
+    font-family: "Nunito Sans", sans-serif !important;
     font-size: 52px;
     font-style: normal;
     font-weight: 700;

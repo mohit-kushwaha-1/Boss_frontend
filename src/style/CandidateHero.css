@@ -13,12 +13,13 @@
 
 .candidate-container-content {
     padding-left: 3%;
+    max-width: 780px;
 }
 
 
 .candidate-container-content h1 {
     color: var(--Boss-White, #F8F8F8);
-    font-family: Nunito;
+    font-family: "Nunito Sans", sans-serif !important;
     font-size: 52px;
     font-style: normal;
     font-weight: 700;
@@ -29,6 +30,10 @@
 @media (max-width: 768px) {
     .candidate-container {
         height: 60vh;
+    }
+
+    .candidate-container-content {
+        max-width: 350px;
     }
 
     .candidate-container-content h1 {

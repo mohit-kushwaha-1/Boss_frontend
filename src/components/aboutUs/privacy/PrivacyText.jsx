@@ -32,7 +32,7 @@ const PrivacyText = () =>
         <div className='privacy-text-content-text'>
 
           <div className='privacy-text-content-text-text'>
-            <h3 style={{ fontSize: "45px" }}>Why We Process Your Data:</h3>
+            <p className='process-your-data'>Why We Process Your Data:</p>
             <h2>1. For Recruitment Purposes:</h2>
             <h4>When you apply for a role or register on our website, we collect your personal data to assess your suitability for current or future positions. We also manage your data within our recruitment database to facilitate communication and inform you about potential opportunities.</h4>
             <ul>

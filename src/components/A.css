@@ -3,7 +3,8 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Nunito Sans", sans-serif !important;
+  ;
   margin: 0;
   padding: 0;
 }
@@ -20,15 +21,19 @@ body {
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 20px;
-  justify-content: center;
+  place-items: start;
+  /* justify-content: center; */
 }
 
 .card {
   border-radius: var(--radius-10, 10px);
   border-radius: 10px;
   padding: 8px;
+  min-width: 350px;
+  max-width: 350px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 700px;
   height: auto;
   display: flex;
   padding-bottom: 30px;
@@ -71,11 +76,12 @@ body {
 h3 {
   margin: 10px 0;
   font-size: 25px;
-  color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #24303A));
+  color: var(--www-independentrecruiters-nl-ebony-clay, var(--color-azure-18, #637D92));
   text-align: center;
 
   /* www.independentrecruiters.nl/Inter/Bold 25.21 */
-  font-family: var(--font-family-Font-1, Inter);
+  font-family: "Nunito Sans", sans-serif !important;
+  ;
   font-size: 25.207px;
   font-style: normal;
   font-weight: var(--font-weight-700, 700);
@@ -106,7 +112,7 @@ p {
   gap: 6px;
   color: var(--Boss, #7B0801);
   text-align: center;
-  font-family: Nunito;
+  font-family: "Nunito Sans", sans-serif !important;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -118,7 +124,7 @@ p {
   margin: 0 auto;
   margin-top: 30%;
 
-  width: 50%;
+  width: auto;
 }
 
 .view-button:hover {
