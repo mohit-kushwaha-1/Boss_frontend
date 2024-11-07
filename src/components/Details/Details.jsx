@@ -10,12 +10,15 @@ import WhatNext from './WhatNext'
 import ApplicationForm from './ApplicationForm';
 import ReumeForm from './ReumeForm';
 import { DataContext } from '../context/DataContext'
+import { useParams } from 'react-router-dom'
 const Details = () => {
 
  const [data,setData] = useState();
   // const data = localStorage.getItem("auth");
   // if (data) {
   //   const parseData = JSON.parse(data);
+  const params = useParams();
+  console.log("params",params);
   const { dataNow, setDataNow, loading, setLoading,id,setId } = useContext(DataContext);
 
   // const id1 = localStorage.getItem("id");
@@ -25,13 +28,15 @@ const Details = () => {
   useEffect(() => {
     fetchdata();
   }, []);
-  console.log("id is",id)
+  // console.log("id is",id)
+
+  
 
   const fetchdata = async () => {
     try {
-      const response = await axios.get(`${baseUrl}/api/jobPost/getJobById/${id}`);
-      console.log(`${baseUrl}/api/jobPost/getJobById/${id}`)
-      console.log("response is", response.data.job);
+      const response = await axios.get(`${baseUrl}/api/jobPost/getJobById/${params.id}`);
+      // console.log(`${baseUrl}/api/jobPost/getJobById/${id}`)
+      // console.log("response is", response.data.job);
 
       if (response.data) {
         setData(response.data.job);
@@ -52,7 +57,7 @@ const Details = () => {
                <DetailsText  data={data}/>
                <WhatNext/>
                {/* <DetailsForm/> */}
-               <ApplicationForm/>
+               <ApplicationForm title={data?._id}/>
                
              </div>
     </div>

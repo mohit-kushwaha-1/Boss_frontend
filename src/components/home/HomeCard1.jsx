@@ -48,7 +48,7 @@ const HomeCard = () =>
   {
     console.log(id)
     setId(id)
-    navigate('/job-details');
+    navigate(`/job-details/${id}`);
   }
   return (
     <div className="app-container">
@@ -78,36 +78,43 @@ const HomeCard = () =>
                       alt="People working in an office"
                       className="job-image"
                     />
+                    
 
-
-
+                    <div className="job-title-container">
                     <h2 className="job-title">{item?.jobName}</h2>
+                    </div>
 
+                 <div className="job-title-container">
+                 <p className="location">{item?.location}</p>
+                 </div>
 
-
-                    <p className="location">{item?.location}</p>
 
 
                     <div className="details">
                       <ul className="job-details">
+                       
 
-                        <li className="detail-item">
+                       {
+                        item?.jobType?(<> <li className="detail-item">
                           <FaBriefcase className="icon-detail" /> {item?.jobType}
-                        </li>
+                        </li></>):(<></>)
+                       }
 
+                     {
+                      item?.upper_jd[0]?(<> <li className="detail-item">
+                        <FaGraduationCap className="icon-detail" />
+                        {item?.upper_jd[0]}
+                      </li></>):(<></>)
+                     }
 
-
-                        <li className="detail-item">
-                          <FaGraduationCap className="icon-detail" />
-                          {item?.upper_jd[0]}
-                        </li>
-
-
-
-                        <li className="detail-item">
-                          <FaGraduationCap className="icon-detail" />
-                          {item?.upper_jd[1]}
-                        </li>
+                     {
+                      item?.upper_jd[1]?(<> <li className="detail-item">
+                        <FaGraduationCap className="icon-detail" />
+                        {item?.upper_jd[1]}
+                      </li></>):(<></>)
+                     }
+                       
+                       
 
                       </ul>
                     </div>

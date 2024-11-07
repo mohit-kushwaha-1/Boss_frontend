@@ -8,6 +8,10 @@ const { Option } = Select;
 const { TextArea } = Input;
 
 const ReumeForm = () => {
+
+
+  const [form] = Form.useForm();
+
   const onFinish = async(values) => {
        const postData = {
         firstName:values.firstName,
@@ -41,7 +45,8 @@ const ReumeForm = () => {
           const response = await axios.post(`${baseUrl}/api/personal/personal-details`,postData)
           console.log("resume data is",response.data);
           if(response.data){
-            message.success("Form submitted succesfuly")
+            message.success("Form submitted succesfuly");
+            form.resetFields();
           }
         } catch (error) {
         console.log(error)
@@ -54,7 +59,7 @@ const ReumeForm = () => {
   return (
     <div className="form-container">
       <h2>Personal Details</h2>
-      <Form layout="vertical" onFinish={onFinish}>
+      <Form form={form} layout="vertical" onFinish={onFinish}>
         <Row gutter={16}>
           <Col span={12}>
             <Form.Item

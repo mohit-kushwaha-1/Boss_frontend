@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./A.css";
 import img1 from "../../public/images/img1.png";
+import { FaMapMarkerAlt, FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import axios from "axios";
 import { baseUrl } from "./helper/helper";
 import { useNavigate } from "react-router-dom";
@@ -125,7 +126,7 @@ const App = ({ data }) =>
   {
     console.log(id)
     setId(id)
-    Navigate('/job-details');
+    Navigate(`/job-details/${id}`);
   }
 
   return (
@@ -143,63 +144,48 @@ const App = ({ data }) =>
               </div>
 
               <div style={{ width: "100%" }}>
-                <h3>{vacancy?.jobName}</h3>
+                {/* <h3>{vacancy?.jobName}</h3>
                 <p style={{ marginTop: "20px" }}>
                   <i className="fas fa-map-marker-alt"></i> {vacancy?.location}
-                </p>
+                </p> */}
 
-                <div className="card-icons">
-                  <div className="card-icons-space">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M4 21C3.45 21 2.97917 20.8042 2.5875 20.4125C2.19583 20.0208 2 19.55 2 19V8C2 7.45 2.19583 6.97917 2.5875 6.5875C2.97917 6.19583 3.45 6 4 6H8V4C8 3.45 8.19583 2.97917 8.5875 2.5875C8.97917 2.19583 9.45 2 10 2H14C14.55 2 15.0208 2.19583 15.4125 2.5875C15.8042 2.97917 16 3.45 16 4V6H20C20.55 6 21.0208 6.19583 21.4125 6.5875C21.8042 6.97917 22 7.45 22 8V12.275C21.7 12.0583 21.3833 11.8708 21.05 11.7125C20.7167 11.5542 20.3667 11.4167 20 11.3V8H4V19H11.075C11.125 19.35 11.2 19.6917 11.3 20.025C11.4 20.3583 11.525 20.6833 11.675 21H4ZM10 6H14V4H10V6ZM18 23C16.6167 23 15.4375 22.5125 14.4625 21.5375C13.4875 20.5625 13 19.3833 13 18C13 16.6167 13.4875 15.4375 14.4625 14.4625C15.4375 13.4875 16.6167 13 18 13C19.3833 13 20.5625 13.4875 21.5375 14.4625C22.5125 15.4375 23 16.6167 23 18C23 19.3833 22.5125 20.5625 21.5375 21.5375C20.5625 22.5125 19.3833 23 18 23ZM18.5 17.8V15H17.5V18.2L19.65 20.35L20.35 19.65L18.5 17.8Z"
-                        fill="#637D92"
-                      />
-                    </svg>
-                    {/* <p><i className="fas fa-clock"></i> {type}</p> */}
-                    <p>{vacancy?.jobType}</p>
-                  </div>
 
-                  <div className="card-icons-space">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M12 21L5 17.2V11.2L1 9L12 3L23 9V17H21V10.1L19 11.2V17.2L12 21ZM12 12.7L18.85 9L12 5.3L5.15 9L12 12.7ZM12 18.725L17 16.025V12.25L12 15L7 12.25V16.025L12 18.725Z"
-                        fill="#637D92"
-                      />
-                    </svg>
-                    <p> {vacancy?.upper_jd[0]}</p>
-                    <div></div>
-                  </div>
+                <div className="job-title-container">
+                    <h2 className="job-title">{vacancy?.jobName}</h2>
+                    </div>
 
-                  <div className="card-icons-space" style={{ marginRight: "15px" }}>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M12 21L5 17.2V11.2L1 9L12 3L23 9V17H21V10.1L19 11.2V17.2L12 21ZM12 12.7L18.85 9L12 5.3L5.15 9L12 12.7ZM12 18.725L17 16.025V12.25L12 15L7 12.25V16.025L12 18.725Z"
-                        fill="#637D92"
-                      />
-                    </svg>
-                    <p> {vacancy?.upper_jd[1]}</p>
-                    <div></div>
-                  </div>
-                </div>
+                 <div className="job-title-container">
+                 <p className="location">{vacancy?.location}</p>
+                 </div>
+
+                <div className="details">
+                      <ul className="job-details">
+                       
+
+                       {
+                        vacancy?.jobType?(<> <li className="detail-item">
+                          <FaBriefcase className="icon-detail" /> {vacancy?.jobType}
+                        </li></>):(<></>)
+                       }
+
+                     {
+                     vacancy?.upper_jd[0]?(<> <li className="detail-item">
+                        <FaGraduationCap className="icon-detail" />
+                        {vacancy?.upper_jd[0]}
+                      </li></>):(<></>)
+                     }
+
+                     {
+                      vacancy?.upper_jd[1]?(<> <li className="detail-item">
+                        <FaGraduationCap className="icon-detail" />
+                        {vacancy?.upper_jd[1]}
+                      </li></>):(<></>)
+                     }
+                       
+                       
+
+                      </ul>
+                    </div>
               </div>
               <button className="view-button" onClick={() => { handle(`${ vacancy?._id }`) }}>View Vacancy</button>
             </div>

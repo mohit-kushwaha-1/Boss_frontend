@@ -46,9 +46,11 @@ const Explor = () =>
       if (response)
       {
         // console.log(response.data.job)
-        setDataNow(response.data.job)
+        const data = response.data.job;
+        const activeData = data.filter(item => item.status === "Active");
+        setDataNow(activeData)
         setLoading(true);
-        navigate('/vacancies')
+        navigate('/vacancies',{state:category})
 
       }
     } catch (error)

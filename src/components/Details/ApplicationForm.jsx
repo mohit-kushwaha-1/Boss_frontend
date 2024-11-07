@@ -6,7 +6,7 @@ import ReumeForm from './ReumeForm';
 import axios from 'axios';
 import { baseUrl } from '../helper/helper';
 
-const ApplicationForm = () =>
+const ApplicationForm = ({title}) =>
 {
   const [file, setFile] = useState(null);
   const [image, setImage] = useState();
@@ -82,6 +82,7 @@ const ApplicationForm = () =>
       phoneNumber: values.phoneNumber,
       email: values.email,
       pdf: image,
+      job:title,
 
     }
 
@@ -93,7 +94,8 @@ const ApplicationForm = () =>
 
       if (response.data)
       {
-        message.success("form submmited succesfully")
+        message.success("form submmited succesfully");
+        form.resetFields();
       }
     } catch (error)
     {
@@ -112,7 +114,7 @@ const ApplicationForm = () =>
     <div className="form-container-main" id="apply-section">
       <div className="form-container">
         <h2>Interested? Send us <br />your application!</h2>
-        <Form layout="vertical" onFinish={onFinish} className="form-content">
+        <Form form={form} layout="vertical" onFinish={onFinish} className="form-content">
           {/* First and Last Name Fields */}
 
 

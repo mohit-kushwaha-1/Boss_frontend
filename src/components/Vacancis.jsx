@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, } from "react";
 import "../style/Vacancies.css";
 import Navbar from "./Navbar";
 import Card from "./Card";
@@ -11,8 +11,12 @@ import axios from "axios";
 import { baseUrl } from "./helper/helper";
 import { DataContext } from "./context/DataContext";
 import { message } from "antd";
+import { useLocation } from "react-router-dom";
 const Vacancis = () =>
 {
+  const location = useLocation()
+  console.log(location.state,"location ");
+  
   const { dataNow, setDataNow, loading, setLoading } = useContext(DataContext);
   const [data, setData] = useState();
   const [filter, setFilter] = useState();
@@ -46,7 +50,9 @@ const Vacancis = () =>
         {
           console.log("inside filter data");
           const data = response.data.jobs;
-          const filterdata = data.filter((item) =>
+
+          const activeData = data.filter(item => item.status === "Active");
+          const filterdata = activeData.filter((item) =>
           {
             return filter.some((filterItem) => item?.category === filterItem);
           });
@@ -55,7 +61,11 @@ const Vacancis = () =>
           // message.success("job filter successfully");
         } else
         {
-          setData(response.data.jobs);
+
+          const data = response.data.jobs;
+
+          const activeData = data.filter(item => item.status === "Active");
+          setData(activeData);
           // message.success("job fetch successfully");
         }
       }
@@ -103,6 +113,7 @@ const Vacancis = () =>
                 setFilter={setFilter}
                 searchFunction={searchFunction}
                 searching={searching}
+                selectedState={location?.state}
               />
             </div>
 

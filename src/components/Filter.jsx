@@ -1,7 +1,7 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "../style/filter.css";
 
-const Filter = ({setFilter,searching,searchFunction}) => {
+const Filter = ({setFilter,searching,searchFunction,selectedState}) => {
   const [selectedFilters, setSelectedFilters] = React.useState([]);
 
 
@@ -12,6 +12,19 @@ const Filter = ({setFilter,searching,searchFunction}) => {
     { label: "Hospitality and Administrative Roles", checked: false },
     { label: "Supervisory and Management Positions", checked: false },
   ]);
+
+
+
+  useEffect(() => {
+    if (selectedState) {
+      setOptions((prevOptions) =>
+        prevOptions.map((option) =>
+          option.label === selectedState ? { ...option, checked: true } : option
+        )
+      );
+    }
+  }, [selectedState]);
+
 
   setFilter(selectedFilters);
 

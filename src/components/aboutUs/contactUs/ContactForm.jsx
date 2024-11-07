@@ -52,7 +52,9 @@ const ContactForm = () =>
       <div className='form-container'>
         <h2 style={{ marginBottom: '50px', marginTop: '30px' }}>Ready For the Next Step?</h2>
         <div className="form-box">
-          <Form style={{ fontFamily: 'Nunito sans' }} layout="vertical" onFinish={onFinish}>
+          <Form form={form} style={{ fontFamily: 'Nunito sans' }} layout="vertical" onFinish={onFinish}>
+            
+            
             <div className="form-row">
               <Form.Item
                 //   label="First Name"
