@@ -234,7 +234,7 @@ const ApplicationForm = ({title}) =>
         onCancel={handleCancel}
         footer={null} // This removes the "OK" and "Cancel" buttons
       >
-        <ReumeForm />
+        <ReumeForm title={title}/>
       </Modal>
     </div>
   );

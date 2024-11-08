@@ -57,7 +57,9 @@ const Vacancis = () =>
             return filter.some((filterItem) => item?.category === filterItem);
           });
           // console.log("filterdata",filterdata);
-          setData(filterdata);
+
+          const rever = filterdata.reverse()
+          setData(rever);
           // message.success("job filter successfully");
         } else
         {
@@ -65,6 +67,8 @@ const Vacancis = () =>
           const data = response.data.jobs;
 
           const activeData = data.filter(item => item.status === "Active");
+
+          const rever = activeData.reverse()
           setData(activeData);
           // message.success("job fetch successfully");
         }
@@ -87,7 +91,7 @@ const Vacancis = () =>
         setNowShowData(updateData);
       }
     }
-  }, [filter, updateData]);
+  }, [filter,updateData]);
 
   return (
     <>

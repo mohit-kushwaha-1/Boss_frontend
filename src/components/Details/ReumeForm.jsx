@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState}from "react";
 import { Form, Input, Radio, Select, DatePicker, Button, Row, Col ,message,TimePicker} from "antd";
 import '../../style/details/ResumeForm.css'
 import axios from "axios";
@@ -7,10 +7,15 @@ import { baseUrl } from "../helper/helper";
 const { Option } = Select;
 const { TextArea } = Input;
 
-const ReumeForm = () => {
-
-
+const ReumeForm = ({title}) => {
+  const [isLicenseValid, setIsLicenseValid] = useState(true);
   const [form] = Form.useForm();
+
+
+  const handleLicenseChange = (e) => {
+    setIsLicenseValid(e.target.value === 'yes');
+  };
+
 
   const onFinish = async(values) => {
        const postData = {
@@ -39,6 +44,7 @@ const ReumeForm = () => {
       finishTime:values.lasttime,
       highEducatioin:values.highest,
       companyName:values.companyName,
+      job:title,
        }
 
        try {
@@ -137,7 +143,7 @@ const ReumeForm = () => {
         <Row gutter={16}>
           <Col span={24}>
             <Form.Item label="Do you have a valid Dutch passport or legal documents to work on St. Maarten?" name="dutchPassport">
-              <Radio.Group>
+              <Radio.Group  >
                 <Radio value="yes">Yes</Radio>
                 <Radio value="no">No</Radio>
               </Radio.Group>
@@ -148,7 +154,7 @@ const ReumeForm = () => {
         <Row gutter={16}>
           <Col span={12}>
             <Form.Item label="Valid Driver's License" name="driversLicense">
-              <Radio.Group>
+              <Radio.Group onChange={handleLicenseChange}>
                 <Radio value="yes">Yes</Radio>
                 <Radio value="no">No</Radio>
               </Radio.Group>
@@ -156,11 +162,12 @@ const ReumeForm = () => {
           </Col>
           <Col span={12}>
             <Form.Item label="Category of Driving License" name="drivingLicenseCategory">
-              <Select placeholder="Select">
-                <Option value="A">A</Option>
+              <Select placeholder="Select"  disabled={!isLicenseValid}>
+                
                 <Option value="B">B</Option>
                 <Option value="C">C</Option>
                 <Option value="D">D</Option>
+                <Option value="A">E</Option>
               </Select>
             </Form.Item>
           </Col>

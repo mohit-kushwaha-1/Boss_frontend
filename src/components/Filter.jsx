@@ -5,14 +5,12 @@ const Filter = ({setFilter,searching,searchFunction,selectedState}) => {
   const [selectedFilters, setSelectedFilters] = React.useState([]);
 
 
- 
   const [options, setOptions] = React.useState([
     { label: "Retail and Customer Service", checked: false },
     { label: "Logistics and Warehousing", checked: false },
     { label: "Hospitality and Administrative Roles", checked: false },
     { label: "Supervisory and Management Positions", checked: false },
   ]);
-
 
 
   useEffect(() => {
@@ -22,6 +20,8 @@ const Filter = ({setFilter,searching,searchFunction,selectedState}) => {
           option.label === selectedState ? { ...option, checked: true } : option
         )
       );
+
+      setSelectedFilters([selectedState]);
     }
   }, [selectedState]);
 
@@ -29,6 +29,7 @@ const Filter = ({setFilter,searching,searchFunction,selectedState}) => {
   setFilter(selectedFilters);
 
   const handleClearAll = () => {
+    
     setSelectedFilters([]);
     setOptions(options.map((option) => ({ ...option, checked: false })));
   };
