@@ -54,10 +54,10 @@ const Explor = () =>
       // Perform the API request with query parameters
       const response = await axios.get(`${ baseUrl }/api/jobPost/jobfilterHome?${ query.toString() }`);
       const data = response?.data?.job;
-      if(data?.length === 0){
-        message.error("Result Not Found");
-        return;
-      }
+      // if(data?.length === 0){
+      //   message.error("Result Not Found");
+      //   return;
+      // }
 
       // Check if response is successful and handle the data
       if (response)

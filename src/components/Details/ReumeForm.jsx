@@ -51,12 +51,12 @@ const ReumeForm = ({title}) => {
           const response = await axios.post(`${baseUrl}/api/personal/personal-details`,postData)
           console.log("resume data is",response.data);
           if(response.data){
-            message.success("Form Submitted Succesfuly");
+            message.success("Form Submitted Successfully");
             form.resetFields();
           }
         } catch (error) {
         console.log(error)
-        message.error("Error In Submitting Form")
+        message.error("Error In Submission Form")
        }
 
     //    console.log("postData",postData)
@@ -293,7 +293,7 @@ const ReumeForm = ({title}) => {
     </Col>
     <Col span={12}>
     <Form.Item
-        label="How many days per Week you can work ?"
+        label="How many days per week you can work ?"
         name="day"
         // rules={[{ required: true, message: 'Please select a day!' }]}
       >

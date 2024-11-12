@@ -16,16 +16,23 @@ const CandidateExplore = () =>
     try
     {
       const response = await axios.get(`${ baseUrl }/api/jobPost/jobfilter?keyword=${ search }`);
-      console.log("search data is now", response.data.job)
+      console.log("search data is now", response.data.job);
       if (response.data)
       {
         setDataNow(response.data.job);
+        setLoading(true);
+        navigate('/vacancies');
+      }else{
+        setDataNow([]);
         setLoading(true);
         navigate('/vacancies');
       }
     } catch (error)
     {
       console.log(error)
+      setDataNow([]);
+        setLoading(true);
+        navigate('/vacancies');
     }
   }
 
