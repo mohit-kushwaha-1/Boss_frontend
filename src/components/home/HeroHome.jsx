@@ -19,7 +19,7 @@ const HeroHome = () =>
           <h1>Your Partner in Recruitment & Executive Search </h1>
           <h2>
             We specialize in finding the right fit for staff positions, aligning
-            talent with opportunity.
+            talent with opportunity on Sint Maartin.
           </h2>
           <button className="browse-button1" onClick={handlevac} style={{ left: "0px" }}>
             Browse All Opportunities

@@ -43,7 +43,7 @@ const SourcingText = () =>
 
                     <div className='souncing-text-content-text'>
                          <h2>Regional and International Reach</h2>
-                         <h4>As part of a global network, we help companies in the Caribbean and beyond attract top-tier talent. Whether hiring for local roles in Philipsburg or looking to expand internationally, we have the connections to find the best candidates.</h4>
+                         <h4>As part of a global network, we help companies in the Caribbean and beyond attract top-tier talent. Whether hiring for local roles on St Maarten or looking to expand internationally, we have the connections to find the best candidates.</h4>
                     </div>
 
                     <div className='souncing-text-content-text'>

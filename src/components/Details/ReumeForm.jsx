@@ -284,26 +284,26 @@ const ReumeForm = ({title}) => {
       <Row gutter={16}>
     <Col span={12}>
       <Form.Item
-        label="Hours Available to Work"
+        label="How many hours per week can you work ?"
         name="hourstoAvailable"
         // rules={[{ required: true, message: "Please enter your Date In Service" }]}
       >
-        <Input placeholder="Enter Work Hours" />
+    <Input placeholder="Enter Work Hours" />
       </Form.Item>
     </Col>
     <Col span={12}>
     <Form.Item
-        label="Day"
+        label="How many days per Week you can work ?"
         name="day"
         // rules={[{ required: true, message: 'Please select a day!' }]}
       >
-        <Select placeholder="Select" >
-          <Option value="5">5</Option>
-          <Option value="10">10</Option>
-          <Option value="15">15</Option>
-          <Option value="20">20</Option>
-          <Option value="25">25</Option>
-        </Select>
+        <Select placeholder="Select number of days">
+    {[...Array(7)].map((_, index) => (
+      <Option key={index + 1} value={index + 1}>
+        {index + 1} {index + 1 === 1 ? 'day' : 'days'}
+      </Option>
+    ))}
+  </Select>
       </Form.Item>
     </Col>
   </Row>
