@@ -42,7 +42,7 @@ const SourcingForm = () =>
       if (response)
       {
         console.log(response.data.imageUrl)
-        message.success("Image uploaded Successfully!");
+        message.success("Image Uploaded Successfully!");
         setImage(response.data.imageUrl);
       }
 
@@ -90,7 +90,7 @@ const SourcingForm = () =>
     <div className="form-container-main">
       <div className="form-container">
         <h2>We find professionals for you!</h2>
-        <Form layout="vertical" onFinish={onFinish} className="form-content">
+        <Form form={form} layout="vertical" onFinish={onFinish} className="form-content" >
           {/* First and Last Name Fields */}
 
 
