@@ -32,17 +32,17 @@ const ContactForm = () =>
 
       if (response.data.success)
       {
-        message.success("form submmited succesfully")
+        message.success("Form Submmited Succesfully")
         form.resetFields();
       }
       else
       {
-        message.error("error in form submition");
+        message.error("Error In Form Submition");
       }
     } catch (error)
     {
       console.log(error);
-      message.error("error in form submition");
+      message.error("Error In Form Submition");
     }
   };
 

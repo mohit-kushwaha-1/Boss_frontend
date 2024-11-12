@@ -42,7 +42,7 @@ const SourcingForm = () =>
       if (response)
       {
         console.log(response.data.imageUrl)
-        message.success("Image uploaded successfully!");
+        message.success("Image uploaded Successfully!");
         setImage(response.data.imageUrl);
       }
 
@@ -50,8 +50,8 @@ const SourcingForm = () =>
       return response.data.imageUrl// Assuming the API returns the image URL in the 'url' field
     } catch (error)
     {
-      message.error("Error uploading image. Please try again later.");
-      console.error("Image upload error:", error);
+      message.error("Error Uploading Image. Please Try Again Later.");
+      console.error("Image Upload Error:", error);
       return null;
     }
   };
@@ -77,7 +77,7 @@ const SourcingForm = () =>
 
       if (response.data)
       {
-        message.success("form submmited succesfully");
+        message.success("Form Submmited Succesfully");
         form.resetFields();
       }
     } catch (error)

@@ -34,7 +34,9 @@ const HomeCard = () =>
         // console.log("data is now");
         // console.log(filter.length);
         const a = response.data.jobs
-        let slicedArray = a.slice(0, 3);
+        // const a = response.data.jobs;
+       const reversedArray = a.reverse();
+        let slicedArray = reversedArray.slice(0, 3);
         setData(slicedArray);
       }
     } catch (error)
@@ -67,6 +69,15 @@ const HomeCard = () =>
           {
             data?.map((item) =>
             {
+
+              const  createdAt = item?.createdAt
+              const date = new Date(createdAt);
+
+              const year = date.getUTCFullYear();
+             const month = String(date.getUTCMonth() + 1).padStart(2, '0'); // Months are 0-based, so add 1
+           const day = String(date.getUTCDate()).padStart(2, '0');
+
+          const dateOnly = `${year}-${month}-${day}`;
               return (
                 <>
 
@@ -84,9 +95,13 @@ const HomeCard = () =>
                     <h2 className="job-title">{item?.jobName}</h2>
                     </div>
 
+                    
+
                  <div className="job-title-container">
-                 <p className="location">{item?.location}</p>
+                   <p className="location">{item?.location}</p>
                  </div>
+
+                
 
 
 
@@ -117,6 +132,10 @@ const HomeCard = () =>
                        
 
                       </ul>
+                    </div>
+
+                    <div className="job-title-container">
+                    <p className="location" style={{textDecoration:"underline"}}>Posted On :{dateOnly}</p>
                     </div>
 
                     <button className="vacancy-button" onClick={() => { handle(`${ item?._id }`) }}>

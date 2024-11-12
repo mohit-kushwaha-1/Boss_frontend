@@ -132,8 +132,19 @@ const App = ({ data }) =>
   return (
     <div className="main-container">
       <div className="vacancy-container">
-        {data?.map((vacancy, index) => (
-          <>
+        {data?.map((vacancy, index) => {
+
+const  createdAt = vacancy?.createdAt
+const date = new Date(createdAt);
+
+const year = date.getUTCFullYear();
+const month = String(date.getUTCMonth() + 1).padStart(2, '0'); // Months are 0-based, so add 1
+const day = String(date.getUTCDate()).padStart(2, '0');
+
+const dateOnly = `${year}-${month}-${day}`;
+
+           return(
+            <>
             <div className="card">
               <div style={{ width: "100%" }}>
                 <img
@@ -187,10 +198,18 @@ const App = ({ data }) =>
                       </ul>
                     </div>
               </div>
+
+              <div className="job-title-container">
+                    <p className="location" style={{textDecoration:"underline"}}>Posted On :{dateOnly}</p>
+                    </div>
               <button className="view-button" onClick={() => { handle(`${ vacancy?._id }`) }}>View Vacancy</button>
             </div>
           </>
-        ))}
+           )
+         
+        }
+        
+        )}
       </div>
     </div>
   );

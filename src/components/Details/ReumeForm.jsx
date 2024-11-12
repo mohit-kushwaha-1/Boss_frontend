@@ -51,12 +51,12 @@ const ReumeForm = ({title}) => {
           const response = await axios.post(`${baseUrl}/api/personal/personal-details`,postData)
           console.log("resume data is",response.data);
           if(response.data){
-            message.success("Form submitted succesfuly");
+            message.success("Form Submitted Succesfuly");
             form.resetFields();
           }
         } catch (error) {
         console.log(error)
-        message.error("Error in submitting form")
+        message.error("Error In Submitting Form")
        }
 
     //    console.log("postData",postData)
