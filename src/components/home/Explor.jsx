@@ -6,6 +6,18 @@ import { DataContext } from "../context/DataContext";
 import axios from "axios";
 import { baseUrl } from "../helper/helper";
 import { useNavigate } from "react-router-dom";
+import {
+  Table,
+  Button,
+  Modal,
+  Form,
+  Input,
+  Select,
+  message,
+  Upload,
+  Switch,
+  Tag
+} from "antd";
 const Explor = () =>
 {
 
@@ -41,6 +53,11 @@ const Explor = () =>
 
       // Perform the API request with query parameters
       const response = await axios.get(`${ baseUrl }/api/jobPost/jobfilterHome?${ query.toString() }`);
+      const data = response?.data?.job;
+      if(data?.length === 0){
+        message.error("Result Not Found");
+        return;
+      }
 
       // Check if response is successful and handle the data
       if (response)

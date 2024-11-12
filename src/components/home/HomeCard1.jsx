@@ -34,8 +34,9 @@ const HomeCard = () =>
         // console.log("data is now");
         // console.log(filter.length);
         const a = response.data.jobs
+        const activeData = a.filter(item => item.status === "Active");
         // const a = response.data.jobs;
-       const reversedArray = a.reverse();
+       const reversedArray = activeData.reverse();
         let slicedArray = reversedArray.slice(0, 3);
         setData(slicedArray);
       }
