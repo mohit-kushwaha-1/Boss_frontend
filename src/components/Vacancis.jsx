@@ -27,20 +27,35 @@ const Vacancis = () =>
   const updateData = dataNow || [];
 
   const [nowShowData, setNowShowData] = useState();
-  console.log("updateData", updateData);
-  console.log("nowShowData", nowShowData);
+  // console.log("updateData", updateData);
+  // console.log("nowShowData", nowShowData);
 
   // console.log("filer is ", filter);
   useEffect(() =>
   {
     fetchdata();
-  }, [filter]);
+   if(!location.state){
+    // setLoading(false);
+    setFilter()
+    fetchdata();
+
+   }
+    // console.log("dataNow",dataNow)
+    // console.log(location.state,"location ");
+  }, [location,loading]);
+
+
+  
+  
+
+
+
   const fetchdata = async () =>
   {
     try
     {
       const response = await axios.get(baseUrl + "/api/jobPost/getAllJobs");
-      console.log("response is", response.data);
+      // console.log("response is", response.data);
 
       if (response.data)
       {
@@ -76,22 +91,74 @@ const Vacancis = () =>
     } catch (error) { }
   };
 
-  useEffect(() =>
-  {
-    if (updateData)
-    {
-      if (filter && filter.length > 0)
-      {
-        const filteredData = updateData.filter((item) =>
-          filter.includes(item?.category)
-        );
-        setNowShowData(filteredData);
-      } else
-      {
-        setNowShowData(updateData);
-      }
+  // useEffect(() =>
+  // {
+  //   if (updateData)
+  //   {
+  //     if (filter && filter.length > 0)
+  //     {
+  //       const filteredData = updateData.filter((item) =>
+  //         filter.includes(item?.category)
+  //       );
+
+  //       console.log("filteredData",filteredData)
+  //       setNowShowData(filteredData);
+  //     } 
+      
+  //       setNowShowData(updateData);
+  //       // console.log("updateData is",updateData)
+  //       // console.log("loading is now ",loading);
+      
+  //   }
+
+    
+    
+  // }, [filter,updateData,location.pathname]);
+
+  console.log("nowShowData is",nowShowData);
+  console.log("loadin is ",loading)
+
+  useEffect(()=>{
+    fetchdata()
+
+    if(filter?.length === 0 && !location?.state?.search){
+     setLoading(false);
     }
-  }, [filter,updateData]);
+  },[filter])
+
+
+  useEffect(() =>
+    {
+      if (updateData)
+      {
+        if (filter && filter.length > 0)
+        {
+          const filteredData = updateData.filter((item) =>
+            filter.includes(item?.category)
+          );
+  
+          console.log("filteredData",filteredData)
+          setNowShowData(filteredData);
+        } 
+        else{
+          setNowShowData(updateData);
+
+          if(location?.state?.search){
+            setLoading(true);
+          }
+          
+        }
+        
+         
+          // console.log("updateData is",updateData)
+          // console.log("loading is now ",loading);
+        
+      }
+  
+      
+      
+    }, [filter,updateData,location.pathname]);
+ 
 
   return (
     <>
@@ -117,7 +184,7 @@ const Vacancis = () =>
                 setFilter={setFilter}
                 searchFunction={searchFunction}
                 searching={searching}
-                selectedState={location?.state}
+                selectedState={location?.state?.category}
               />
             </div>
 

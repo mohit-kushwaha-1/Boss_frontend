@@ -27,7 +27,12 @@ const App = ({ setSearchValue, setSearchData, setSearching, filter, setSearchFuc
 
       if (response.data)
       {
-        setDataNow(response.data.job)
+
+       const data = response.data.job
+        const activeData = data.filter(item => item.status === "Active");
+
+        const rever = activeData.reverse()
+        setDataNow(rever)
         setLoading(true);
       }
 

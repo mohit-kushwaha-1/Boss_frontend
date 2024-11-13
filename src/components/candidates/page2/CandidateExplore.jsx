@@ -19,9 +19,17 @@ const CandidateExplore = () =>
       console.log("search data is now", response.data.job);
       if (response.data)
       {
-        setDataNow(response.data.job);
+
+        const data = response.data.job
+        
+
+        const activeData = data.filter(item => item.status === "Active");
+
+          const rever = activeData.reverse()
+
+          setDataNow(rever);
         setLoading(true);
-        navigate('/vacancies');
+        navigate('/vacancies',{state:{search}});
       }else{
         setDataNow([]);
         setLoading(true);

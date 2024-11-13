@@ -19,7 +19,7 @@ const SourcingForm = () =>
       setFile(name);
     } else if (status === 'error')
     {
-      console.error(`${ name } file upload failed.`);
+      // console.error(`${ name } file upload failed.`);
     }
 
     const formData = new FormData();
@@ -42,7 +42,7 @@ const SourcingForm = () =>
       if (response)
       {
         console.log(response.data.imageUrl)
-        message.success("Image Uploaded Successfully!");
+        message.success("Vacancy Uploaded Successfully!");
         setImage(response.data.imageUrl);
       }
 
@@ -50,8 +50,8 @@ const SourcingForm = () =>
       return response.data.imageUrl// Assuming the API returns the image URL in the 'url' field
     } catch (error)
     {
-      message.error("Error Uploading Image. Please Try Again Later.");
-      console.error("Image Upload Error:", error);
+      message.error("Error Uploading Vacancy . Please Try Again Later.");
+      console.error("Vacancy Upload Error:", error);
       return null;
     }
   };
@@ -77,7 +77,7 @@ const SourcingForm = () =>
 
       if (response.data)
       {
-        message.success("Form Submmited Succesfully");
+        message.success("Form Submmited Successfully");
         form.resetFields();
       }
     } catch (error)

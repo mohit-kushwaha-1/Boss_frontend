@@ -7,7 +7,7 @@ import { baseUrl } from "../helper/helper";
 const { Option } = Select;
 const { TextArea } = Input;
 
-const ReumeForm = ({title}) => {
+const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
   const [isLicenseValid, setIsLicenseValid] = useState(true);
   const [form] = Form.useForm();
 
@@ -47,17 +47,22 @@ const ReumeForm = ({title}) => {
       job:title,
        }
 
-       try {
-          const response = await axios.post(`${baseUrl}/api/personal/personal-details`,postData)
-          console.log("resume data is",response.data);
-          if(response.data){
-            message.success("Form Submitted Successfully");
-            form.resetFields();
-          }
-        } catch (error) {
-        console.log(error)
-        message.error("Error In Submission Form")
-       }
+       setResumeData(postData)
+       setCondition(true)
+       setIsModalVisible(false)
+
+      //  try {
+      //     const response = await axios.post(`${baseUrl}/api/personal/personal-details`,postData)
+      //     console.log("resume data is",response.data);
+      //     if(response.data){
+      //       message.success("Form Submitted Successfully");
+      //       setIsModalVisible(false)
+      //       form.resetFields();
+      //     }
+      //   } catch (error) {
+      //   console.log(error)
+      //   message.error("Error In Submission Form")
+      //  }
 
     //    console.log("postData",postData)
   };
