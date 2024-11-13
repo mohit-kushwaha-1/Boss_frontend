@@ -33,16 +33,18 @@ const Vacancis = () =>
   // console.log("filer is ", filter);
   useEffect(() =>
   {
-    fetchdata();
+    
    if(!location.state){
     // setLoading(false);
     setFilter()
     fetchdata();
 
+   }else{
+
    }
     // console.log("dataNow",dataNow)
     // console.log(location.state,"location ");
-  }, [location,loading]);
+  }, [location]);
 
 
   
@@ -118,13 +120,15 @@ const Vacancis = () =>
   console.log("nowShowData is",nowShowData);
   console.log("loadin is ",loading)
 
-  useEffect(()=>{
-    fetchdata()
+  useEffect(() => {
+    fetchdata();
 
-    if(filter?.length === 0 && !location?.state?.search){
-     setLoading(false);
+    if (location?.state?.search) {
+      setLoading(true);
+    } else if (!location?.state?.search && filter?.length === 0) {
+      setLoading(false);
     }
-  },[filter])
+  }, [filter, location?.state?.search]);
 
 
   useEffect(() =>

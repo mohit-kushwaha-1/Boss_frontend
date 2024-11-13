@@ -49,7 +49,11 @@ const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
 
        setResumeData(postData)
        setCondition(true)
+       
+       message.success("Details Submitted Successfully");
+       form.resetFields();
        setIsModalVisible(false)
+       
 
       //  try {
       //     const response = await axios.post(`${baseUrl}/api/personal/personal-details`,postData)
@@ -76,7 +80,7 @@ const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
             <Form.Item
               label="First Name"
               name="firstName"
-              rules={[{ required: true, message: "Please enter your first name" }]}
+              rules={[{ required: true, message: "Please Enter Your First Name" }]}
             >
               <Input placeholder="Enter First Name" />
             </Form.Item>
@@ -85,7 +89,7 @@ const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
             <Form.Item
               label="Last Name"
               name="lastName"
-              rules={[{ required: true, message: "Please enter your last name" }]}
+              rules={[{ required: true, message: "Please Enter Your Last name" }]}
             >
               <Input placeholder="Enter Last Name" />
             </Form.Item>
@@ -97,7 +101,7 @@ const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
         <Form.Item
           label="Date of Birth"
           name="dob"
-          rules={[{ required: true, message: 'Please select your date of birth!' }]}
+          rules={[{ required: true, message: 'Please Select Your DDate of Birth!' }]}
         >
           <input type="date" style={{ width: '100%' }} placeholder="Select Date" />
         </Form.Item>
@@ -117,7 +121,7 @@ const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
             <Form.Item
               label="Country of Residence"
               name="countryOfResidence"
-              rules={[{ required: true, message: "Please enter your country" }]}
+              rules={[{ required: true, message: "Please Enter Your Country" }]}
             >
               <Input placeholder="Enter Your Residence Country" />
             </Form.Item>
@@ -129,7 +133,7 @@ const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
             <Form.Item
               label="Phone Number"
               name="phoneNumber"
-              rules={[{ required: true, message: "Please enter your phone number" }]}
+              rules={[{ required: true, message: "Please Enter Your Phone Number" }]}
             >
               <Input placeholder="Enter Phone Number" />
             </Form.Item>
@@ -138,7 +142,7 @@ const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
             <Form.Item
               label="E-mail Address"
               name="email"
-              rules={[{ required: true, message: "Please enter your email" }]}
+              rules={[{ required: true, message: "Please Enter Your Email" }]}
             >
               <Input placeholder="Enter E-mail Address" />
             </Form.Item>
@@ -147,7 +151,7 @@ const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
 
         <Row gutter={16}>
           <Col span={24}>
-            <Form.Item label="Do you have a valid Dutch passport or legal documents to work on St. Maarten?" name="dutchPassport">
+            <Form.Item label="Do You Have a Valid Dutch Passport or Legal Documents to Work on St. Maarten?" name="dutchPassport">
               <Radio.Group  >
                 <Radio value="yes">Yes</Radio>
                 <Radio value="no">No</Radio>
@@ -180,7 +184,7 @@ const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
 
         <Row gutter={16}>
           <Col span={24}>
-            <Form.Item label="Do you own a Vehicle?" name="ownVehicle">
+            <Form.Item label="Do You Own a Vehicle?" name="ownVehicle">
               <Radio.Group>
                 <Radio value="yes">Yes</Radio>
                 <Radio value="no">No</Radio>
@@ -193,7 +197,7 @@ const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
 
         <Row gutter={16}>
           <Col span={24}>
-            <Form.Item label="Are you currently Employed?" name="currentlyEmployed">
+            <Form.Item label="Are You Currently Employed?" name="currentlyEmployed">
               <Radio.Group>
                 <Radio value="yes">Yes</Radio>
                 <Radio value="no">No</Radio>
@@ -203,7 +207,7 @@ const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
         </Row>
 
 
-      <h6>If Yes, please specify your employer:</h6>
+      <h6>If Yes, Please Specify Your Employer:</h6>
 
       <Row gutter={16}>
           <Col span={12}>
@@ -275,7 +279,7 @@ const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
 
 
      <Form.Item
-        label="Reason for Leaving"
+        label="Reason For Leaving"
         name="reason"
       >
         <TextArea
@@ -289,7 +293,7 @@ const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
       <Row gutter={16}>
     <Col span={12}>
       <Form.Item
-        label="How many hours per week can you work ?"
+        label="How Many Hours Per Week Can You Work ?"
         name="hourstoAvailable"
         // rules={[{ required: true, message: "Please enter your Date In Service" }]}
       >
@@ -298,11 +302,11 @@ const ReumeForm = ({title,setIsModalVisible,setResumeData, setCondition}) => {
     </Col>
     <Col span={12}>
     <Form.Item
-        label="How many days per week you can work ?"
+        label="How Many Days Per Week You Can Work ?"
         name="day"
         // rules={[{ required: true, message: 'Please select a day!' }]}
       >
-        <Select placeholder="Select number of days">
+        <Select placeholder="Select Number of Days">
     {[...Array(7)].map((_, index) => (
       <Option key={index + 1} value={index + 1}>
         {index + 1} {index + 1 === 1 ? 'day' : 'days'}

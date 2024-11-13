@@ -56,7 +56,7 @@ const Seeking = () =>
           const activeData = data.filter(item => item.status === "Active");
           setDataNow(activeData)
           setLoading(true);
-          navigate('/vacancies',{state:category})
+          navigate('/vacancies',{state:{category}})
   
         }
       } catch (error)
