@@ -5,10 +5,12 @@ import '../../../style/AboutUs/contactUs/ContactUsForm.css'
 const { TextArea } = Input;
 import { baseUrl } from '../../helper/helper';
 import axios from 'axios';
+import { useState } from 'react';
 
 const ContactForm = () =>
 {
   const [form] = Form.useForm();
+  const[submitButton,setSubmitButton] = useState(false);
   const onFinish = async (values) =>
   {
     console.log('Form values:', values);
@@ -17,6 +19,7 @@ const ContactForm = () =>
     //     "phoneNumber":"9889987876",
     //     "email":"mukesh@gmail.com",
     //     "question":"I want to applied job"
+    setSubmitButton(true);
     const postdata = {
       firstName: values.firstName,
       lastName: values.lastName,
@@ -29,7 +32,7 @@ const ContactForm = () =>
     {
       const response = await axios.post(`${ baseUrl }/api/contacts/createContact`, postdata);
       console.log("response", response)
-
+     setSubmitButton(false);
       if (response.data.success)
       {
         message.success("Form Submitted Successfully")
@@ -43,6 +46,7 @@ const ContactForm = () =>
     {
       console.log(error);
       message.error("Error in Form Submission");
+      setSubmitButton(false);
     }
   };
 
@@ -94,7 +98,7 @@ const ContactForm = () =>
               <Input placeholder="E-mail Address *" style={{ height: "50px", fontFamily: 'Nunito sans' }} />
             </Form.Item>
             <Form.Item style={{ marginTop: '50px' }}>
-              <Button type="primary" htmlType="submit" className="submit-btn" style={{ hover: 'backgour-color:red' }}>
+              <Button disabled={submitButton} type="primary" htmlType="submit" className="submit-btn" style={{ hover: 'backgour-color:red' }}>
                 Send
               </Button>
             </Form.Item>
