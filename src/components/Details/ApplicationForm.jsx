@@ -6,14 +6,14 @@ import ReumeForm from './ReumeForm';
 import axios from 'axios';
 import { baseUrl } from '../helper/helper';
 
-const ApplicationForm = ({title}) =>
+const ApplicationForm = ({ title }) =>
 {
   const [file, setFile] = useState(null);
   const [image, setImage] = useState();
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [form] = Form.useForm();
-  const[resumeData,setResumeData] = useState();
-  const[conndition,setCondition] = useState(false);
+  const [resumeData, setResumeData] = useState();
+  const [conndition, setCondition] = useState(false);
 
   const showModal = () =>
   {
@@ -47,7 +47,7 @@ const ApplicationForm = ({title}) =>
     try
     {
       const response = await axios.post(
-        `${baseUrl}/api/uploadImage/uploadImage1`,
+        `${ baseUrl }/api/uploadImage/uploadImage1`,
         formData,
         {
           headers: {
@@ -83,34 +83,40 @@ const ApplicationForm = ({title}) =>
       phoneNumber: values.phoneNumber,
       email: values.email,
       pdf: image,
-      job:title,
+      job: title,
 
     }
 
 
-    if(conndition){
-      try {
-        const response = await axios.post(`${baseUrl}/api/personal/personal-details`,resumeData)
-        console.log("resume data is",response.data);
-        if(response.data){
+    if (conndition)
+    {
+      try
+      {
+        const response = await axios.post(`${ baseUrl }/api/personal/personal-details`, resumeData)
+        console.log("resume data is", response.data);
+        if (response.data)
+        {
           message.success("Form Submitted Successfully");
           // setIsModalVisible(false)
+          window.location.reload()
           form.resetFields();
           setCondition(false);
         }
-      } catch (error) {
-      console.log(error)
-      message.error("Error In Submission Form")
-     }
+      } catch (error)
+      {
+        console.log(error)
+        message.error("Error In Submission Form")
+      }
 
-     return;
+      return;
     }
-    else{
+    else
+    {
       try
       {
         const response = await axios.post(`${ baseUrl }/api/sendApplication/createSendApplication`, formdata);
         console.log("response", response)
-  
+
         if (response.data)
         {
           message.success("Form Submmited Successfully");
@@ -122,7 +128,6 @@ const ApplicationForm = ({title}) =>
       }
     }
 
-    
   };
 
   const handdleClick = (e) =>
@@ -145,103 +150,103 @@ const ApplicationForm = ({title}) =>
               <div className="row">
 
                 {
-                  conndition?(<>
-                  <Form.Item
-                  name="firsName"
-                  // label="First name"
-                  // rules={[{ required: true, message: 'Please enter your first name!' }]}
-                  className="input-half"
-                >
-                  <Input placeholder="First Name*" style={{ height: "50px" }} />
-                </Form.Item>
-                  </>):(<>
+                  conndition ? (<>
                     <Form.Item
-                  name="firsName"
-                  // label="First name"
-                  rules={[{ required: true, message: 'Please enter your first name!' }]}
-                  className="input-half"
-                >
-                  <Input placeholder="First Name*" style={{ height: "50px" }} />
-                </Form.Item>
+                      name="firsName"
+                      // label="First name"
+                      // rules={[{ required: true, message: 'Please enter your first name!' }]}
+                      className="input-half"
+                    >
+                      <Input placeholder="First Name*" style={{ height: "50px" }} />
+                    </Form.Item>
+                  </>) : (<>
+                    <Form.Item
+                      name="firsName"
+                      // label="First name"
+                      rules={[{ required: true, message: 'Please enter your first name!' }]}
+                      className="input-half"
+                    >
+                      <Input placeholder="First Name*" style={{ height: "50px" }} />
+                    </Form.Item>
                   </>)
                 }
 
-               {
-                conndition?(<>
-                 <Form.Item
-                  name="lastName"
-                  // label="Last name"
-                  // rules={[{ required: true, message: 'Please enter your last name!' }]}
-                  className="input-half"
-                >
-                  <Input placeholder="Last Name*" style={{ height: "50px" }} />
-                </Form.Item>
-                </>):(<>
-                  <Form.Item
-                  name="lastName"
-                  // label="Last name"
-                  rules={[{ required: true, message: 'Please enter your last name!' }]}
-                  className="input-half"
-                >
-                  <Input placeholder="Last Name*" style={{ height: "50px" }} />
-                </Form.Item>
-                </>)
-               }
+                {
+                  conndition ? (<>
+                    <Form.Item
+                      name="lastName"
+                      // label="Last name"
+                      // rules={[{ required: true, message: 'Please enter your last name!' }]}
+                      className="input-half"
+                    >
+                      <Input placeholder="Last Name*" style={{ height: "50px" }} />
+                    </Form.Item>
+                  </>) : (<>
+                    <Form.Item
+                      name="lastName"
+                      // label="Last name"
+                      rules={[{ required: true, message: 'Please enter your last name!' }]}
+                      className="input-half"
+                    >
+                      <Input placeholder="Last Name*" style={{ height: "50px" }} />
+                    </Form.Item>
+                  </>)
+                }
 
-               
+
               </div>
 
               {/* Phone Number */}
 
               {
-                conndition?(<>
-                 <Form.Item
-                name="phoneNumber"
-                // label="Phone number"
-                // rules={[{ required: true, message: 'Please enter your phone number!' }]}
-              >
-                <Input placeholder="Phone Number" style={{ height: "50px" }} />
-              </Form.Item>
-                </>):(<>
+                conndition ? (<>
                   <Form.Item
-                name="phoneNumber"
-                // label="Phone number"
-                rules={[{ required: true, message: 'Please enter your phone number!' }]}
-              >
-                <Input placeholder="Phone Number" style={{ height: "50px" }} />
-              </Form.Item>
+                    name="phoneNumber"
+                  // label="Phone number"
+                  // rules={[{ required: true, message: 'Please enter your phone number!' }]}
+                  >
+                    <Input placeholder="Phone Number" style={{ height: "50px" }} />
+                  </Form.Item>
+                </>) : (<>
+                  <Form.Item
+                    name="phoneNumber"
+                    // label="Phone number"
+                    rules={[{ required: true, message: 'Please enter your phone number!' }]}
+                  >
+                    <Input placeholder="Phone Number" style={{ height: "50px" }} />
+                  </Form.Item>
                 </>)
               }
-             
+
 
               {/* Email Address */}
 
               {
-                conndition?(<>
-                 <Form.Item
-                name="email"
-                // label="E-mail address"
-                // rules={[
-                //   { required: true, message: 'Please enter your email!' },
-                //   { type: 'email', message: 'Please enter a valid email!' },
-                // ]}
-              >
-                <Input placeholder="E-mail Address *" style={{ height: "50px" }} />
-              </Form.Item>
-                </>):(<>
+                conndition ? (<>
                   <Form.Item
-                name="email"
-                // label="E-mail address"
-                rules={[
-                  { required: true, message: 'Please enter your email!' },
-                  { type: 'email', message: 'Please enter a valid email!' },
-                ]}
-              >
-                <Input placeholder="E-mail Address *" style={{ height: "50px" }} />
-              </Form.Item>
+                    name="email"
+                  // label="E-mail address"
+                  // rules={[
+                  //   { required: true, message: 'Please enter your email!' },
+                  //   { type: 'email', message: 'Please enter a valid email!' },
+                  // ]}
+                  >
+                    <Input placeholder="E-mail Address *" style={{ height: "50px" }} />
+                  </Form.Item>
+                </>) : (<>
+                  <Form.Item
+                    name="email"
+                    // label="E-mail address"
+                    rules={[
+                      { required: true, message: 'Please enter your email!' },
+                      { type: 'email', message: 'Please enter a valid email!' },
+                    ]}
+                  >
+                    <Input placeholder="E-mail Address *" style={{ height: "50px" }} />
+                  </Form.Item>
                 </>)
               }
-             
+
             </div>
 
 
@@ -251,61 +256,61 @@ const ApplicationForm = ({title}) =>
             <div className='form-aligh-style-right'>
 
               {
-                conndition?(
+                conndition ? (
                   <>
-                   <Form.Item
-                name="resume"
-                // label="Resume Upload"
-                // rules={[{ required: true, message: 'Please upload your resume!' }]}
-                className="upload-box"
-              >
-                <Upload.Dragger
-                  name="file"
-                  multiple={false}
-                  beforeUpload={() => false} // Prevents auto-upload
-                  onChange={handleFileChange}
-                  style={{ width: '100%' }}
-                >
-                  <p className="ant-upload-drag-icon">
-                    <InboxOutlined />
-                  </p>
-                  <p className="ant-upload-text" style={{ fontSize: '16px' }}>
-                    {file ? file : 'Resume Upload (Required)'}
-                  </p>
-                  <p className="ant-upload-hint">Drag & Drop or Browse</p>
-                </Upload.Dragger>
-              </Form.Item>
+                    <Form.Item
+                      name="resume"
+                      // label="Resume Upload"
+                      // rules={[{ required: true, message: 'Please upload your resume!' }]}
+                      className="upload-box"
+                    >
+                      <Upload.Dragger
+                        name="file"
+                        multiple={false}
+                        beforeUpload={() => false} // Prevents auto-upload
+                        onChange={handleFileChange}
+                        style={{ width: '100%' }}
+                      >
+                        <p className="ant-upload-drag-icon">
+                          <InboxOutlined />
+                        </p>
+                        <p className="ant-upload-text" style={{ fontSize: '16px' }}>
+                          {file ? file : 'Resume Upload (Required)'}
+                        </p>
+                        <p className="ant-upload-hint">Drag & Drop or Browse</p>
+                      </Upload.Dragger>
+                    </Form.Item>
                   </>
-                ):(
+                ) : (
 
                   <>
-                   <Form.Item
-                name="resume"
-                // label="Resume Upload"
-                rules={[{ required: true, message: 'Please upload your resume!' }]}
-                className="upload-box"
-              >
-                <Upload.Dragger
-                  name="file"
-                  multiple={false}
-                  beforeUpload={() => false} // Prevents auto-upload
-                  onChange={handleFileChange}
-                  style={{ width: '100%' }}
-                >
-                  <p className="ant-upload-drag-icon">
-                    <InboxOutlined />
-                  </p>
-                  <p className="ant-upload-text" style={{ fontSize: '16px' }}>
-                    {file ? file : 'Resume Upload (Required)'}
-                  </p>
-                  <p className="ant-upload-hint">Drag & Drop or Browse</p>
-                </Upload.Dragger>
-              </Form.Item>
+                    <Form.Item
+                      name="resume"
+                      // label="Resume Upload"
+                      rules={[{ required: true, message: 'Please upload your resume!' }]}
+                      className="upload-box"
+                    >
+                      <Upload.Dragger
+                        name="file"
+                        multiple={false}
+                        beforeUpload={() => false} // Prevents auto-upload
+                        onChange={handleFileChange}
+                        style={{ width: '100%' }}
+                      >
+                        <p className="ant-upload-drag-icon">
+                          <InboxOutlined />
+                        </p>
+                        <p className="ant-upload-text" style={{ fontSize: '16px' }}>
+                          {file ? file : 'Resume Upload (Required)'}
+                        </p>
+                        <p className="ant-upload-hint">Drag & Drop or Browse</p>
+                      </Upload.Dragger>
+                    </Form.Item>
                   </>
                 )
               }
 
-             
+
 
 
               <div className='select-form-modal'>
@@ -351,7 +356,7 @@ const ApplicationForm = ({title}) =>
         onCancel={handleCancel}
         footer={null} // This removes the "OK" and "Cancel" buttons
       >
-        <ReumeForm title={title} setIsModalVisible={setIsModalVisible}  setResumeData={setResumeData} setCondition={setCondition}/>
+        <ReumeForm title={title} setIsModalVisible={setIsModalVisible} setResumeData={setResumeData} setCondition={setCondition} />
       </Modal>
     </div>
   );

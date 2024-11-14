@@ -3,7 +3,8 @@ import logo from "../../public/images/logo.png";
 import { Link } from 'react-router-dom';
 
 import "../style/Footer.css";
-const Footer = () => {
+const Footer = () =>
+{
   return (
     <div>
       <div className="footer-container">
@@ -38,7 +39,7 @@ const Footer = () => {
                   />
                 </svg>
 
-                <h4 style={{marginLeft:"8px"}}>+1 (721) 542-1242</h4>
+                <h4 style={{ marginLeft: "8px" }}>+1 (721) 542-1242</h4>
               </div>
 
               <div className="middle-phone">
@@ -55,7 +56,7 @@ const Footer = () => {
                   />
                 </svg>
 
-                <h4 style={{marginLeft:"8px"}}>+1 (721) 524-1709</h4>
+                <h4 style={{ marginLeft: "8px" }}>+1 (721) 524-1709</h4>
               </div>
               <div>
                 <div className="middle-email">
@@ -205,10 +206,10 @@ const Footer = () => {
                   <Link to="/vacancies">Vacancies</Link>
                 </li>
                 <li>
-                  <Link to="/job-application-process">Candidates</Link>
+                  <Link to="/job-application-process">Candidate Process</Link>
                 </li>
                 <li>
-                  <Link to="/procedure">Clients</Link>
+                  <Link to="/procedure">Recruitement Procedure</Link>
                 </li>
                 <li>
                   <Link to="/working-at-boss-recruitement">About Us</Link>
