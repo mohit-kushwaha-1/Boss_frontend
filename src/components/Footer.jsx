@@ -211,7 +211,7 @@ const Footer = () => {
                   <Link to="/procedure">Clients</Link>
                 </li>
                 <li>
-                  <Link to="/privacy-statement">About Us</Link>
+                  <Link to="/working-at-boss-recruitement">About Us</Link>
                 </li>
               </ul>
             </div>

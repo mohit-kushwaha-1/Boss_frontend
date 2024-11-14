@@ -15,32 +15,35 @@ const CandidateExplore = () =>
   {
     try
     {
-      const response = await axios.get(`${ baseUrl }/api/jobPost/jobfilter?keyword=${ search }`);
-      console.log("search data is now", response.data.job);
-      if (response.data)
+      // Ensure baseUrl, search, and category are properly defined
+      const query = new URLSearchParams();
+
+      // Append search and category values if present
+      if (search) query.append('search', search);
+      // if (category) query.append('category', category);
+
+      // Perform the API request with query parameters
+      const response = await axios.get(`${ baseUrl }/api/jobPost/jobfilterHome?${ query.toString() }`);
+      const data = response?.data?.job;
+      // if(data?.length === 0){
+      //   message.error("Result Not Found");
+      //   return;
+      // }
+
+      // Check if response is successful and handle the data
+      if (response)
       {
-
-        const data = response.data.job
-        
-
+        // console.log(response.data.job)
+        const data = response.data.job;
         const activeData = data.filter(item => item.status === "Active");
-
-          const rever = activeData.reverse()
-
-          setDataNow(rever);
+        setDataNow(activeData)
         setLoading(true);
-        navigate('/vacancies',{state:{search}});
-      }else{
-        setDataNow([]);
-        setLoading(true);
-        navigate('/vacancies');
+        navigate('/vacancies',{state:{search}})
+
       }
     } catch (error)
     {
-      console.log(error)
-      setDataNow([]);
-        setLoading(true);
-        navigate('/vacancies');
+      console.error('Error occurred while fetching jobs:', error.message);
     }
   }
 

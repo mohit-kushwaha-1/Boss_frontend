@@ -22,44 +22,35 @@ const App = ({ setSearchValue, setSearchData, setSearching, filter, setSearchFuc
   {
     try
     {
-      const response = await axios.get(`${ baseUrl }/api/jobPost/jobfilter?keyword=${ search }`);
-      console.log("search data is now", response.data.job)
+      // Ensure baseUrl, search, and category are properly defined
+      const query = new URLSearchParams();
 
-      if (response.data)
+      // Append search and category values if present
+      if (search) query.append('search', search);
+      // if (category) query.append('category', category);
+
+      // Perform the API request with query parameters
+      const response = await axios.get(`${ baseUrl }/api/jobPost/jobfilterHome?${ query.toString() }`);
+      const data = response?.data?.job;
+      // if(data?.length === 0){
+      //   message.error("Result Not Found");
+      //   return;
+      // }
+
+      // Check if response is successful and handle the data
+      if (response)
       {
-
-       const data = response.data.job
+        // console.log(response.data.job)
+        const data = response.data.job;
         const activeData = data.filter(item => item.status === "Active");
-
-        const rever = activeData.reverse()
-        setDataNow(rever)
+        setDataNow(activeData)
         setLoading(true);
+        // navigate('/vacancies',{state:{category,search}})
+
       }
-
-
-      //  if(response.data){
-      //   // setSearchData(response.data.job)
-      //   setSearching(true);
-
-      //   if (filter.length > 0) {
-
-      //     console.log("inside filter data")
-      //     const data = response.data.job;
-      //     const filterdata = data.filter((item) => {
-      //       return filter.some((filterItem) => item?.category === filterItem);
-      //     });
-      //     console.log("filterdata",filterdata);
-      //     setSearchData(filterdata)
-      //     // handle();
-      //   }
-      //   else{
-      //     setSearchData(response.data.job)
-      //     message.success("search data succesfully")
-      //   }
-      //  }
     } catch (error)
     {
-      console.log(error)
+      console.error('Error occurred while fetching jobs:', error.message);
     }
   }
 
